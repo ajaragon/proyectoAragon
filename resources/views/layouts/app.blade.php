@@ -33,16 +33,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('ganadero.index') }}">{{ __('Registro de los ganaderos') }}</a>
                         </li>
-                        <!--
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('explotacion.index') }}">{{ __('Registro de las explotaciones') }}</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('ganado.index') }}">{{ __('Registro del ganado') }}</a>
-                        </li>
-                        -->
-                        
                     </ul>
 
                     <!-- Right Side Of Navbar -->
