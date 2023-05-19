@@ -16,6 +16,7 @@ return new class extends Migration
             NOMBRE
             APELLIDO 1
             APELLIDO 2
+            TELEFONO
             CALLE
             LOCALIDAD
             COMARCA
@@ -30,6 +31,7 @@ return new class extends Migration
             $table->string("Nombre");
             $table->string("Apellido1");
             $table->string("Apellido2");
+            $table->string("Telefono");
             $table->string("Calle");
             $table->string("Localidad");
             $table->string("Comarca");

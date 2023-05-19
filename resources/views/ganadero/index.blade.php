@@ -31,6 +31,7 @@
                 <th>Nombre</th>
                 <th>Primer apellido</th>
                 <th>Segundo apellido</th>
+                <th>Teléfono</th>
                 <th>Calle</th>
                 <th>Localidad</th>
                 <th>Comarca</th>
@@ -45,9 +46,10 @@
                 <!--Como aparezcan en MyAdmin-->
                 <td>{{ $ganadero->id }}</td>
                 <td>{{ $ganadero->DNI }}</td>
-                <td>{{ $ganadero->nombre }}</td>
+                <td>{{ $ganadero->Nombre }}</td>
                 <td>{{ $ganadero->Apellido1 }}</td>
                 <td>{{ $ganadero->Apellido2 }}</td>
+                <td>{{ $ganadero->Telefono }}</td>
                 <td>{{ $ganadero->Calle }}</td>
                 <td>{{ $ganadero->Localidad }}</td>
                 <td>{{ $ganadero->Comarca }}</td>

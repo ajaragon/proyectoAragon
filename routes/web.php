@@ -75,9 +75,11 @@ Route::get('/ganadero/create',[GanaderoController::class,'create']);
 
 //el middleware evita que una persona que conoce la url pueda introducir datos
 //con el "auth" se obliga a cualquier usuario a loguearse
-Route::resource('ganadero',GanaderoController::class)->middleware('auth');
+//Route::resource('ganadero',GanaderoController::class)->middleware('auth');. .//Seguridad
+Route::resource('ganadero',GanaderoController::class);
 
-Auth::routes(['register'=>false,'reset'=>false]);
+Auth::routes();
+//Auth::routes(['register'=>false,'reset'=>false]);. . . . . . . . . . . . . . //Seguridad
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home',[GanaderoController::class,'index'])->name('home');

@@ -33,6 +33,10 @@
     <input  type="text" id="Apellido2" name="Apellido2" 
             value="{{ isset($ganadero->Apellido2)?$ganadero->Apellido2:old('Apellido2') }}"><br>
 
+    <label  for="Telefono"> Teléfono: </label>
+    <input  type="text" id="Telefono" name="Telefono" 
+            value="{{ isset($ganadero->Telefono)?$ganadero->Telefono:old('Telefono') }}"><br>
+
     <label  for="Calle"> Calle: </label>
     <input  type="text" id="Calle" name="Calle" 
             value="{{ isset($ganadero->Calle)?$ganadero->Calle:old('Calle') }}"><br>
