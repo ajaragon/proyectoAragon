@@ -32,10 +32,48 @@ class GanaderoController extends Controller
      */
     public function store(Request $request)
     {
+
+        //con el objetivo de evitar que de error a la hora de agregar un nuevo registro con algún campo en blanco
+        //obligamos al usuario a introducir datos en ellos mediante el "required"
+        $campos =
+        [
+            'DNI'=>'required|string|max:9',
+            'Nombre'=>'required|string|max:20',
+            'Apellido1'=>'required|string|max:20',
+            'Apellido2'=>'required|string|max:20',
+            'Calle'=>'required|string|max:30',
+            'Localidad'=>'required|string|max:20',
+            'Comarca'=>'required|string|max:20',
+            'Provincia'=>'required|string|max:20',
+        ];
+
+        //$mensaje =['required'=>'El :attribute es obligatorio'];
+
+        
+        $mensaje =
+        [
+            'DNI.required'=>'Debe introducir el DNI',
+            'Nombre.required'=>'Debe introducir el nombre',
+            'Apellido1.required'=>'Debe introducir el primer apellido',
+            'Apellido2.required'=>'Debe introducir el segundo apellido',
+            'Calle.required'=>'Debe introducir la calle',
+            'Localidad.required'=>'Debe introducir la localidad',
+            'Comarca.required'=>'Debe introducir la comarca',
+            'Provincia.required'=>'Debe introducir la provincia',
+        ];
+        
+
+        $this->validate($request, $campos, $mensaje);
+
         //$datosGanadero =request()->all();             //todos los datos recibidos desde el formulario
         $datosGanadero =request()->except('_token');    //recibe todos los datos del registro excepto el token
         Ganadero::insert($datosGanadero);               //a la base de datos le inserta todos los datos que recibe
-        return response()->json($datosGanadero);        //y los va a enviar en un archivo json                                 
+        //return response()->json($datosGanadero);        //y los va a enviar en un archivo json
+        //Se dice que redireccione hacia la vista ganadero una vez introducidos los datos,
+        //además, consecuentemente, se mostrará en pantalla la información 
+        //de que se guardó un nuevo registro
+        return redirect('ganadero')->with('mensaje','Se añadió un ganadero a la base de datos.');
+        
     }
 
     /**
@@ -60,9 +98,50 @@ class GanaderoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Ganadero $ganadero)
+    public function update(Request $request, $id)
     {
-        //
+
+        //Validar la introducción de datos del formulario
+        $campos =
+        [
+            'DNI'=>'required|string|max:9',
+            'Nombre'=>'required|string|max:20',
+            'Apellido1'=>'required|string|max:20',
+            'Apellido2'=>'required|string|max:20',
+            'Calle'=>'required|string|max:30',
+            'Localidad'=>'required|string|max:20',
+            'Comarca'=>'required|string|max:20',
+            'Provincia'=>'required|string|max:20',
+        ];
+
+        //$mensaje =['required'=>'El :attribute es obligatorio'];
+
+        
+        $mensaje =
+        [
+            'DNI.required'=>'Debe introducir el DNI',
+            'Nombre.required'=>'Debe introducir el nombre',
+            'Apellido1.required'=>'Debe introducir el primer apellido',
+            'Apellido2.required'=>'Debe introducir el segundo apellido',
+            'Calle.required'=>'Debe introducir la calle',
+            'Localidad.required'=>'Debe introducir la localidad',
+            'Comarca.required'=>'Debe introducir la comarca',
+            'Provincia.required'=>'Debe introducir la provincia',
+        ];
+        
+
+        $this->validate($request, $campos, $mensaje);
+
+        //----------------------------------------------------------------------------------------------------\\
+
+        $datosGanadero =request()->except(['_token','_method']);    //Recibe todos los datos 
+                                                                    //exceptuando el token y el método
+        Ganadero::where('id','=',$id)->update($datosGanadero);      //La actualización se llevará a cabo
+                                                                    //en el elemento donde coincidan los id
+        //Vuelve a recuperar los datos y mostrar los campos del registro con la información actualizada
+        $ganadero =Ganadero::findOrFail($id);
+        //return view('ganadero.edit', compact('ganadero'));
+        return redirect('ganadero')->with('mensaje','Se actualizó el registro de la base de datos.');
     }
 
     /**
@@ -71,6 +150,7 @@ class GanaderoController extends Controller
     public function destroy($id)
     {
         Ganadero::destroy($id);         //le paso el id del elemento que quiero que elimine
-        return redirect('ganadero');    //vuelve a mostrar los registros de todos los ganaderos    
+        //return redirect('ganadero');  //vuelve a mostrar los registros de todos los ganaderos
+        return redirect('ganadero')->with('mensaje','Se eliminó el registro de la base de datos.');  
     }
 }

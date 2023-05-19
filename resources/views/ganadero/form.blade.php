@@ -5,30 +5,63 @@
         de no existir este atributo, 
         el espacio aparecería en blanco
     -->
-    <label for="DNI"> DNI: </label>
-    <input type="text" id="DNI" name="DNI" value="{{ $ganadero->DNI }}"><br> 
+    <!--
+        Con un operador ternario, le decimos al programa que 
+        en el caso de que esté definida la variable,
+        se muestre en pantalla.
+        En caso contrario, lo sustituirá por un espacio en blanco
+        "isset($ganadero->DNI)?$ganadero->DNI:' '"
+        La función old() conserva la información que había en el campo
+        antes de aplicar el guardar los cambios
+        De lo contrario, esta información desaparece
+    -->
+    <h1>{{ $modo }}</h1><hr>
 
-    <label for="Nombre"> Nombre: </label>
-    <input type="text" id="Nombre" name="Nombre" value="{{ $ganadero->Nombre }}"><br>
+    <label  for="DNI"> DNI: </label>
+    <input  type="text" id="DNI" name="DNI" 
+            value="{{ isset($ganadero->DNI)?$ganadero->DNI:old('DNI') }}"><br> 
 
-    <label for="Apellido1"> Primer apellido: </label>
-    <input type="text" id="Apellido1" name="Apellido1" value="{{ $ganadero->Apellido1 }}"><br>
+    <label  for="Nombre"> Nombre: </label>
+    <input  type="text" id="Nombre" name="Nombre" 
+            value="{{ isset($ganadero->Nombre)?$ganadero->Nombre:old('Nombre') }}"><br>
 
-    <label for="Apellido2"> Segundo apellido: </label>
-    <input type="text" id="Apellido2" name="Apellido2" value="{{ $ganadero->Apellido2 }}"><br>
+    <label  for="Apellido1"> Primer apellido: </label>
+    <input  type="text" id="Apellido1" name="Apellido1" 
+            value="{{ isset($ganadero->Apellido1)?$ganadero->Apellido1:old('Apellido2') }}"><br>
 
-    <label for="Calle"> Calle: </label>
-    <input type="text" id="Calle" name="Calle" value="{{ $ganadero->Calle }}"><br>
+    <label  for="Apellido2"> Segundo apellido: </label>
+    <input  type="text" id="Apellido2" name="Apellido2" 
+            value="{{ isset($ganadero->Apellido2)?$ganadero->Apellido2:old('Apellido2') }}"><br>
 
-    <label for="Localidad"> Localidad: </label>
-    <input type="text" id="Localidad" name="Localidad" value="{{ $ganadero->Localidad }}"><br>
+    <label  for="Calle"> Calle: </label>
+    <input  type="text" id="Calle" name="Calle" 
+            value="{{ isset($ganadero->Calle)?$ganadero->Calle:old('Calle') }}"><br>
 
-    <label for="Comarca"> Comarca: </label>
-    <input type="text" id="Comarca" name="Comarca" value="{{ $ganadero->Comarca }}"><br>
+    <label  for="Localidad"> Localidad: </label>
+    <input  type="text" id="Localidad" name="Localidad" 
+            value="{{ isset($ganadero->Localidad)?$ganadero->Localidad:old('Localidad') }}"><br>
 
-    <label for="Provincia"> Provincia: </label>
-    <input type="text" id="Provincia" name="Provincia" value="{{ $ganadero->Provincia }}"><br>
+    <label  for="Comarca"> Comarca: </label>
+    <input  type="text" id="Comarca" name="Comarca" 
+            value="{{ isset($ganadero->Comarca)?$ganadero->Comarca:old('Comarca') }}"><br>
 
-    <label for="Añadir">  </label>
-    <input type="submit" id="AgregarGanadero" value="Añadir"><hr>
+    <label  for="Provincia"> Provincia: </label>
+    <input  type="text" id="Provincia" name="Provincia" 
+            value="{{ isset($ganadero->Provincia)?$ganadero->Provincia:old('Provincia') }}"><br>
+
+    <label  for="Añadir">  </label>
+    <input  type="submit" id="AgregarGanadero" value="{{ $modo }}"><hr>
+
+    <!--Aviso de campos por rellenar-->
+    <div>
+        <ul>
+                @if(count($errors)>0)
+                        @foreach($errors->all() as $error)
+                                <dt>{{ $error }}</dt>
+                        @endforeach
+                @endif
+        </ul>
+    </div>
+
+    <a href="{{ url('ganadero/') }}" >Volver</a>
 <!--fin del formulario por defecto-->

@@ -15,7 +15,7 @@ use App\Http\Controllers\GanaderoController; //enlace creado con el controlador 
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');  //aparece la vista donde el usuario se loguea
 });
 
 /*
@@ -68,8 +68,20 @@ Route::get('/ganadero/create',[GanaderoController::class,'create']);
 */
 //---------------------------------------------------------------\\
 //OPCIÓN DE RUTAS 3
-Route::resource('ganadero',GanaderoController::class);  //Para acceder a las direcciones 
+//Route::resource('ganadero',GanaderoController::class);  //Para acceder a las direcciones 
                                                         //que se crearon en el controlador de Ganadero
                                                         //php artisan route:list
 //---------------------------------------------------------------\\
 
+//el middleware evita que una persona que conoce la url pueda introducir datos
+//con el "auth" se obliga a cualquier usuario a loguearse
+Route::resource('ganadero',GanaderoController::class)->middleware('auth');
+
+Auth::routes(['register'=>false,'reset'=>false]);
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home',[GanaderoController::class,'index'])->name('home');
+
+Route::group(['middleware'=>'auth'], function(){
+    Route::get('/', [GanaderoController::class, 'index'])->name('home');
+});
