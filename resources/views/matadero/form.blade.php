@@ -27,7 +27,7 @@
 
     <label  for="Apellido1"> Primer apellido: </label>
     <input  type="text" id="Apellido1" name="Apellido1" 
-            value="{{ isset($ganadero->Apellido1)?$ganadero->Apellido1:old('Apellido1') }}"><br>
+            value="{{ isset($ganadero->Apellido1)?$ganadero->Apellido1:old('Apellido2') }}"><br>
 
     <label  for="Apellido2"> Segundo apellido: </label>
     <input  type="text" id="Apellido2" name="Apellido2" 

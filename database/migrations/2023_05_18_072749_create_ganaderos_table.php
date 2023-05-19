@@ -21,13 +21,19 @@ return new class extends Migration
             LOCALIDAD
             COMARCA
             PROVINCIA
-            ?NOMBRE DEL NEGOCIO
+            FK-CIF EXPLOTACION
         */
         Schema::create('ganaderos', function (Blueprint $table) {
             $table->id();
             //------------------------------\\
             //Campos:
             $table->string("DNI");
+            //$table->string("CIF_Explotacion");  //este es el campo de la foreign key
+            //en la siguiente linea se especifica que el campo CIF
+            //hace referencia a la tabla explotacion
+            //y además le ordenamos al programa que 
+            //cuando borre un registro, lo realice en "cascada"
+            //$table->foreign("CIF_Explotacion")->references("CIF")->on('explotaciones')->onDelete('set null'); 
             $table->string("Nombre");
             $table->string("Apellido1");
             $table->string("Apellido2");

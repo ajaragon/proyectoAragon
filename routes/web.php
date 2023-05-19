@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('auth.login');  //aparece la vista donde el usuario se loguea
 });
 
+//RUTAS GANADEROS
 /*
 RUTAS NECESARIAS:
     Ruta para mostrar la lista con todos los ganaderos
@@ -87,3 +88,31 @@ Route::get('/home',[GanaderoController::class,'index'])->name('home');
 Route::group(['middleware'=>'auth'], function(){
     Route::get('/', [GanaderoController::class, 'index'])->name('home');
 });
+
+/*
+//RUTAS EXPLOTACIONES
+Route::resource('explotacion',ExplotacionController::class);
+
+Auth::routes();
+//Auth::routes(['register'=>false,'reset'=>false]);. . . . . . . . . . . . . . //Seguridad
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home',[ExplotacionController::class,'index'])->name('home');
+
+Route::group(['middleware'=>'auth'], function(){
+    Route::get('/', [ExplotacionController::class, 'index'])->name('home');
+});
+
+//RUTAS GANADO
+Route::resource('ganado',GanadoController::class);
+
+Auth::routes();
+//Auth::routes(['register'=>false,'reset'=>false]);. . . . . . . . . . . . . . //Seguridad
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home',[GanadoController::class,'index'])->name('home');
+
+Route::group(['middleware'=>'auth'], function(){
+    Route::get('/', [GanadoController::class, 'index'])->name('home');
+});
+*/
