@@ -74,7 +74,7 @@ class GanaderoController extends Controller
         //Se dice que redireccione hacia la vista ganadero una vez introducidos los datos,
         //además, consecuentemente, se mostrará en pantalla la información 
         //de que se guardó un nuevo registro
-        return redirect('ganadero')->with('mensaje','Se añadió un ganadero a la base de datos.');
+        return redirect('ganadero')->with('mensaje','Se añadió un registro a la base de datos.');
         
     }
 
