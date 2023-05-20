@@ -24,3 +24,7 @@ Para crear las relaciones entre las tablas consulté la documentación de Larave
 https://laravel.com/docs/10.x/eloquent-relationships
 
 https://www.youtube.com/watch?v=GFo3N9RNu8U
+
+php artisan make:model Explotacion  -cr
+
+php artisan make:migration create_explotaciones_table

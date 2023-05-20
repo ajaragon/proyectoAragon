@@ -31,7 +31,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('ganadero.index') }}">{{ __('Registro de los ganaderos') }}</a>
+                            <a class="nav-link" href="ganadero.index">{{ __('Registro de los ganaderos') }}</a>
                         </li>
                     </ul>
 
