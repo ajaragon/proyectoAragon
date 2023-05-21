@@ -12,7 +12,30 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('ganaderos', function (Blueprint $table) {
-            $table->id();
+            $table->engine="InnoDB";
+            //$table->id();
+
+            $table->string('DNI');
+            $table->string('Nombre');
+            $table->string('Apellido1');
+            $table->string('Apellido2');
+            $table->string('Telefono');
+            $table->string('Correo_Electronico');
+            $table->string('Provincia');
+            
+            //$table->unsignedBigInteger('CIF_Explotacion');    //Campo perteneciente a la tabla explotación
+                                                                //Así conocemos en qué ganadería trabaja cada ganadero
+                    
+            //Creación de la clave foránea
+            //Sintaxis:
+                //el campo CIF_Explotacion hace referencia al campo CIF de la tabla explotacions 
+            
+            
+            $table  ->foreignId('CIF')
+                    ->constrained('explotacions')
+                    ->onUpdate('cascade')
+                    ->onDelete('cascade');
+
             $table->timestamps();
         });
     }

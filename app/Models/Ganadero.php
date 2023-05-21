@@ -12,8 +12,12 @@ class Ganadero extends Model
     /*
     public function explotacion_R()
     {
-        return $this->belongsTo('App\Http\Models\Explotacion');
+        return $this->belongsTo('App\Models\Explotacion');
     }//fin de explotacion_R
 
     */
+    //Un ganadero solo puede trabajar en una ganadería
+    public function explotacion(){
+        return $this->belongsTo('App\Models\Explotacion');
+    }
 }

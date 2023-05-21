@@ -12,7 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('explotacions', function (Blueprint $table) {
+            $table->engine="InnoDB";
             $table->id();
+
+            $table->string('CIF');
+            $table->string('Nombre_Explotacion');
+            $table->string('Titular');
+            $table->string('Telefono');
+            $table->string('Correo_Electronico');
+            $table->string('Direccion');
+            $table->string('Comarca');
+            $table->string('Provincia');
+            $table->string('CP');
+            
             $table->timestamps();
         });
     }

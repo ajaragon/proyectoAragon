@@ -12,7 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('especies', function (Blueprint $table) {
+            $table->engine="InnoDB";
+
             $table->id();
+
+            $table->string('ID_Especie');
+            $table->string('Descripcion');
+
             $table->timestamps();
         });
     }

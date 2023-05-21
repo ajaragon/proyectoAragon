@@ -10,7 +10,7 @@
         @endif
     </div>
     
-    <a href="{{ url('ganadero/create') }}" >Crear nuevo registro</a>
+    <a href="{{ url('explotacion/create') }}" >Crear nuevo registro</a>
     <table class="table">
         <thead>
             <tr>
@@ -20,7 +20,7 @@
                 <th>Titular</th>
                 <th>Teléfono</th>
                 <th>Correo electrónico</th>
-                <th>Direccion</th>
+                <th>Dirección</th>
                 <th>Comarca</th>
                 <th>Provincia</th>
                 <th>Código postal</th>

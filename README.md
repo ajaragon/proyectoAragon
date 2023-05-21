@@ -1,5 +1,13 @@
 Andrés Julián Aragón Guerrero
 
+Versiones:
+
+1.0V Creación de Modelos y Vistas
+
+2.0V Creación de Tablas y Campos
+
+3.0V Creación de relaciones
+
 Para realizar la programación de la base de datos he seguido el tutorial de YouTube
 "Cómo hacer un CRUD en Laravel paso a paso, gratis y desde cero" del canal Develoteca
 
@@ -27,7 +35,7 @@ https://www.youtube.com/watch?v=GFo3N9RNu8U
 
 php artisan make:model Explotacion  -cr
 
-php artisan make:migration create_explotaciones_table
+php artisan make:migration create_explotacions_table
 
 //En un principio, el códido en el archivo app.blade.php era: 
     <a class="nav-link" href="{{ route('explotacion.index') }}">{{ __('Registro de las explotaciones') }}</a>
