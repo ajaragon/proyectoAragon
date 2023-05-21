@@ -10,7 +10,7 @@
         @endif
     </div>
     
-    <a href="{{ url('administrador/create') }}" >Crear nuevo registro</a>
+    <a href="{{ url('matarife/create') }}" >Crear nuevo registro</a>
     <table class="table">
         <thead>
             <tr>
@@ -27,21 +27,21 @@
         </thead>
         <tbody>
             <!--Blade-->
-            @foreach($administradors as $administrador)
+            @foreach($matarives as $matarife)
             <tr>
                 <!--Como aparezcan en MyAdmin-->
-                <td>{{ $administrador->id }}</td>
-                <td>{{ $administrador->DNI }}</td>
-                <td>{{ $administrador->Nombre }}</td>
-                <td>{{ $administrador->Apellido1 }}</td>
-                <td>{{ $administrador->Apellido2 }}</td>
-                <td>{{ $administrador->Telefono }}</td>
-                <td>{{ $administrador->Correo_Electronico }}</td>
-                <td>{{ $administrador->Provincia }}</td>
+                <td>{{ $matarife->id }}</td>
+                <td>{{ $matarife->DNI }}</td>
+                <td>{{ $matarife->Nombre }}</td>
+                <td>{{ $matarife->Apellido1 }}</td>
+                <td>{{ $matarife->Apellido2 }}</td>
+                <td>{{ $matarife->Telefono }}</td>
+                <td>{{ $matarife->Correo_Electronico }}</td>
+                <td>{{ $matarife->Provincia }}</td>
                 <td>
-                    <a href="{{ url('/administrador/'.$administrador->id.'/edit') }}">Editar</a>
+                    <a href="{{ url('/matarife/'.$matarife->id.'/edit') }}">Editar</a>
                     
-                    <form action="{{ url('/administrador/'.$administrador->id) }}" method="post">
+                    <form action="{{ url('/matarife/'.$matarife->id) }}" method="post">
                     @csrf    
                         {{ method_field('DELETE') }} 
                         <input  type="submit" id="borrar" value="Eliminar" 
@@ -52,6 +52,6 @@
             @endforeach
         </tbody>
     </table>
-    {!! $administradors->links() !!}
+    {!! $matarives->links() !!}
 </div>
 @endsection

@@ -23,27 +23,25 @@ class VeterinarioController extends Controller
 
         $campos =
         [
+            'NUM_Colegiado'=>'required|string|max:9',
             'DNI'=>'required|string|max:9',
             'Nombre'=>'required|string|max:20',
             'Apellido1'=>'required|string|max:20',
             'Apellido2'=>'required|string|max:20',
             'Telefono'=>'required|string|max:9',
-            'Calle'=>'required|string|max:30',
-            'Localidad'=>'required|string|max:20',
-            'Comarca'=>'required|string|max:20',
+            'Correo_Electronico'=>'required|string|max:30',
             'Provincia'=>'required|string|max:20',
         ];
         
         $mensaje =
         [
+            'NUM_Colegiado.required'=>'Debe introducir el número de colegiado',
             'DNI.required'=>'Debe introducir el DNI',
             'Nombre.required'=>'Debe introducir el nombre',
             'Apellido1.required'=>'Debe introducir el primer apellido',
             'Apellido2.required'=>'Debe introducir el segundo apellido',
             'Telefono.required'=>'Debe introducir el teléfono',
-            'Calle.required'=>'Debe introducir la calle',
-            'Localidad.required'=>'Debe introducir la localidad',
-            'Comarca.required'=>'Debe introducir la comarca',
+            'Correo_Electronico.required'=>'Debe introducir el correo electrónico',
             'Provincia.required'=>'Debe introducir la provincia',
         ];
         
@@ -71,31 +69,28 @@ class VeterinarioController extends Controller
     
         $campos =
         [
+            'NUM_Colegiado'=>'required|string|max:9',
             'DNI'=>'required|string|max:9',
             'Nombre'=>'required|string|max:20',
             'Apellido1'=>'required|string|max:20',
             'Apellido2'=>'required|string|max:20',
             'Telefono'=>'required|string|max:9',
-            'Calle'=>'required|string|max:30',
-            'Localidad'=>'required|string|max:20',
-            'Comarca'=>'required|string|max:20',
+            'Correo_Electronico'=>'required|string|max:30',
             'Provincia'=>'required|string|max:20',
         ];
-
+        
         $mensaje =
         [
+            'NUM_Colegiado.required'=>'Debe introducir el número de colegiado',
             'DNI.required'=>'Debe introducir el DNI',
             'Nombre.required'=>'Debe introducir el nombre',
             'Apellido1.required'=>'Debe introducir el primer apellido',
             'Apellido2.required'=>'Debe introducir el segundo apellido',
             'Telefono.required'=>'Debe introducir el teléfono',
-            'Calle.required'=>'Debe introducir la calle',
-            'Localidad.required'=>'Debe introducir la localidad',
-            'Comarca.required'=>'Debe introducir la comarca',
+            'Correo_Electronico.required'=>'Debe introducir el correo electrónico',
             'Provincia.required'=>'Debe introducir la provincia',
         ];
         
-
         $this->validate($request, $campos, $mensaje);
 
         //----------------------------------------------------------------------------------------------------\\

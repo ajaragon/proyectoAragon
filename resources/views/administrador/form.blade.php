@@ -22,17 +22,9 @@
     <input  type="text" id="Telefono" name="Telefono" 
             value="{{ isset($administrador->Telefono)?$administrador->Telefono:old('Telefono') }}"><br>
 
-    <label  for="Calle"> Calle: </label>
-    <input  type="text" id="Calle" name="Calle" 
-            value="{{ isset($administrador->Calle)?$administrador->Calle:old('Calle') }}"><br>
-
-    <label  for="Localidad"> Localidad: </label>
-    <input  type="text" id="Localidad" name="Localidad" 
-            value="{{ isset($administrador->Localidad)?$administrador->Localidad:old('Localidad') }}"><br>
-
-    <label  for="Comarca"> Comarca: </label>
-    <input  type="text" id="Comarca" name="Comarca" 
-            value="{{ isset($administrador->Comarca)?$administrador->Comarca:old('Comarca') }}"><br>
+    <label  for="Correo_Electronico"> Correo electrónico: </label>
+    <input  type="text" id="Correo_Electronico" name="Correo_Electronico" 
+            value="{{ isset($administrador->Correo_Electronico)?$administrador->Correo_Electronico:old('Correo_Electronico') }}"><br>
 
     <label  for="Provincia"> Provincia: </label>
     <input  type="text" id="Provincia" name="Provincia" 

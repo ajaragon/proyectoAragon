@@ -2,10 +2,6 @@
     
     <h1>{{ $modo }}</h1><hr>
 
-    <label  for="NUM_Colegiado"> Número de colegiado: </label>
-    <input  type="text" id="NUM_Colegiado" name="NUM_Colegiado" 
-            value="{{ isset($administrador->NUM_Colegiado)?$administrador->NUM_Colegiado:old('NUM_Colegiado') }}"><br> 
-
     <label  for="DNI"> DNI: </label>
     <input  type="text" id="DNI" name="DNI" 
             value="{{ isset($administrador->DNI)?$administrador->DNI:old('DNI') }}"><br> 
@@ -35,7 +31,7 @@
             value="{{ isset($administrador->Provincia)?$administrador->Provincia:old('Provincia') }}"><br>
 
     <label  for="Añadir">  </label>
-    <input  type="submit" id="AgregarVeterinario" value="{{ $modo }}"><hr>
+    <input  type="submit" id="AgregarMatarife" value="{{ $modo }}"><hr>
     
     <div>
         <ul>
@@ -47,5 +43,5 @@
         </ul>
     </div>
 
-    <a href="{{ url('veterinario/') }}" >Volver</a>
+    <a href="{{ url('matarife/') }}" >Volver</a>
 <!--fin del formulario por defecto-->

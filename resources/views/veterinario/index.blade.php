@@ -15,14 +15,13 @@
         <thead>
             <tr>
                 <th>Código</th><!--id MyAdmin-->
+                <th>Número del colegiado</th>
                 <th>DNI</th>
                 <th>Nombre</th>
                 <th>Primer apellido</th>
                 <th>Segundo apellido</th>
                 <th>Teléfono</th>
-                <th>Calle</th>
-                <th>Localidad</th>
-                <th>Comarca</th>
+                <th>Correo electrónico</th>
                 <th>Provincia</th>
                 <th>Funciones</th><!--CRUD-->
             </tr>
@@ -33,14 +32,13 @@
             <tr>
                 <!--Como aparezcan en MyAdmin-->
                 <td>{{ $veterinario->id }}</td>
+                <td>{{ $veterinario->NUM_Colegiado }}</td>
                 <td>{{ $veterinario->DNI }}</td>
                 <td>{{ $veterinario->Nombre }}</td>
                 <td>{{ $veterinario->Apellido1 }}</td>
                 <td>{{ $veterinario->Apellido2 }}</td>
                 <td>{{ $veterinario->Telefono }}</td>
-                <td>{{ $veterinario->Calle }}</td>
-                <td>{{ $veterinario->Localidad }}</td>
-                <td>{{ $veterinario->Comarca }}</td>
+                <td>{{ $veterinario->Correo_Electronico }}</td>
                 <td>{{ $veterinario->Provincia }}</td>
                 <td>
                     <a href="{{ url('/veterinario/'.$veterinario->id.'/edit') }}">Editar</a>

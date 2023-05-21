@@ -42,9 +42,7 @@ class GanaderoController extends Controller
             'Apellido1'=>'required|string|max:20',
             'Apellido2'=>'required|string|max:20',
             'Telefono'=>'required|string|max:9',
-            'Calle'=>'required|string|max:30',
-            'Localidad'=>'required|string|max:20',
-            'Comarca'=>'required|string|max:20',
+            'Correo_Electronico'=>'required|string|max:30',
             'Provincia'=>'required|string|max:20',
         ];
 
@@ -58,19 +56,16 @@ class GanaderoController extends Controller
             'Apellido1.required'=>'Debe introducir el primer apellido',
             'Apellido2.required'=>'Debe introducir el segundo apellido',
             'Telefono.required'=>'Debe introducir el teléfono',
-            'Calle.required'=>'Debe introducir la calle',
-            'Localidad.required'=>'Debe introducir la localidad',
-            'Comarca.required'=>'Debe introducir la comarca',
+            'Correo_Electronico.required'=>'Debe introducir la calle',
             'Provincia.required'=>'Debe introducir la provincia',
         ];
         
-
         $this->validate($request, $campos, $mensaje);
 
         //$datosGanadero =request()->all();             //todos los datos recibidos desde el formulario
         $datosGanadero =request()->except('_token');    //recibe todos los datos del registro excepto el token
         Ganadero::insert($datosGanadero);               //a la base de datos le inserta todos los datos que recibe
-        //return response()->json($datosGanadero);        //y los va a enviar en un archivo json
+        //return response()->json($datosGanadero);      //y los va a enviar en un archivo json
         //Se dice que redireccione hacia la vista ganadero una vez introducidos los datos,
         //además, consecuentemente, se mostrará en pantalla la información 
         //de que se guardó un nuevo registro
@@ -111,15 +106,12 @@ class GanaderoController extends Controller
             'Apellido1'=>'required|string|max:20',
             'Apellido2'=>'required|string|max:20',
             'Telefono'=>'required|string|max:9',
-            'Calle'=>'required|string|max:30',
-            'Localidad'=>'required|string|max:20',
-            'Comarca'=>'required|string|max:20',
+            'Correo_Electronico'=>'required|string|max:30',
             'Provincia'=>'required|string|max:20',
         ];
 
         //$mensaje =['required'=>'El :attribute es obligatorio'];
 
-        
         $mensaje =
         [
             'DNI.required'=>'Debe introducir el DNI',
@@ -127,12 +119,9 @@ class GanaderoController extends Controller
             'Apellido1.required'=>'Debe introducir el primer apellido',
             'Apellido2.required'=>'Debe introducir el segundo apellido',
             'Telefono.required'=>'Debe introducir el teléfono',
-            'Calle.required'=>'Debe introducir la calle',
-            'Localidad.required'=>'Debe introducir la localidad',
-            'Comarca.required'=>'Debe introducir la comarca',
+            'Correo_Electronico.required'=>'Debe introducir la calle',
             'Provincia.required'=>'Debe introducir la provincia',
         ];
-        
 
         $this->validate($request, $campos, $mensaje);
 

@@ -9,7 +9,7 @@ class AdministradorController extends Controller
 {
     public function index()
     {
-        $datos['administradores'] =Administrador::paginate(10);
+        $datos['administradors'] =Administrador::paginate(10);
         return view('administrador.index', $datos);
     }
 
@@ -28,9 +28,7 @@ class AdministradorController extends Controller
             'Apellido1'=>'required|string|max:20',
             'Apellido2'=>'required|string|max:20',
             'Telefono'=>'required|string|max:9',
-            'Calle'=>'required|string|max:30',
-            'Localidad'=>'required|string|max:20',
-            'Comarca'=>'required|string|max:20',
+            'Correo_Electronico'=>'required|string|max:30',
             'Provincia'=>'required|string|max:20',
         ];
         
@@ -41,9 +39,7 @@ class AdministradorController extends Controller
             'Apellido1.required'=>'Debe introducir el primer apellido',
             'Apellido2.required'=>'Debe introducir el segundo apellido',
             'Telefono.required'=>'Debe introducir el teléfono',
-            'Calle.required'=>'Debe introducir la calle',
-            'Localidad.required'=>'Debe introducir la localidad',
-            'Comarca.required'=>'Debe introducir la comarca',
+            'Correo_Electronico.required'=>'Debe introducir el correo electrónico',
             'Provincia.required'=>'Debe introducir la provincia',
         ];
         
@@ -76,12 +72,10 @@ class AdministradorController extends Controller
             'Apellido1'=>'required|string|max:20',
             'Apellido2'=>'required|string|max:20',
             'Telefono'=>'required|string|max:9',
-            'Calle'=>'required|string|max:30',
-            'Localidad'=>'required|string|max:20',
-            'Comarca'=>'required|string|max:20',
+            'Correo_Electronico'=>'required|string|max:30',
             'Provincia'=>'required|string|max:20',
         ];
-
+        
         $mensaje =
         [
             'DNI.required'=>'Debe introducir el DNI',
@@ -89,9 +83,7 @@ class AdministradorController extends Controller
             'Apellido1.required'=>'Debe introducir el primer apellido',
             'Apellido2.required'=>'Debe introducir el segundo apellido',
             'Telefono.required'=>'Debe introducir el teléfono',
-            'Calle.required'=>'Debe introducir la calle',
-            'Localidad.required'=>'Debe introducir la localidad',
-            'Comarca.required'=>'Debe introducir la comarca',
+            'Correo_Electronico.required'=>'Debe introducir el correo electrónico',
             'Provincia.required'=>'Debe introducir la provincia',
         ];
         

@@ -22,7 +22,7 @@
     </div>
 
     <!--Links hacia las diferentes vistas-->
-    <a href="{{ url('ganadero/create') }}" >Crear ganadero</a>
+    <a href="{{ url('ganadero/create') }}" >Crear nuevo registro</a>
     <table class="table">
         <thead>
             <tr>
@@ -32,9 +32,7 @@
                 <th>Primer apellido</th>
                 <th>Segundo apellido</th>
                 <th>Teléfono</th>
-                <th>Calle</th>
-                <th>Localidad</th>
-                <th>Comarca</th>
+                <th>Correo electrónico</th>
                 <th>Provincia</th>
                 <th>Funciones</th><!--CRUD-->
             </tr>
@@ -50,9 +48,7 @@
                 <td>{{ $ganadero->Apellido1 }}</td>
                 <td>{{ $ganadero->Apellido2 }}</td>
                 <td>{{ $ganadero->Telefono }}</td>
-                <td>{{ $ganadero->Calle }}</td>
-                <td>{{ $ganadero->Localidad }}</td>
-                <td>{{ $ganadero->Comarca }}</td>
+                <td>{{ $ganadero->Correo_Electronico }}</td>
                 <td>{{ $ganadero->Provincia }}</td>
                 <td>
                     <!--Añadir opción de actualizar y eliminar-->

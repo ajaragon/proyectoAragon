@@ -31,28 +31,28 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="explotacion.index">{{ __('Registro de las explotaciones ganaderas') }}</a>
+                            <a class="nav-link" href="explotacion">{{ __('Registro de las explotaciones ganaderas') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="camara.index">{{ __('Registro de las cámaras frigoríficas') }}</a>
+                            <a class="nav-link" href="camara">{{ __('Registro de las cámaras frigoríficas') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="especie.index">{{ __('Registro de las especies') }}</a>
+                            <a class="nav-link" href="especie">{{ __('Registro de las especies') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ganadero.index">{{ __('Registro de los ganaderos') }}</a>
+                            <a class="nav-link" href="ganadero">{{ __('Registro de los ganaderos') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ganado.index">{{ __('Registro del ganado') }}</a>
+                            <a class="nav-link" href="ganado">{{ __('Registro del ganado') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="administrador.index">{{ __('Registro de los administradores') }}</a>
+                            <a class="nav-link" href="administrador">{{ __('Registro de los administradores') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="veterinario.index">{{ __('Registro de los veterinarios') }}</a>
+                            <a class="nav-link" href="veterinario">{{ __('Registro de los veterinarios') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="matarife.index">{{ __('Registro de los matarifes') }}</a>
+                            <a class="nav-link" href="matarife">{{ __('Registro de los matarifes') }}</a>
                         </li>
                     </ul>
 

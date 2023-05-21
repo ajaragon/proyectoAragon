@@ -23,28 +23,24 @@ class GanadoController extends Controller
 
         $campos =
         [
-            'DNI'=>'required|string|max:9',
-            'Nombre'=>'required|string|max:20',
-            'Apellido1'=>'required|string|max:20',
-            'Apellido2'=>'required|string|max:20',
-            'Telefono'=>'required|string|max:9',
-            'Calle'=>'required|string|max:30',
-            'Localidad'=>'required|string|max:20',
-            'Comarca'=>'required|string|max:20',
-            'Provincia'=>'required|string|max:20',
+            'ID_ANIMAL'=>'required|string|max:9',
+            'NUM_Crotal'=>'required|string|max:20',
+            'L_Engorde'=>'required|string|max:50',
+            'L_Nacimiento'=>'required|string|max:50',
+            'F_Nacimiento'=>'required|string|max:10',
+            'L_Sacrificio'=>'required|string|max:50',
+            'F_Sacrificio'=>'required|string|max:10',
         ];
-        
+
         $mensaje =
         [
-            'DNI.required'=>'Debe introducir el DNI',
-            'Nombre.required'=>'Debe introducir el nombre',
-            'Apellido1.required'=>'Debe introducir el primer apellido',
-            'Apellido2.required'=>'Debe introducir el segundo apellido',
-            'Telefono.required'=>'Debe introducir el teléfono',
-            'Calle.required'=>'Debe introducir la calle',
-            'Localidad.required'=>'Debe introducir la localidad',
-            'Comarca.required'=>'Debe introducir la comarca',
-            'Provincia.required'=>'Debe introducir la provincia',
+            'ID_ANIMAL.required'=>'Debe introducir el identificador del animal',
+            'NUM_Crotal.required'=>'Debe introducir el número del crotal',
+            'L_Engorde.required'=>'Debe introducir el lugar de engorde',
+            'L_Nacimiento.required'=>'Debe introducir el lugar de nacimiento',
+            'F_Nacimiento.required'=>'Debe introducir la fecha de nacimiento',
+            'L_Sacrificio.required'=>'Debe introducir el lugar de sacrificio',
+            'F_Sacrificio.required'=>'Debe introducir la fecha de sacrifio',
         ];
         
         $this->validate($request, $campos, $mensaje);
@@ -71,31 +67,26 @@ class GanadoController extends Controller
     
         $campos =
         [
-            'DNI'=>'required|string|max:9',
-            'Nombre'=>'required|string|max:20',
-            'Apellido1'=>'required|string|max:20',
-            'Apellido2'=>'required|string|max:20',
-            'Telefono'=>'required|string|max:9',
-            'Calle'=>'required|string|max:30',
-            'Localidad'=>'required|string|max:20',
-            'Comarca'=>'required|string|max:20',
-            'Provincia'=>'required|string|max:20',
+            'ID_ANIMAL'=>'required|string|max:9',
+            'NUM_Crotal'=>'required|string|max:20',
+            'L_Engorde'=>'required|string|max:50',
+            'L_Nacimiento'=>'required|string|max:50',
+            'F_Nacimiento'=>'required|string|max:10',
+            'L_Sacrificio'=>'required|string|max:50',
+            'F_Sacrificio'=>'required|string|max:10',
         ];
 
         $mensaje =
         [
-            'DNI.required'=>'Debe introducir el DNI',
-            'Nombre.required'=>'Debe introducir el nombre',
-            'Apellido1.required'=>'Debe introducir el primer apellido',
-            'Apellido2.required'=>'Debe introducir el segundo apellido',
-            'Telefono.required'=>'Debe introducir el teléfono',
-            'Calle.required'=>'Debe introducir la calle',
-            'Localidad.required'=>'Debe introducir la localidad',
-            'Comarca.required'=>'Debe introducir la comarca',
-            'Provincia.required'=>'Debe introducir la provincia',
+            'ID_ANIMAL.required'=>'Debe introducir el identificador del animal',
+            'NUM_Crotal.required'=>'Debe introducir el número del crotal',
+            'L_Engorde.required'=>'Debe introducir el lugar de engorde',
+            'L_Nacimiento.required'=>'Debe introducir el lugar de nacimiento',
+            'F_Nacimiento.required'=>'Debe introducir la fecha de nacimiento',
+            'L_Sacrificio.required'=>'Debe introducir el lugar de sacrificio',
+            'F_Sacrificio.required'=>'Debe introducir la fecha de sacrifio',
         ];
         
-
         $this->validate($request, $campos, $mensaje);
 
         //----------------------------------------------------------------------------------------------------\\

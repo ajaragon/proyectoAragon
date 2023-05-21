@@ -15,15 +15,9 @@
         <thead>
             <tr>
                 <th>Código</th><!--id MyAdmin-->
-                <th>DNI</th>
-                <th>Nombre</th>
-                <th>Primer apellido</th>
-                <th>Segundo apellido</th>
-                <th>Teléfono</th>
-                <th>Calle</th>
-                <th>Localidad</th>
-                <th>Comarca</th>
-                <th>Provincia</th>
+                <th>Número de cámara</th>
+                <th>Capacidad</th>
+                <th>Temperatura media</th>
                 <th>Funciones</th><!--CRUD-->
             </tr>
         </thead>
@@ -33,15 +27,9 @@
             <tr>
                 <!--Como aparezcan en MyAdmin-->
                 <td>{{ $camara->id }}</td>
-                <td>{{ $camara->DNI }}</td>
-                <td>{{ $camara->Nombre }}</td>
-                <td>{{ $camara->Apellido1 }}</td>
-                <td>{{ $camara->Apellido2 }}</td>
-                <td>{{ $camara->Telefono }}</td>
-                <td>{{ $camara->Calle }}</td>
-                <td>{{ $camara->Localidad }}</td>
-                <td>{{ $camara->Comarca }}</td>
-                <td>{{ $camara->Provincia }}</td>
+                <td>{{ $camara->Numero_Camara }}</td>
+                <td>{{ $camara->Capacidad }}</td>
+                <td>{{ $camara->Temperatura_Media }}</td>
                 <td>
                     <a href="{{ url('/camara/'.$camara->id.'/edit') }}">Editar</a>
                     

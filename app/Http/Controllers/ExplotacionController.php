@@ -9,7 +9,7 @@ class ExplotacionController extends Controller
 {
     public function index()
     {
-        $datos['explotaciones'] =Explotacion::paginate(10);
+        $datos['explotacions'] =Explotacion::paginate(10);
         return view('explotacion.index', $datos);
     }
 
@@ -23,28 +23,28 @@ class ExplotacionController extends Controller
 
         $campos =
         [
-            'DNI'=>'required|string|max:9',
-            'Nombre'=>'required|string|max:20',
-            'Apellido1'=>'required|string|max:20',
-            'Apellido2'=>'required|string|max:20',
+            'CIF'=>'required|string|max:9',
+            'Nombre_Explotacion'=>'required|string|max:20',
+            'Titular'=>'required|string|max:50',
             'Telefono'=>'required|string|max:9',
-            'Calle'=>'required|string|max:30',
-            'Localidad'=>'required|string|max:20',
+            'Correo_Electronico'=>'required|string|max:30',
+            'Direccion'=>'required|string|max:50',
             'Comarca'=>'required|string|max:20',
             'Provincia'=>'required|string|max:20',
+            'CP'=>'required|string|max:5',
         ];
         
         $mensaje =
         [
-            'DNI.required'=>'Debe introducir el DNI',
-            'Nombre.required'=>'Debe introducir el nombre',
-            'Apellido1.required'=>'Debe introducir el primer apellido',
-            'Apellido2.required'=>'Debe introducir el segundo apellido',
+            'CIF.required'=>'Debe introducir el CIF',
+            'Nombre_Explotacion.required'=>'Debe introducir el nombre de la explotación',
+            'Titular.required'=>'Debe introducir el titular de la explotación',
             'Telefono.required'=>'Debe introducir el teléfono',
-            'Calle.required'=>'Debe introducir la calle',
-            'Localidad.required'=>'Debe introducir la localidad',
+            'Correo_Electronico.required'=>'Debe introducir el correo electrónico',
+            'Direccion.required'=>'Debe introducir la dirección',
             'Comarca.required'=>'Debe introducir la comarca',
             'Provincia.required'=>'Debe introducir la provincia',
+            'CP.required'=>'Debe introducir el código postal',
         ];
         
         $this->validate($request, $campos, $mensaje);
@@ -71,31 +71,30 @@ class ExplotacionController extends Controller
     
         $campos =
         [
-            'DNI'=>'required|string|max:9',
-            'Nombre'=>'required|string|max:20',
-            'Apellido1'=>'required|string|max:20',
-            'Apellido2'=>'required|string|max:20',
+            'CIF'=>'required|string|max:9',
+            'Nombre_Explotacion'=>'required|string|max:20',
+            'Titular'=>'required|string|max:50',
             'Telefono'=>'required|string|max:9',
-            'Calle'=>'required|string|max:30',
-            'Localidad'=>'required|string|max:20',
+            'Correo_Electronico'=>'required|string|max:30',
+            'Direccion'=>'required|string|max:50',
             'Comarca'=>'required|string|max:20',
             'Provincia'=>'required|string|max:20',
-        ];
-
-        $mensaje =
-        [
-            'DNI.required'=>'Debe introducir el DNI',
-            'Nombre.required'=>'Debe introducir el nombre',
-            'Apellido1.required'=>'Debe introducir el primer apellido',
-            'Apellido2.required'=>'Debe introducir el segundo apellido',
-            'Telefono.required'=>'Debe introducir el teléfono',
-            'Calle.required'=>'Debe introducir la calle',
-            'Localidad.required'=>'Debe introducir la localidad',
-            'Comarca.required'=>'Debe introducir la comarca',
-            'Provincia.required'=>'Debe introducir la provincia',
+            'CP'=>'required|string|max:5',
         ];
         
-
+        $mensaje =
+        [
+            'CIF.required'=>'Debe introducir el CIF',
+            'Nombre_Explotacion.required'=>'Debe introducir el nombre de la explotación',
+            'Titular.required'=>'Debe introducir el titular de la explotación',
+            'Telefono.required'=>'Debe introducir el teléfono',
+            'Correo_Electronico.required'=>'Debe introducir el correo electrónico',
+            'Direccion.required'=>'Debe introducir la dirección',
+            'Comarca.required'=>'Debe introducir la comarca',
+            'Provincia.required'=>'Debe introducir la provincia',
+            'CP.required'=>'Debe introducir el código postal',
+        ];
+        
         $this->validate($request, $campos, $mensaje);
 
         //----------------------------------------------------------------------------------------------------\\

@@ -2,41 +2,33 @@
     
     <h1>{{ $modo }}</h1><hr>
 
-    <label  for="DNI"> DNI: </label>
-    <input  type="text" id="DNI" name="DNI" 
-            value="{{ isset($ganado->DNI)?$ganado->DNI:old('DNI') }}"><br> 
+    <label  for="ID_ANIMAL"> Identificar del animal: </label>
+    <input  type="text" id="ID_ANIMAL" name="ID_ANIMAL" 
+            value="{{ isset($ganado->ID_ANIMAL)?$ganado->ID_ANIMAL:old('ID_ANIMAL') }}"><br> 
 
-    <label  for="Nombre"> Nombre: </label>
-    <input  type="text" id="Nombre" name="Nombre" 
-            value="{{ isset($ganado->Nombre)?$ganado->Nombre:old('Nombre') }}"><br>
+    <label  for="NUM_Crotal"> Número del crotal: </label>
+    <input  type="text" id="NUM_Crotal" name="NUM_Crotal" 
+            value="{{ isset($ganado->NUM_Crotal)?$ganado->NUM_Crotal:old('NUM_Crotal') }}"><br>
 
-    <label  for="Apellido1"> Primer apellido: </label>
-    <input  type="text" id="Apellido1" name="Apellido1" 
-            value="{{ isset($ganado->Apellido1)?$ganado->Apellido1:old('Apellido1') }}"><br>
+    <label  for="L_Engorde"> Lugar de engorde: </label>
+    <input  type="text" id="L_Engorde" name="L_Engorde" 
+            value="{{ isset($ganado->L_Engorde)?$ganado->L_Engorde:old('L_Engorde') }}"><br>
 
-    <label  for="Apellido2"> Segundo apellido: </label>
-    <input  type="text" id="Apellido2" name="Apellido2" 
-            value="{{ isset($ganado->Apellido2)?$ganado->Apellido2:old('Apellido2') }}"><br>
+    <label  for="L_Nacimiento"> Lugar de nacimiento: </label>
+    <input  type="text" id="L_Nacimiento" name="L_Nacimiento" 
+            value="{{ isset($ganado->L_Nacimiento)?$ganado->L_Nacimiento:old('L_Nacimiento') }}"><br>
 
-    <label  for="Telefono"> Teléfono: </label>
-    <input  type="text" id="Telefono" name="Telefono" 
-            value="{{ isset($ganado->Telefono)?$ganado->Telefono:old('Telefono') }}"><br>
+    <label  for="F_Nacimiento"> Fecha de nacimiento: </label>
+    <input  type="text" id="F_Nacimiento" name="F_Nacimiento" 
+            value="{{ isset($ganado->F_Nacimiento)?$ganado->F_Nacimiento:old('F_Nacimiento') }}"><br>
 
-    <label  for="Calle"> Calle: </label>
-    <input  type="text" id="Calle" name="Calle" 
-            value="{{ isset($ganado->Calle)?$ganado->Calle:old('Calle') }}"><br>
+    <label  for="L_Sacrificio"> Lugar de sacrificio: </label>
+    <input  type="text" id="L_Sacrificio" name="L_Sacrificio" 
+            value="{{ isset($ganado->L_Sacrificio)?$ganado->L_Sacrificio:old('L_Sacrificio') }}"><br>
 
-    <label  for="Localidad"> Localidad: </label>
-    <input  type="text" id="Localidad" name="Localidad" 
-            value="{{ isset($ganado->Localidad)?$ganado->Localidad:old('Localidad') }}"><br>
-
-    <label  for="Comarca"> Comarca: </label>
-    <input  type="text" id="Comarca" name="Comarca" 
-            value="{{ isset($ganado->Comarca)?$ganado->Comarca:old('Comarca') }}"><br>
-
-    <label  for="Provincia"> Provincia: </label>
-    <input  type="text" id="Provincia" name="Provincia" 
-            value="{{ isset($ganado->Provincia)?$ganado->Provincia:old('Provincia') }}"><br>
+    <label  for="F_Sacrificio"> Fecha de sacrificio: </label>
+    <input  type="text" id="F_Sacrificio" name="F_Sacrificio" 
+            value="{{ isset($ganado->F_Sacrificio)?$ganado->F_Sacrificio:old('F_Sacrificio') }}"><br>
 
     <label  for="Añadir">  </label>
     <input  type="submit" id="AgregarGanado" value="{{ $modo }}"><hr>

@@ -15,15 +15,8 @@
         <thead>
             <tr>
                 <th>Código</th><!--id MyAdmin-->
-                <th>DNI</th>
-                <th>Nombre</th>
-                <th>Primer apellido</th>
-                <th>Segundo apellido</th>
-                <th>Teléfono</th>
-                <th>Calle</th>
-                <th>Localidad</th>
-                <th>Comarca</th>
-                <th>Provincia</th>
+                <th>Identificador de la especie</th>
+                <th>Descripcion</th>
                 <th>Funciones</th><!--CRUD-->
             </tr>
         </thead>
@@ -33,15 +26,8 @@
             <tr>
                 <!--Como aparezcan en MyAdmin-->
                 <td>{{ $especie->id }}</td>
-                <td>{{ $especie->DNI }}</td>
-                <td>{{ $especie->Nombre }}</td>
-                <td>{{ $especie->Apellido1 }}</td>
-                <td>{{ $especie->Apellido2 }}</td>
-                <td>{{ $especie->Telefono }}</td>
-                <td>{{ $especie->Calle }}</td>
-                <td>{{ $especie->Localidad }}</td>
-                <td>{{ $especie->Comarca }}</td>
-                <td>{{ $especie->Provincia }}</td>
+                <td>{{ $especie->ID_Especie }}</td>
+                <td>{{ $especie->Descripcion }}</td>
                 <td>
                     <a href="{{ url('/especie/'.$especie->id.'/edit') }}">Editar</a>
                     

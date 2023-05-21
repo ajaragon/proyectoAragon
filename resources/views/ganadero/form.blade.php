@@ -37,17 +37,9 @@
     <input  type="text" id="Telefono" name="Telefono" 
             value="{{ isset($ganadero->Telefono)?$ganadero->Telefono:old('Telefono') }}"><br>
 
-    <label  for="Calle"> Calle: </label>
-    <input  type="text" id="Calle" name="Calle" 
-            value="{{ isset($ganadero->Calle)?$ganadero->Calle:old('Calle') }}"><br>
-
-    <label  for="Localidad"> Localidad: </label>
-    <input  type="text" id="Localidad" name="Localidad" 
-            value="{{ isset($ganadero->Localidad)?$ganadero->Localidad:old('Localidad') }}"><br>
-
-    <label  for="Comarca"> Comarca: </label>
-    <input  type="text" id="Comarca" name="Comarca" 
-            value="{{ isset($ganadero->Comarca)?$ganadero->Comarca:old('Comarca') }}"><br>
+    <label  for="Correo_Electronico"> Correo electrónico: </label>
+    <input  type="text" id="Correo_Electronico" name="Correo_Electronico" 
+            value="{{ isset($ganadero->Correo_Electronico)?$ganadero->Correo_Electronico:old('Correo_Electronico') }}"><br>
 
     <label  for="Provincia"> Provincia: </label>
     <input  type="text" id="Provincia" name="Provincia" 

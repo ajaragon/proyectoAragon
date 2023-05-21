@@ -23,28 +23,17 @@ class CamaraController extends Controller
 
         $campos =
         [
-            'DNI'=>'required|string|max:9',
-            'Nombre'=>'required|string|max:20',
-            'Apellido1'=>'required|string|max:20',
-            'Apellido2'=>'required|string|max:20',
-            'Telefono'=>'required|string|max:9',
-            'Calle'=>'required|string|max:30',
-            'Localidad'=>'required|string|max:20',
-            'Comarca'=>'required|string|max:20',
-            'Provincia'=>'required|string|max:20',
+            'Numero_Camara'=>'required|string|max:2',
+            'Capacidad'=>'required|string|max:3',
+            'Temperatura_Media'=>'required|string|max:2'
         ];
         
         $mensaje =
         [
-            'DNI.required'=>'Debe introducir el DNI',
-            'Nombre.required'=>'Debe introducir el nombre',
-            'Apellido1.required'=>'Debe introducir el primer apellido',
-            'Apellido2.required'=>'Debe introducir el segundo apellido',
-            'Telefono.required'=>'Debe introducir el teléfono',
-            'Calle.required'=>'Debe introducir la calle',
-            'Localidad.required'=>'Debe introducir la localidad',
-            'Comarca.required'=>'Debe introducir la comarca',
-            'Provincia.required'=>'Debe introducir la provincia',
+            'Numero_Camara.required'=>'Debe introducir el número de la cámara frigorífica',
+            'Capacidad.required'=>'Debe introducir la capacidad de la cámara',
+            'Temperatura_Media.required'=>'Debe introducir la temperatura media',
+
         ];
         
         $this->validate($request, $campos, $mensaje);
@@ -71,28 +60,17 @@ class CamaraController extends Controller
     
         $campos =
         [
-            'DNI'=>'required|string|max:9',
-            'Nombre'=>'required|string|max:20',
-            'Apellido1'=>'required|string|max:20',
-            'Apellido2'=>'required|string|max:20',
-            'Telefono'=>'required|string|max:9',
-            'Calle'=>'required|string|max:30',
-            'Localidad'=>'required|string|max:20',
-            'Comarca'=>'required|string|max:20',
-            'Provincia'=>'required|string|max:20',
+            'Numero_Camara'=>'required|string|max:2',
+            'Capacidad'=>'required|string|max:3',
+            'Temperatura_Media'=>'required|string|max:2'
         ];
-
+        
         $mensaje =
         [
-            'DNI.required'=>'Debe introducir el DNI',
-            'Nombre.required'=>'Debe introducir el nombre',
-            'Apellido1.required'=>'Debe introducir el primer apellido',
-            'Apellido2.required'=>'Debe introducir el segundo apellido',
-            'Telefono.required'=>'Debe introducir el teléfono',
-            'Calle.required'=>'Debe introducir la calle',
-            'Localidad.required'=>'Debe introducir la localidad',
-            'Comarca.required'=>'Debe introducir la comarca',
-            'Provincia.required'=>'Debe introducir la provincia',
+            'Numero_Camara.required'=>'Debe introducir el número de la cámara frigorífica',
+            'Capacidad.required'=>'Debe introducir la capacidad de la cámara',
+            'Temperatura_Media.required'=>'Debe introducir la temperatura media',
+
         ];
         
 

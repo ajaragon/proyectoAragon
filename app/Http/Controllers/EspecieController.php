@@ -23,28 +23,14 @@ class EspecieController extends Controller
 
         $campos =
         [
-            'DNI'=>'required|string|max:9',
-            'Nombre'=>'required|string|max:20',
-            'Apellido1'=>'required|string|max:20',
-            'Apellido2'=>'required|string|max:20',
-            'Telefono'=>'required|string|max:9',
-            'Calle'=>'required|string|max:30',
-            'Localidad'=>'required|string|max:20',
-            'Comarca'=>'required|string|max:20',
-            'Provincia'=>'required|string|max:20',
+            'ID_Especie'=>'required|string|max:1',
+            'Descripcion'=>'required|string|max:10',
         ];
-        
+
         $mensaje =
         [
-            'DNI.required'=>'Debe introducir el DNI',
-            'Nombre.required'=>'Debe introducir el nombre',
-            'Apellido1.required'=>'Debe introducir el primer apellido',
-            'Apellido2.required'=>'Debe introducir el segundo apellido',
-            'Telefono.required'=>'Debe introducir el teléfono',
-            'Calle.required'=>'Debe introducir la calle',
-            'Localidad.required'=>'Debe introducir la localidad',
-            'Comarca.required'=>'Debe introducir la comarca',
-            'Provincia.required'=>'Debe introducir la provincia',
+            'ID_Especie.required'=>'Debe introducir el identificador de la especie',
+            'Descripcion.required'=>'Debe introducir la descripción',
         ];
         
         $this->validate($request, $campos, $mensaje);
@@ -71,28 +57,14 @@ class EspecieController extends Controller
     
         $campos =
         [
-            'DNI'=>'required|string|max:9',
-            'Nombre'=>'required|string|max:20',
-            'Apellido1'=>'required|string|max:20',
-            'Apellido2'=>'required|string|max:20',
-            'Telefono'=>'required|string|max:9',
-            'Calle'=>'required|string|max:30',
-            'Localidad'=>'required|string|max:20',
-            'Comarca'=>'required|string|max:20',
-            'Provincia'=>'required|string|max:20',
+            'ID_Especie'=>'required|string|max:1',
+            'Descripcion'=>'required|string|max:10',
         ];
 
         $mensaje =
         [
-            'DNI.required'=>'Debe introducir el DNI',
-            'Nombre.required'=>'Debe introducir el nombre',
-            'Apellido1.required'=>'Debe introducir el primer apellido',
-            'Apellido2.required'=>'Debe introducir el segundo apellido',
-            'Telefono.required'=>'Debe introducir el teléfono',
-            'Calle.required'=>'Debe introducir la calle',
-            'Localidad.required'=>'Debe introducir la localidad',
-            'Comarca.required'=>'Debe introducir la comarca',
-            'Provincia.required'=>'Debe introducir la provincia',
+            'ID_Especie.required'=>'Debe introducir el identificador de la especie',
+            'Descripcion.required'=>'Debe introducir la descripción',
         ];
         
 

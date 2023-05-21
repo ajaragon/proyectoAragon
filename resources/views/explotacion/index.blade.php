@@ -15,33 +15,33 @@
         <thead>
             <tr>
                 <th>Código</th><!--id MyAdmin-->
-                <th>DNI</th>
-                <th>Nombre</th>
-                <th>Primer apellido</th>
-                <th>Segundo apellido</th>
+                <th>CIF</th>
+                <th>Nombre de la explotación</th>
+                <th>Titular</th>
                 <th>Teléfono</th>
-                <th>Calle</th>
-                <th>Localidad</th>
+                <th>Correo electrónico</th>
+                <th>Direccion</th>
                 <th>Comarca</th>
                 <th>Provincia</th>
+                <th>Código postal</th>
                 <th>Funciones</th><!--CRUD-->
             </tr>
         </thead>
         <tbody>
             <!--Blade-->
-            @foreach($explotaciones as $explotacion)
+            @foreach($explotacions as $explotacion)
             <tr>
                 <!--Como aparezcan en MyAdmin-->
                 <td>{{ $explotacion->id }}</td>
-                <td>{{ $explotacion->DNI }}</td>
-                <td>{{ $explotacion->Nombre }}</td>
-                <td>{{ $explotacion->Apellido1 }}</td>
-                <td>{{ $explotacion->Apellido2 }}</td>
+                <td>{{ $explotacion->CIF }}</td>
+                <td>{{ $explotacion->Nombre_Explotacion }}</td>
+                <td>{{ $explotacion->Titular }}</td>
                 <td>{{ $explotacion->Telefono }}</td>
-                <td>{{ $explotacion->Calle }}</td>
-                <td>{{ $explotacion->Localidad }}</td>
+                <td>{{ $explotacion->Correo_Electronico }}</td>
+                <td>{{ $explotacion->Direccion }}</td>
                 <td>{{ $explotacion->Comarca }}</td>
                 <td>{{ $explotacion->Provincia }}</td>
+                <td>{{ $explotacion->CP }}</td>
                 <td>
                     <a href="{{ url('/explotacion/'.$explotacion->id.'/edit') }}">Editar</a>
                     
@@ -56,6 +56,6 @@
             @endforeach
         </tbody>
     </table>
-    {!! $explotaciones->links() !!}
+    {!! $explotacions->links() !!}
 </div>
 @endsection
