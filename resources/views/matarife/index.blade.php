@@ -14,7 +14,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Código</th><!--id MyAdmin-->
+                <th>ID Matarife</th><!--id MyAdmin-->
                 <th>DNI</th>
                 <th>Nombre</th>
                 <th>Primer apellido</th>
@@ -27,7 +27,7 @@
         </thead>
         <tbody>
             <!--Blade-->
-            @foreach($matarives as $matarife)
+            @foreach($slaughterers as $matarife)
             <tr>
                 <!--Como aparezcan en MyAdmin-->
                 <td>{{ $matarife->id }}</td>
@@ -52,6 +52,6 @@
             @endforeach
         </tbody>
     </table>
-    {!! $matarives->links() !!}
+    {!! $slaughterers->links() !!}
 </div>
 @endsection

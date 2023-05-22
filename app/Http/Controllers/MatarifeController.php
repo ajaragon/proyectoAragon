@@ -9,7 +9,7 @@ class MatarifeController extends Controller
 {
     public function index()
     {
-        $datos['matarives'] =Matarife::paginate(10);
+        $datos['slaughterers'] =Matarife::paginate(10);
         return view('matarife.index', $datos);
     }
 

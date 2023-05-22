@@ -14,7 +14,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Código</th><!--id MyAdmin-->
+                <th>ID Veterinario</th><!--id MyAdmin-->
                 <th>Número del colegiado</th>
                 <th>DNI</th>
                 <th>Nombre</th>
@@ -54,6 +54,6 @@
             @endforeach
         </tbody>
     </table>
-    {!! $veterinarios->links() !!}
+    {!! $vets->links() !!}
 </div>
 @endsection

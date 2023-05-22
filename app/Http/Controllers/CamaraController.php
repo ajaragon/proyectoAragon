@@ -9,7 +9,7 @@ class CamaraController extends Controller
 {
     public function index()
     {
-        $datos['camaras'] =Camara::paginate(10);
+        $datos['chambers'] =Camara::paginate(10);
         return view('camara.index', $datos);
     }
 
@@ -61,6 +61,7 @@ class CamaraController extends Controller
         $campos =
         [
             'Numero_Camara'=>'required|string|max:2',
+            'Descripcion'=>'required|string|max:50',
             'Capacidad'=>'required|string|max:3',
             'Temperatura_Media'=>'required|string|max:2'
         ];
@@ -68,9 +69,9 @@ class CamaraController extends Controller
         $mensaje =
         [
             'Numero_Camara.required'=>'Debe introducir el número de la cámara frigorífica',
+            'Descripción.required'=>'Debe introducir la descripción',
             'Capacidad.required'=>'Debe introducir la capacidad de la cámara',
             'Temperatura_Media.required'=>'Debe introducir la temperatura media',
-
         ];
         
 

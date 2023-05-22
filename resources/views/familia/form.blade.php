@@ -2,16 +2,16 @@
     
     <h1>{{ $modo }}</h1><hr>
 
-    <label  for="ID_Especie"> Identificador de la especie: </label>
+    <label  for="ID_Especie"> ID especie: </label>
     <input  type="text" id="ID_Especie" name="ID_Especie" 
-            value="{{ isset($especie->ID_Especie)?$especie->ID_Especie:old('ID_Especie') }}"><br> 
+            value="{{ isset($familia->ID_Especie)?$familia->ID_Especie:old('ID_Especie') }}"><br> 
 
     <label  for="Descripcion"> Descripción: </label>
     <input  type="text" id="Descripcion" name="Descripcion" 
-            value="{{ isset($especie->Descripcion)?$especie->Descripcion:old('Descripcion') }}"><br>
-
+            value="{{ isset($familia->Descripcion)?$explotacion->Descripcion:old('Descripcion') }}"><br>
+       
     <label  for="Añadir">  </label>
-    <input  type="submit" id="AgregarEspecie" value="{{ $modo }}"><hr>
+    <input  type="submit" id="AgregarFamilia" value="{{ $modo }}"><hr>
     
     <div>
         <ul>
@@ -23,5 +23,5 @@
         </ul>
     </div>
 
-    <a href="{{ url('especie/') }}" >Volver</a>
+    <a href="{{ url('familia/') }}" >Volver</a>
 <!--fin del formulario por defecto-->

@@ -3,10 +3,10 @@
 
 @section('content')
 <div class="container">
-    <form action="{{ url('/administrador/'.$administrador->id) }}" method="post">
+    <form action="{{ url('/empleado/'.$empleado->id) }}" method="post">
         @csrf
         {{ method_field('PATCH')}} <!--Se envía los datos al controlador para que los actualice-->
-        @include('administrador.form',['modo'=>'Editar registro'])
+        @include('empleado.form',['modo'=>'Editar registro'])
     </form>
 </div>
 @endsection

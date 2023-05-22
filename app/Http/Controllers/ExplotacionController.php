@@ -9,7 +9,7 @@ class ExplotacionController extends Controller
 {
     public function index()
     {
-        $datos['explotacions'] =Explotacion::paginate(10);
+        $datos['farms'] =Explotacion::paginate(10);
         return view('explotacion.index', $datos);
     }
 

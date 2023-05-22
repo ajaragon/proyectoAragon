@@ -29,7 +29,7 @@
         </thead>
         <tbody>
             <!--Blade-->
-            @foreach($explotacions as $explotacion)
+            @foreach($farms as $explotacion)
             <tr>
                 <!--Como aparezcan en MyAdmin-->
                 <td>{{ $explotacion->id }}</td>
@@ -56,6 +56,6 @@
             @endforeach
         </tbody>
     </table>
-    {!! $explotacions->links() !!}
+    {!! $farms->links() !!}
 </div>
 @endsection

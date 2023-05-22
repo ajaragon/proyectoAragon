@@ -15,7 +15,7 @@ class GanaderoController extends Controller
      //Accede a la vista index
     public function index()
     {
-        $datos['ganaderos'] =Ganadero::paginate(10); //en la pantalla se mostrarán los datos de 10 ganaderos
+        $datos['livestock_farmers'] =Ganadero::paginate(10); //en la pantalla se mostrarán los datos de 10 ganaderos
         return view('ganadero.index', $datos);
     }
 
@@ -37,6 +37,7 @@ class GanaderoController extends Controller
         //obligamos al usuario a introducir datos en ellos mediante el "required"
         $campos =
         [
+            //'ID_Ganadero'=>'required|string|max:9',
             'DNI'=>'required|string|max:9',
             'Nombre'=>'required|string|max:20',
             'Apellido1'=>'required|string|max:20',
@@ -51,6 +52,7 @@ class GanaderoController extends Controller
         
         $mensaje =
         [
+            //'ID_Ganadero.required'=>'Debe introducir el identificador',
             'DNI.required'=>'Debe introducir el DNI',
             'Nombre.required'=>'Debe introducir el nombre',
             'Apellido1.required'=>'Debe introducir el primer apellido',
@@ -101,6 +103,7 @@ class GanaderoController extends Controller
         //Validar la introducción de datos del formulario
         $campos =
         [
+            //'ID_Ganadero'=>'required|string|max:9',
             'DNI'=>'required|string|max:9',
             'Nombre'=>'required|string|max:20',
             'Apellido1'=>'required|string|max:20',
@@ -114,6 +117,7 @@ class GanaderoController extends Controller
 
         $mensaje =
         [
+            //'ID_Ganadero.required'=>'Debe introducir el identificador',
             'DNI.required'=>'Debe introducir el DNI',
             'Nombre.required'=>'Debe introducir el nombre',
             'Apellido1.required'=>'Debe introducir el primer apellido',
