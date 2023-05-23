@@ -23,7 +23,7 @@ class EmpleadoController extends Controller
 
         $campos =
         [
-            //'ID_Empleado'=>'required|string|max:9',
+            'ID_Empleado'=>'required|string|max:9',
             'DNI'=>'required|string|max:9',
             'Nombre'=>'required|string|max:20',
             'Apellido1'=>'required|string|max:20',

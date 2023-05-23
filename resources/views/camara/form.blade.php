@@ -9,11 +9,11 @@
     <label  for="Capacidad"> Capacidad: </label>
     <input  type="text" id="Capacidad" name="Capacidad" 
             value="{{ isset($camara->Capacidad)?$camara->Capacidad:old('Capacidad') }}"><br>
-
+    <!--
     <label  for="Temperatura_Media"> Temperatura media: </label>
     <input  type="text" id="Temperatura_Media" name="Temperatura_Media" 
             value="{{ isset($camara->Temperatura_Media)?$camara->Temperatura_Media:old('Temperatura_Media') }}"><br>
-
+    -->
     <label  for="Añadir">  </label>
     <input  type="submit" id="AgregarCamara" value="{{ $modo }}"><hr>
     

@@ -32,6 +32,8 @@ class ExplotacionController extends Controller
             'Comarca'=>'required|string|max:20',
             'Provincia'=>'required|string|max:20',
             'CP'=>'required|string|max:5',
+            'DNI'=>'required|string|max:9',
+            'ID_Animal'=>'required|string|max:9',
         ];
         
         $mensaje =
