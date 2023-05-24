@@ -2,16 +2,18 @@
 
 //Import punteros hacie los controladores
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController; //enlace creado con el controlador de explotacion
-use App\Http\Controllers\ExplotacionController; //enlace creado con el controlador de explotacion
-use App\Http\Controllers\CamaraController; //enlace creado con el controlador de camara
-use App\Http\Controllers\EspecieController; //enlace creado con el controlador de especie
-use App\Http\Controllers\GanaderoController; //enlace creado con el controlador de ganadero
-use App\Http\Controllers\GanadoController; //enlace creado con el controlador de ganado
-use App\Http\Controllers\AdministradorController; //enlace creado con el controlador de administrador
-use App\Http\Controllers\VeterinarioController; //enlace creado con el controlador de veterinario
-use App\Http\Controllers\MatarifeController; //enlace creado con el controlador de matarife
-
+use App\Http\Controllers\HomeController; //enlace creado con el controlador de farm
+use App\Http\Controllers\AnimalController; //enlace creado con el controlador de farm
+use App\Http\Controllers\ChamberController; //enlace creado con el controlador de chamber
+use App\Http\Controllers\EmployeeController; //enlace creado con el controlador de chamber
+use App\Http\Controllers\FarmController; //enlace creado con el controlador de farm
+use App\Http\Controllers\FamilyController; //enlace creado con el controlador de especie
+use App\Http\Controllers\Livestock_farmerController; //enlace creado con el controlador de livestock_farmer
+use App\Http\Controllers\InventoryController; //enlace creado con el controlador de ganado
+use App\Http\Controllers\SlaughtererController; //enlace creado con el controlador de slaughterer
+use App\Http\Controllers\PartController; //enlace creado con el controlador de administrador
+use App\Http\Controllers\SlaughterController; //enlace creado con el controlador de slaughterer
+use App\Http\Controllers\VetController; //enlace creado con el controlador de vet
 
 /*
 |--------------------------------------------------------------------------
@@ -31,13 +33,13 @@ Route::get('/', function () {
 //RUTAS GANADEROS
 /*
 RUTAS NECESARIAS:
-    Ruta para mostrar la lista con todos los ganaderos
+    Ruta para mostrar la lista con todos los livestock_farmers
         (
-            Podré añadir un nuevo ganadero,
-            borrar un ganadero,
-            abrir una interfaz donde actualizar los datos del ganadero
+            Podré añadir un nuevo livestock_farmer,
+            borrar un livestock_farmer,
+            abrir una interfaz donde actualizar los datos del livestock_farmer
         )
-    Ruta para mostrar una interfaz donde pueda actualizar los datos de un ganadero
+    Ruta para mostrar una interfaz donde pueda actualizar los datos de un livestock_farmer
 */
 
 //---------------------------------------------------------------\\
@@ -45,78 +47,82 @@ RUTAS NECESARIAS:
 /*
 Ejemplo de ruta:
 Route::get('/', function () {
-    return view('Ganadero.');   //el punto permite acceder 
+    return view('Livestock_farmer.');   //el punto permite acceder 
                                 //a cualquiera de las vistas de 
-                                // la carpeta ganadero
+                                // la carpeta livestock_farmer
 });
 */
 /*
 //Routa que me dirige hacia la vista de index.blade.php
-Route::get('/ganadero', function () {
-    return view('ganadero.index');
+Route::get('/livestock_farmer', function () {
+    return view('livestock_farmer.index');
 });
 
 //Routa que me dirige hacia la vista de create.blade.php
-Route::get('/ganadero', function () {
-    return view('ganadero.create');
+Route::get('/livestock_farmer', function () {
+    return view('livestock_farmer.create');
 });
 
 //Routa que me dirige hacia la vista de edit.blade.php
-Route::get('/ganadero', function () {
-    return view('ganadero.edit');
+Route::get('/livestock_farmer', function () {
+    return view('livestock_farmer.edit');
 });
 
 //Routa que me dirige hacia la vista de form.blade.php
-Route::get('/ganadero', function () {
-    return view('ganadero.form');
+Route::get('/livestock_farmer', function () {
+    return view('livestock_farmer.form');
 });
 */
 //---------------------------------------------------------------\\
 //OPCIÓN DE RUTAS 2
 /*
-//accede a la función create del controlador de Ganadero
-Route::get('/ganadero/create',[GanaderoController::class,'create']);
+//accede a la función create del controlador de Livestock_farmer
+Route::get('/livestock_farmer/create',[Livestock_farmerController::class,'create']);
 */
 //---------------------------------------------------------------\\
 //OPCIÓN DE RUTAS 3
-//Route::resource('ganadero',GanaderoController::class);  //Para acceder a las direcciones 
-                                                        //que se crearon en el controlador de Ganadero
+//Route::resource('livestock_farmer',Livestock_farmerController::class);  //Para acceder a las direcciones 
+                                                        //que se crearon en el controlador de Livestock_farmer
                                                         //php artisan route:list
 //---------------------------------------------------------------\\
 
 //el middleware evita que una persona que conoce la url pueda introducir datos
 //con el "auth" se obliga a cualquier usuario a loguearse
-//Route::resource('ganadero',GanaderoController::class)->middleware('auth');. .//Seguridad
+//Route::resource('livestock_farmer',Livestock_farmerController::class)->middleware('auth');. .//Seguridad
 Route::resource('home',HomeController::class);
-Route::resource('explotacion',ExplotacionController::class);
-Route::resource('camara',CamaraController::class);
-Route::resource('especie',EspecieController::class);
-Route::resource('ganadero',GanaderoController::class);
-Route::resource('ganado',GanadoController::class);
-Route::resource('administrador',AdministradorController::class);
-Route::resource('veterinario',VeterinarioController::class);
-Route::resource('matarife',MatarifeController::class);
-
+Route::resource('animal',AnimalController::class);
+Route::resource('chamber',ChamberController::class);
+Route::resource('employee',EmployeeController::class);
+Route::resource('farm',FarmController::class);
+Route::resource('family',FamilyController::class);
+Route::resource('livestock_farmer',Livestock_farmerController::class);
+Route::resource('inventory',InventoryController::class);
+Route::resource('slaughterer',SlaughtererController::class);
+Route::resource('part',PartController::class);
+Route::resource('slaughter',SlaughterController::class);
+Route::resource('vet',VetController::class);
 
 Auth::routes();
 //Auth::routes(['register'=>false,'reset'=>false]);. . . . . . . . . . . . . . //Seguridad
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-//Route::get('/home',[GanaderoController::class,'index'])->name('home');
+//Route::get('/home',[Livestock_farmerController::class,'index'])->name('home');
 /*
 Route::group(['middleware'=>'auth'], function(){
-    Route::get('/', [GanaderoController::class, 'index'])->name('home');
+    Route::get('/', [Livestock_farmerController::class, 'index'])->name('home');
 });
 */
 
-//Obtén la ruta, concatena /xxxxx con la función index del controlador xxxxx
+//Obtén la ruta, concatena /xxxxx con la función index del controlador xxxxx 
 Route::get('/home',[HomeController::class,'index'])->name('home');
-Route::get('/explotacion',[ExplotacionController::class,'index'])->name('explotacion');
-Route::get('/camara',[CamaraController::class,'index'])->name('camara');
-Route::get('/especie',[EspecieController::class,'index'])->name('especie');
-Route::get('/ganadero',[GanaderoController::class,'index'])->name('ganadero');
-Route::get('/ganado',[GanadoController::class,'index'])->name('ganado');
-Route::get('/administrador',[AdministradorController::class,'index'])->name('administrador');
-Route::get('/veterinario',[VeterinarioController::class,'index'])->name('veterinario');
-Route::get('/matarife',[MatarifeController::class,'index'])->name('matarife');
-
+Route::get('/animal',[AnimalController::class,'index'])->name('animal');
+Route::get('/chamber',[ChamberController::class,'index'])->name('chamber');
+Route::get('/employee',[EmployeeController::class,'index'])->name('employee');
+Route::get('/farm',[FarmController::class,'index'])->name('farm');
+Route::get('/family',[FamilyController::class,'index'])->name('family');
+Route::get('/livestock_farmer',[Livestock_farmerController::class,'index'])->name('livestock_farmer');
+Route::get('/inventory',[InventoryController::class,'index'])->name('inventory');
+Route::get('/slaughterer',[SlaughtererController::class,'index'])->name('slaughterer');
+Route::get('/part',[PartController::class,'index'])->name('part');
+Route::get('/slaughter',[SlaughterController::class,'index'])->name('slaughter');
+Route::get('/vet',[VetController::class,'index'])->name('vet');

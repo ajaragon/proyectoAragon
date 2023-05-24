@@ -30,30 +30,51 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
+
                         <li class="nav-item">
-                            <a class="nav-link" href="explotacion">{{ __('Registro de las explotaciones ganaderas') }}</a>
+                            <a class="nav-link" href="animal">{{ __('Registro de los animales') }}</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="camara">{{ __('Registro de las cámaras frigoríficas') }}</a>
+                            <a class="nav-link" href="chamber">{{ __('Registro de las cámaras frigoríficas') }}</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="especie">{{ __('Registro de las especies') }}</a>
+                            <a class="nav-link" href="employee">{{ __('Registro de los empleados') }}</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="ganadero">{{ __('Registro de los ganaderos') }}</a>
+                            <a class="nav-link" href="family">{{ __('Registro de las especies') }}</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="ganado">{{ __('Registro del ganado') }}</a>
+                            <a class="nav-link" href="farm">{{ __('Registro de las explotaciones ganaderas') }}</a>
                         </li>
+                        
                         <li class="nav-item">
-                            <a class="nav-link" href="administrador">{{ __('Registro de los administradores') }}</a>
+                            <a class="nav-link" href="inventory">{{ __('Registro del inventario') }}</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="veterinario">{{ __('Registro de los veterinarios') }}</a>
+                            <a class="nav-link" href="livestock_farmer">{{ __('Registro de los ganaderos') }}</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="matarife">{{ __('Registro de los matarifes') }}</a>
+                            <a class="nav-link" href="part">{{ __('Registro de las piezas de los animales') }}</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="slaughter">{{ __('Registro de los sacrificios') }}</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="slaughterer">{{ __('Registro de los matarifes') }}</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="vet">{{ __('Registro de los veterinarios') }}</a>
+                        </li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->

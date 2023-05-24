@@ -33,13 +33,18 @@ https://laravel.com/docs/10.x/eloquent-relationships
 
 https://www.youtube.com/watch?v=GFo3N9RNu8U
 
-php artisan make:model Explotacion  -cr
+php artisan make:model Farm  -cr
 
-php artisan make:migration create_explotacions_table
+php artisan make:migration create_farm_table
 
 //En un principio, el códido en el archivo app.blade.php era: 
-    <a class="nav-link" href="{{ route('explotacion.index') }}">{{ __('Registro de las explotaciones') }}</a>
+    <a class="nav-link" href="{{ route('farm.index') }}">{{ __('Registro de las farmes') }}</a>
 //Pero en la pantalla aparecía el error Route [XXXXXXX] not defined
 //Así que para solucionarlo encontré este vídeo:
 
 https://www.youtube.com/watch?v=8uHWH8NWfEg
+
+Para ordenar registros:
+
+https://www.youtube.com/watch?v=pmstPUEL2kU
+

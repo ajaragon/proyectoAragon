@@ -28,9 +28,8 @@ class AnimalController extends Controller
             'L_Engorde'=>'required|string|max:50',
             'L_Nacimiento'=>'required|string|max:50',
             'F_Nacimiento'=>'required|string|max:10',
-            'L_Sacrificio'=>'required|string|max:50',
-            'F_Sacrificio'=>'required|string|max:10',
-            'ID_Matarife'=>'required|string|max:9',
+            'L_Slaughter'=>'required|string|max:50',
+            'F_Slaughter'=>'required|string|max:10',
             'ID_Especie'=>'required|string|max:1',
         ];
         
@@ -41,9 +40,8 @@ class AnimalController extends Controller
             'L_Engorde.required'=>'Debe introducir el lugar de engorde',
             'L_Nacimiento.required'=>'Debe introducir el lugar de nacimiento',
             'F_Nacimiento.required'=>'Debe introducir la fecha de nacimiento',
-            'L_Sacrificio.required'=>'Debe introducir el lugar de nacimiento',
-            'F_Sacrificio.required'=>'Debe introducir la fecha de sacrificio',
-            'ID_Matarife.required'=>'Debe introducir el identificador del matarife',
+            'L_Slaughter.required'=>'Debe introducir el lugar de nacimiento',
+            'F_Slaughter.required'=>'Debe introducir la fecha de slaughter',
             'ID_Especie.required'=>'Debe introducir el identificador de la especie'
         ];
         
@@ -76,9 +74,8 @@ class AnimalController extends Controller
             'L_Engorde'=>'required|string|max:50',
             'L_Nacimiento'=>'required|string|max:50',
             'F_Nacimiento'=>'required|string|max:10',
-            'L_Sacrificio'=>'required|string|max:50',
-            'F_Sacrificio'=>'required|string|max:10',
-            'ID_Matarife'=>'required|string|max:9',
+            'L_Slaughter'=>'required|string|max:50',
+            'F_Slaughter'=>'required|string|max:10',
             'ID_Especie'=>'required|string|max:1',
         ];
         
@@ -89,9 +86,8 @@ class AnimalController extends Controller
             'L_Engorde.required'=>'Debe introducir el lugar de engorde',
             'L_Nacimiento.required'=>'Debe introducir el lugar de nacimiento',
             'F_Nacimiento.required'=>'Debe introducir la fecha de nacimiento',
-            'L_Sacrificio.required'=>'Debe introducir el lugar de nacimiento',
-            'F_Sacrificio.required'=>'Debe introducir la fecha de sacrificio',
-            'ID_Matarife.required'=>'Debe introducir el identificador del matarife',
+            'L_Slaughter.required'=>'Debe introducir el lugar de nacimiento',
+            'F_Slaughter.required'=>'Debe introducir la fecha de slaughter',
             'ID_Especie.required'=>'Debe introducir el identificador de la especie'
         ];
 

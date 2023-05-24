@@ -14,14 +14,14 @@
     <table class="table">
         <thead>
             <tr>
-                <th>ID Animal</th><!--id MyAdmin-->
+                <th>ID registro</th><!--id MyAdmin-->
+                <th>ID Animal</th>
                 <th>Número de crotal</th>
                 <th>Lugar de engorde</th>
                 <th>Lugar de nacimiento</th>
                 <th>Fecha de nacimiento</th>
-                <th>Lugar de sacrificio</th>
-                <th>Fecha de sacrificio</th>
-                <th>ID Matarife</th>
+                <th>Lugar de slaughter</th>
+                <th>Fecha de slaughter</th>
                 <th>ID Especie</th>
                 <th>Funciones</th><!--CRUD-->
             </tr>
@@ -32,13 +32,13 @@
             <tr>
                 <!--Como aparezcan en MyAdmin-->
                 <td>{{ $animal->id }}</td>
+                <td>{{ $animal->ID_Animal }}</td>
                 <td>{{ $animal->NUM_Crotal }}</td>
                 <td>{{ $animal->L_Engorde }}</td>
                 <td>{{ $animal->L_Nacimiento }}</td>
                 <td>{{ $animal->F_Nacimiento }}</td>
-                <td>{{ $animal->L_Sacrificio }}</td>
-                <td>{{ $animal->F_Sacrificio }}</td>
-                <td>{{ $animal->ID_Matarife }}</td>
+                <td>{{ $animal->L_Slaughter }}</td>
+                <td>{{ $animal->F_Slaughter }}</td>
                 <td>{{ $animal->ID_Especie }}</td>
                 <td>
                     <a href="{{ url('/animal/'.$animal->id.'/edit') }}">Editar</a>
