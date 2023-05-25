@@ -52,10 +52,6 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="inventory">{{ __('Registro del inventario') }}</a>
-                        </li>
-
-                        <li class="nav-item">
                             <a class="nav-link" href="livestock_farmer">{{ __('Registro de los ganaderos') }}</a>
                         </li>
 

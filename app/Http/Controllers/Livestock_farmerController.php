@@ -141,9 +141,20 @@ class Livestock_farmerController extends Controller
         return redirect('livestock_farmer')->with('mensaje','Se actualizó el registro de la base de datos.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    public function search(Request $request){
+
+        $busqueda =$request['search'] ?? " ";
+        if($busqueda != " "){
+            $livestock_farmers =Livestock_farmer::where('DNI', 'LIKE', "%$busqueda%")->get();
+        }//fin del if
+        else{
+            $livestock_farmers =Livestock_farmer::all();
+        }//fin del else
+
+        $datosLivestock_farmer =compact('livestock_farmers');
+        return view('livestock_farmer.index', compact('livestock_farmers', 'busqueda'));
+    }
+
     public function destroy($id)
     {
         Livestock_farmer::destroy($id);         //le paso el id del elemento que quiero que elimine

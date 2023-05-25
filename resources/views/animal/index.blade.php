@@ -3,6 +3,22 @@
 
 @section('content')
 <div class="container">
+    <!--BARRA DE BÚSQUEDA DE REGISTROS-->
+    <!--
+        Tutorial:
+        https://www.youtube.com/watch?v=L2pBIKreVx0
+        https://www.youtube.com/watch?v=aPYEOVDTV6E
+        Mediante un formulario, se recogerán los datos que se vayan introduciendo en la dirección /XXXXX
+        mediante el método get se pasarán a la función index de la clase correspondiente
+        Finalmente, esta devolverá los registros que haya encontrado
+    -->
+    <!--<form action="{{ url('/busqueda')}}" type="get">-->
+    <form action="" class="col-8">
+        <div class="form-group">
+            <input class="form-control, col-6" type="search" name="search" placeholder="Buscar identificador...">
+            <button class="col-2" type="submit">Buscar</button>
+        </div>
+    </form>
 
     <div>
         @if(Session::has('mensaje'))
@@ -54,6 +70,6 @@
             @endforeach
         </tbody>
     </table>
-    {!! $animals->links() !!}
+    
 </div>
 @endsection

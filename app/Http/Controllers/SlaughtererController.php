@@ -97,9 +97,20 @@ class SlaughtererController extends Controller
         return redirect('slaughterer')->with('mensaje','Se actualizó el registro de la base de datos.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    public function search(Request $request){
+
+        $busqueda =$request['search'] ?? " ";
+        if($busqueda != " "){
+            $slaughterers =Slaughterer::where('DNI', 'LIKE', "%$busqueda%")->get();
+        }//fin del if
+        else{
+            $slaughterers =Slaughterer::all();
+        }//fin del else
+
+        $datosSlaughterer =compact('slaughterers');
+        return view('slaughterer.index', compact('slaughterers', 'busqueda'));
+    }
+
     public function destroy($id)
     {
         Slaughterer::destroy($id);

@@ -101,9 +101,20 @@ class VetController extends Controller
         return redirect('vet')->with('mensaje','Se actualizó el registro de la base de datos.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    public function search(Request $request){
+
+        $busqueda =$request['search'] ?? " ";
+        if($busqueda != " "){
+            $vets =Vet::where('NUM_Colegiado', 'LIKE', "%$busqueda%")->get();
+        }//fin del if
+        else{
+            $vets =Vet::all();
+        }//fin del else
+
+        $datosVet =compact('vets');
+        return view('vet.index', compact('vets', 'busqueda'));
+    }
+
     public function destroy($id)
     {
         Vet::destroy($id);

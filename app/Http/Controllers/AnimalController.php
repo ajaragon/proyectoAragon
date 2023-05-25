@@ -101,9 +101,20 @@ class AnimalController extends Controller
         return redirect('animal')->with('mensaje','Se actualizó el registro de la base de datos.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    public function search(Request $request){
+
+        $busqueda =$request['search'] ?? " ";
+        if($busqueda != " "){
+            $animals =Animal::where('ID_Animal', 'LIKE', "%$busqueda%")->get();
+        }//fin del if
+        else{
+            $animals =Animal::all();
+        }//fin del else
+
+        $datosAnimal =compact('animals');
+        return view('animal.index', compact('animals', 'busqueda'));
+    }
+
     public function destroy($id)
     {
         Animal::destroy($id);

@@ -8,6 +8,10 @@ Versiones:
 
 3.0V Creación de relaciones
 
+4.0V Creación de búsquedas de registros
+
+
+
 Para realizar la programación de la base de datos he seguido el tutorial de YouTube
 "Cómo hacer un CRUD en Laravel paso a paso, gratis y desde cero" del canal Develoteca
 
@@ -48,3 +52,4 @@ Para ordenar registros:
 
 https://www.youtube.com/watch?v=pmstPUEL2kU
 
+Para que funcione la barra de búsquedas hay que borrar: {!! $animals->links() !!}

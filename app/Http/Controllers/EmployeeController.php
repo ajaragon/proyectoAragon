@@ -105,9 +105,20 @@ class EmployeeController extends Controller
         return redirect('employee')->with('mensaje','Se actualizó el registro de la base de datos.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    public function search(Request $request){
+
+        $busqueda =$request['search'] ?? " ";
+        if($busqueda != " "){
+            $employees =Employee::where('ID_Employee', 'LIKE', "%$busqueda%")->get();
+        }//fin del if
+        else{
+            $employees =Employee::all();
+        }//fin del else
+
+        $datosEmployee =compact('employees');
+        return view('employee.index', compact('employees', 'busqueda'));
+    }
+    
     public function destroy($id)
     {
         Employee::destroy($id);

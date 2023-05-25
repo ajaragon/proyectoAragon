@@ -59,14 +59,14 @@ class chamberController extends Controller
     
         $campos =
         [
-            'NUM_chamber'=>'required|string|max:2',
+            'NUM_Chamber'=>'required|string|max:2',
             'Capacidad'=>'required|string|max:3',
             'COD_Slaughter'=>'required|string|max:2',
         ];
         
         $mensaje =
         [
-            'NUM_chamber.required'=>'Debe introducir el número de la cámara frigorífica',
+            'NUM_Chamber.required'=>'Debe introducir el número de la cámara frigorífica',
             'Capacidad.required'=>'Debe introducir la capacidad de la cámara',
             'COD_Slaughter.required'=>'Debe introducir el código del sacrificio',
         ];
@@ -82,9 +82,20 @@ class chamberController extends Controller
         return redirect('chamber')->with('mensaje','Se actualizó el registro de la base de datos.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    public function search(Request $request){
+
+        $busqueda =$request['search'] ?? " ";
+        if($busqueda != " "){
+            $chambers =Chamber::where('NUM_chamber', 'LIKE', "%$busqueda%")->get();
+        }//fin del if
+        else{
+            $chambers =Chamber::all();
+        }//fin del else
+
+        $datosChamber =compact('chambers');
+        return view('chamber.index', compact('chambers', 'busqueda'));
+    }
+
     public function destroy($id)
     {
         Chamber::destroy($id);

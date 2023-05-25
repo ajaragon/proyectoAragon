@@ -113,9 +113,20 @@ class FarmController extends Controller
         return redirect('farm')->with('mensaje','Se actualizó el registro de la base de datos.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    public function search(Request $request){
+
+        $busqueda =$request['search'] ?? " ";
+        if($busqueda != " "){
+            $farms =Farm::where('CIF', 'LIKE', "%$busqueda%")->get();
+        }//fin del if
+        else{
+            $farms =Farm::all();
+        }//fin del else
+
+        $datosFarm =compact('farms');
+        return view('farm.index', compact('farms', 'busqueda'));
+    }
+
     public function destroy($id)
     {
         Farm::destroy($id);

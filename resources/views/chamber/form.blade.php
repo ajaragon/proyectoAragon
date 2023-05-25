@@ -2,9 +2,9 @@
     
     <h1>{{ $modo }}</h1><hr>
 
-    <label  for="Numero_chamber"> Número de cámara: </label>
-    <input  type="text" id="Numero_chamber" name="Numero_chamber" 
-            value="{{ isset($chamber->Numero_chamber)?$chamber->Numero_chamber:old('Numero_chamber') }}"><br> 
+    <label  for="NUM_Chamber"> Número de cámara: </label>
+    <input  type="text" id="NUM_Chamber" name="NUM_Chamber" 
+            value="{{ isset($chamber->NUM_Chamber)?$chamber->NUM_Chamber:old('NUM_Chamber') }}"><br> 
 
     <label  for="Capacidad"> Capacidad: </label>
     <input  type="text" id="Capacidad" name="Capacidad" 

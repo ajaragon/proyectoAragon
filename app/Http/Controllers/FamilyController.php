@@ -77,9 +77,20 @@ class FamilyController extends Controller
         return redirect('family')->with('mensaje','Se actualizó el registro de la base de datos.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    public function search(Request $request){
+
+        $busqueda =$request['search'] ?? " ";
+        if($busqueda != " "){
+            $families =Family::where('ID_Especie', 'LIKE', "%$busqueda%")->get();
+        }//fin del if
+        else{
+            $families =Family::all();
+        }//fin del else
+
+        $datosFamily =compact('families');
+        return view('family.index', compact('families', 'busqueda'));
+    }
+
     public function destroy($id)
     {
         Family::destroy($id);

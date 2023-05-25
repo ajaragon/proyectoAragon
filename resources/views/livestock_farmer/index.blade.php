@@ -6,6 +6,12 @@
 
 @section('content')
 <div class="container">
+    <form action="" class="col-8">
+        <div class="form-group">
+            <input class="form-control, col-6" type="search" name="search" placeholder="Buscar identificador...">
+            <button class="col-2" type="submit">Buscar</button>
+        </div>
+    </form>
     <!--Mensaje por defecto-->
     <!--<div class="alert-success alert-dismissible" role="alert">-->
     <div>
@@ -76,6 +82,5 @@
             @endforeach
         </tbody>
     </table>
-    {!! $livestock_farmers->links() !!}
 </div>
 @endsection

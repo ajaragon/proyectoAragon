@@ -76,9 +76,20 @@ class PartController extends Controller
         return redirect('part')->with('mensaje','Se actualizó el registro de la base de datos.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    public function search(Request $request){
+
+        $busqueda =$request['search'] ?? " ";
+        if($busqueda != " "){
+            $parts =Part::where('COD_Part', 'LIKE', "%$busqueda%")->get();
+        }//fin del if
+        else{
+            $parts =Part::all();
+        }//fin del else
+
+        $datosPart =compact('parts');
+        return view('part.index', compact('parts', 'busqueda'));
+    }
+
     public function destroy($id)
     {
         Part::destroy($id);
