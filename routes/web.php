@@ -1,4 +1,9 @@
 <?php
+//---------------------------------------------------------------------------------\\
+//---------------------------------------------------------------------------------\\
+//BACKEND
+//---------------------------------------------------------------------------------\\
+//---------------------------------------------------------------------------------\\
 
 //Import punteros hacie los controladores
 use Illuminate\Support\Facades\Route;
@@ -136,4 +141,51 @@ Route::get('/livestock_farmer',[PartController::class,'search']);
 Route::get('/part',[SlaughterController::class,'search']);
 Route::get('/slaughter',[SlaughtererController::class,'search']);
 Route::get('/vet',[VetController::class,'search']);
+
+
+//---------------------------------------------------------------------------------\\
+//---------------------------------------------------------------------------------\\
+//FRONTEND
+//---------------------------------------------------------------------------------\\
+//---------------------------------------------------------------------------------\\
+
+//Para que nos muestre la vista "Sobre nosotros"
+Route::get('/about', function(){
+    return view('about');
+});
+
+//Para que nos muestre la vista "Blog"
+Route::get('/blog', function(){
+    return view('blog');
+});
+
+//Para que nos muestre la vista "Contacta con nosotros"
+Route::get('/contact', function(){
+    return view('contact');
+});
+
+//Para que muestre las entradas del blog
+Route::get('/entrada1', function(){
+    return view('entrada1');
+});
+
+Route::get('/entrada12', function(){
+    return view('entrada2');
+});
+
+Route::get('/entrada3', function(){
+    return view('entrada3');
+});
+
+Route::get('/entrada4', function(){
+    return view('entrada4');
+});
+
+Route::get('/entrada5', function(){
+    return view('entrada5');
+});
+
+Route::get('/entrada6', function(){
+    return view('entrada6');
+});
 
