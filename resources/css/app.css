@@ -11,7 +11,6 @@
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
-
 body {
     font-family: 'Poppins', sans-serif;
     background: #041F3D !important;
@@ -23,7 +22,7 @@ p {
     font-size: 1.25em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #C4C4C4;
+    color: #F1F3F4;
 }
 
 a, a:hover, a:focus {
@@ -53,6 +52,14 @@ a, a:hover, a:focus {
     height: 1px;
     border-bottom: 1px dashed #F1F3F4;
     margin: 40px 0;
+}
+
+#login{
+    color: #DD0740 !important;
+}
+
+#register{
+    color: #DD0740 !important;
 }
 
 /* ---------------------------------------------------

@@ -1,0 +1,13 @@
+
+/*General*/
+section{
+    margin: 1em;
+}
+
+/*Barra de búsquedas*/
+#nuevo-registro:hover{
+    color: #041F3D !important;
+    text-decoration: none;
+}
+
+/*Tablas de registros*/
