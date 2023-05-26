@@ -7,17 +7,18 @@
 
 //Import punteros hacie los controladores
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController; //enlace creado con el controlador de farm
-use App\Http\Controllers\AnimalController; //enlace creado con el controlador de farm
+use App\Http\Controllers\HomeController; //enlace creado con el controlador de home
+use App\Http\Controllers\AnimalController; //enlace creado con el controlador de animal
+use App\Http\Controllers\AnimalPartController; //enlace creado con el controlador de animal/part
 use App\Http\Controllers\ChamberController; //enlace creado con el controlador de chamber
-use App\Http\Controllers\EmployeeController; //enlace creado con el controlador de chamber
+use App\Http\Controllers\EmployeeController; //enlace creado con el controlador de employee
 use App\Http\Controllers\FarmController; //enlace creado con el controlador de farm
-use App\Http\Controllers\FamilyController; //enlace creado con el controlador de especie
+use App\Http\Controllers\FamilyController; //enlace creado con el controlador de family
 use App\Http\Controllers\Livestock_farmerController; //enlace creado con el controlador de livestock_farmer
-use App\Http\Controllers\InventoryController; //enlace creado con el controlador de ganado
+use App\Http\Controllers\PartController; //enlace creado con el controlador de part
 use App\Http\Controllers\SlaughtererController; //enlace creado con el controlador de slaughterer
-use App\Http\Controllers\PartController; //enlace creado con el controlador de administrador
 use App\Http\Controllers\SlaughterController; //enlace creado con el controlador de slaughterer
+use App\Http\Controllers\SlaughterSlaughtererController; //enlace creado con el controlador de slaughter/slaughterer
 use App\Http\Controllers\VetController; //enlace creado con el controlador de vet
 
 /*
@@ -96,6 +97,7 @@ Route::get('/livestock_farmer/create',[Livestock_farmerController::class,'create
 //Route::resource('livestock_farmer',Livestock_farmerController::class)->middleware('auth');. .//Seguridad
 Route::resource('home',HomeController::class);
 Route::resource('animal',AnimalController::class);
+Route::resource('animal',AnimalPartController::class);
 Route::resource('chamber',ChamberController::class);
 Route::resource('employee',EmployeeController::class);
 Route::resource('farm',FarmController::class);
@@ -105,6 +107,7 @@ Route::resource('inventory',InventoryController::class);
 Route::resource('slaughterer',SlaughtererController::class);
 Route::resource('part',PartController::class);
 Route::resource('slaughter',SlaughterController::class);
+Route::resource('animal',SlaughterSlaughtererController::class);
 Route::resource('vet',VetController::class);
 
 Auth::routes();
@@ -121,6 +124,7 @@ Route::group(['middleware'=>'auth'], function(){
 //Obtén la ruta, concatena /xxxxx con la función index del controlador xxxxx 
 Route::get('/home',[HomeController::class,'index'])->name('home');
 Route::get('/animal',[AnimalController::class,'index'])->name('animal');
+Route::get('/animal_part',[AnimalPartController::class,'index'])->name('animal_part');
 Route::get('/chamber',[ChamberController::class,'index'])->name('chamber');
 Route::get('/employee',[EmployeeController::class,'index'])->name('employee');
 Route::get('/farm',[FarmController::class,'index'])->name('farm');
@@ -129,9 +133,11 @@ Route::get('/livestock_farmer',[Livestock_farmerController::class,'index'])->nam
 Route::get('/part',[PartController::class,'index'])->name('part');
 Route::get('/slaughter',[SlaughterController::class,'index'])->name('slaughter');
 Route::get('/slaughterer',[SlaughtererController::class,'index'])->name('slaughterer');
+Route::get('/slaughter_slaughterer',[SlaughterSlaughtererController::class,'index'])->name('slaughter_slaughterer');
 Route::get('/vet',[VetController::class,'index'])->name('vet');
 
 Route::get('/animal',[AnimalController::class,'search']);
+Route::get('/animal_part',[AnimalPartController::class,'search']);
 Route::get('/chamber',[ChamberController::class,'search']);
 Route::get('/employee',[EmployeeController::class,'search']);
 Route::get('/slaughterer',[FarmController::class,'search']);
@@ -140,6 +146,7 @@ Route::get('/farm',[Livestock_farmerController::class,'search']);
 Route::get('/livestock_farmer',[PartController::class,'search']);
 Route::get('/part',[SlaughterController::class,'search']);
 Route::get('/slaughter',[SlaughtererController::class,'search']);
+Route::get('/slaughter_slaughterer',[SlaughterSlaughtererController::class,'search']);
 Route::get('/vet',[VetController::class,'search']);
 
 
