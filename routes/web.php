@@ -20,6 +20,7 @@ use App\Http\Controllers\SlaughterController; //enlace creado con el controlador
 use App\Http\Controllers\SlaughtererController; //enlace creado con el controlador de slaughterer
 //use App\Http\Controllers\SlaughterSlaughtererController; //enlace creado con el controlador de slaughter/slaughterer
 use App\Http\Controllers\VetController; //enlace creado con el controlador de vet
+use App\Http\Controllers\PDFController; //enlace creado con el controlador de vet
 
 /*
 |--------------------------------------------------------------------------
@@ -148,6 +149,7 @@ Route::get('/slaughter',[SlaughtererController::class,'search']);
 //Route::get('/slaughter_slaughterer',[SlaughterSlaughtererController::class,'search']);
 Route::get('/vet',[VetController::class,'search']);
 
+Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
 
 //---------------------------------------------------------------------------------\\
 //---------------------------------------------------------------------------------\\
