@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Animal;
 use Illuminate\Http\Request;
+use PDF;
 
 class AnimalController extends Controller
 {
@@ -119,5 +120,27 @@ class AnimalController extends Controller
     {
         Animal::destroy($id);
         return redirect('animal')->with('mensaje','Se eliminó el registro de la base de datos.');  
+    }
+
+    //Función para exportar tablas en .pdf
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+    */
+    public function export()
+    {
+        $animals = Animal::get();
+  
+        $data =
+        [
+            'title' =>'REGISTROS DE LOS ANIMALES',
+            'date' =>date('m/d/Y'),
+            'animals' =>$animals, 
+        ];
+ 
+        $pdf = PDF::loadView('export', $data);
+     
+        return $pdf->download('animales.pdf');
     }
 }

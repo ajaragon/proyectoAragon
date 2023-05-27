@@ -149,7 +149,31 @@ Route::get('/slaughter',[SlaughtererController::class,'search']);
 //Route::get('/slaughter_slaughterer',[SlaughterSlaughtererController::class,'search']);
 Route::get('/vet',[VetController::class,'search']);
 
-Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
+//Ruta para exportar tablas en .pdf
+//Route::get('animal.export', [AnimalController::class, 'export'])->name('export');
+Route::get('export', [AnimalController::class, 'export']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //---------------------------------------------------------------------------------\\
 //---------------------------------------------------------------------------------\\
