@@ -104,6 +104,10 @@
             </tbody>
         </table>
     </div>
-
+    <div>
+        @if(Session::has('mensaje'))
+        {{ Session::get('mensaje')}} 
+        @endif
+    </div>
 </section>
 @endsection

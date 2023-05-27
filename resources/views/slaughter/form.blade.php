@@ -31,5 +31,5 @@
         </ul>
     </div>
 
-    <a href="{{ url('slaughterer/') }}" >Volver</a>
+    <a href="{{ url('slaughter/') }}" >Volver</a>
 <!--fin del formulario por defecto-->

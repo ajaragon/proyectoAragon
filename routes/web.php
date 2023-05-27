@@ -16,8 +16,8 @@ use App\Http\Controllers\FarmController; //enlace creado con el controlador de f
 use App\Http\Controllers\FamilyController; //enlace creado con el controlador de family
 use App\Http\Controllers\Livestock_farmerController; //enlace creado con el controlador de livestock_farmer
 use App\Http\Controllers\PartController; //enlace creado con el controlador de part
+use App\Http\Controllers\SlaughterController; //enlace creado con el controlador de slaughter
 use App\Http\Controllers\SlaughtererController; //enlace creado con el controlador de slaughterer
-use App\Http\Controllers\SlaughterController; //enlace creado con el controlador de slaughterer
 //use App\Http\Controllers\SlaughterSlaughtererController; //enlace creado con el controlador de slaughter/slaughterer
 use App\Http\Controllers\VetController; //enlace creado con el controlador de vet
 
@@ -103,10 +103,9 @@ Route::resource('employee',EmployeeController::class);
 Route::resource('farm',FarmController::class);
 Route::resource('family',FamilyController::class);
 Route::resource('livestock_farmer',Livestock_farmerController::class);
-Route::resource('inventory',InventoryController::class);
-Route::resource('slaughterer',SlaughtererController::class);
 Route::resource('part',PartController::class);
 Route::resource('slaughter',SlaughterController::class);
+Route::resource('slaughterer',SlaughtererController::class);
 //Route::resource('animal',SlaughterSlaughtererController::class);
 Route::resource('vet',VetController::class);
 
@@ -121,7 +120,7 @@ Route::group(['middleware'=>'auth'], function(){
 });
 */
 
-//Obtén la ruta, concatena /xxxxx con la función index del controlador xxxxx 
+//Obtiene la ruta, concatena /xxxxx con la función index del controlador xxxxx 
 Route::get('/home',[HomeController::class,'index'])->name('home');
 Route::get('/animal',[AnimalController::class,'index'])->name('animal');
 //Route::get('/animal_part',[AnimalPartController::class,'index'])->name('animal_part');
