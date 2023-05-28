@@ -33,8 +33,15 @@ use App\Http\Controllers\PDFController; //enlace creado con el controlador de ve
 |
 */
 
+//CAMBIAR RUTA "/"; añadir "/home": Lo que se encuentra un internauta nada más acceder al sitio web
 Route::get('/', function () {
     return view('auth.login');  //aparece la vista donde el usuario se loguea
+});
+
+//enla url localhost/proyectoAragon/public/
+//ordeno que muestre la vista de welcome
+Route::get('/', function(){
+    return view('welcome');
 });
 
 //RUTAS GANADEROS
@@ -122,7 +129,7 @@ Route::group(['middleware'=>'auth'], function(){
 */
 
 //Obtiene la ruta, concatena /xxxxx con la función index del controlador xxxxx 
-Route::get('/home',[HomeController::class,'index'])->name('home');
+Route::get('/home',[HomeController::class,'index'])->name('home');  //lleva a la interfaz principal de la base de datos una vez que el usuario se registra
 Route::get('/animal',[AnimalController::class,'index'])->name('animal');
 //Route::get('/animal_part',[AnimalPartController::class,'index'])->name('animal_part');
 Route::get('/chamber',[ChamberController::class,'index'])->name('chamber');
@@ -183,41 +190,41 @@ Route::get('export', [AnimalController::class, 'export']);
 
 //Para que nos muestre la vista "Sobre nosotros"
 Route::get('/about', function(){
-    return view('about');
+    return view('layouts/about');
 });
 
 //Para que nos muestre la vista "Blog"
 Route::get('/blog', function(){
-    return view('blog');
+    return view('layouts/blog');
 });
 
 //Para que nos muestre la vista "Contacta con nosotros"
 Route::get('/contact', function(){
-    return view('contact');
+    return view('layouts/contact');
 });
 
 //Para que muestre las entradas del blog
 Route::get('/entrada1', function(){
-    return view('entrada1');
+    return view('layouts/entrada1');
 });
 
 Route::get('/entrada12', function(){
-    return view('entrada2');
+    return view('layouts/entrada2');
 });
 
 Route::get('/entrada3', function(){
-    return view('entrada3');
+    return view('layouts/entrada3');
 });
 
 Route::get('/entrada4', function(){
-    return view('entrada4');
+    return view('layouts/entrada4');
 });
 
 Route::get('/entrada5', function(){
-    return view('entrada5');
+    return view('layouts/entrada5');
 });
 
 Route::get('/entrada6', function(){
-    return view('entrada6');
+    return view('layouts/entrada6');
 });
 

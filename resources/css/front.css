@@ -1,0 +1,46 @@
+/*
+    Colores para el front:
+        -#041E42 azul oscuro
+        -#00A3E0 azul claro
+        -#E40046 rosa
+        -#FFFFFF blanco
+*/
+
+body{
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#logo{
+  width: 4em;
+  height: 4em;
+}
+
+/*HEADER*/
+.header{
+}
+
+.color-navbar{
+}
+
+.color-letras-navbar{
+  color: #FFFFFF;
+}
+
+ul li a{
+  font-size: 18px;
+}
+
+.navbar-brand{
+  font-size: 25px;
+}
+
+/*FOOTER*/
+
+.footer{
+  margin-top: auto;
+  width: 100%;
+}
