@@ -52,6 +52,7 @@
                     <th>Correo electrónico</th>
                     <th>Dirección</th>
                     <th>Provincia</th>
+                    <th>CIF de la explotación</th>
                     <th>Funciones</th><!--CRUD-->
                 </tr>
             </thead>
@@ -70,6 +71,7 @@
                     <td>{{ $employee->Correo_Electronico }}</td>
                     <td>{{ $employee->Direccion }}</td>
                     <td>{{ $employee->Provincia }}</td>
+                    <td>{{ $employee->CIF }}</td>
                     <td>
                         <a href="{{ url('/employee/'.$employee->id.'/edit') }}">Editar</a>
                         

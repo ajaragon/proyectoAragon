@@ -22,8 +22,15 @@ return new class extends Migration
             $table->string('L_Slaughter');
             $table->string('F_Slaughter');
 
+            //Quiero saber a qué especie pertenece
             $table  ->foreignId('ID_Especie')
                     ->constrained('families')
+                    ->onUpdate('cascade')
+                    ->onDelete('cascade');
+            
+            //Quiero saber de qué explotación proviene
+            $table  ->foreignId('CIF')
+                    ->constrained('farms')
                     ->onUpdate('cascade')
                     ->onDelete('cascade');
             

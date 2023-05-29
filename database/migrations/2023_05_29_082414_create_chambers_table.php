@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('NUM_chamber');
             $table->string('Capacidad');
             
+            //Necesita tener el código de sacrificio que se almacena
             $table  ->foreignId('COD_Slaughter')
                     ->constrained('slaughters')
                     ->onUpdate('cascade')

@@ -9,6 +9,11 @@ class Slaughter extends Model
 {
     use HasFactory;
 
+    //Un sacrificio corresponde a un animal
+    public function animal(){
+        return $this->belongsTo(Animal::class, 'animals');
+    }
+
     //Cada sacrificio se almacena en una cámara
     public function chamber(){
         return $this->belongsTo(Chamber::class, 'chambers');

@@ -38,15 +38,7 @@
     <input  type="text" id="CP" name="CP" 
             value="{{ isset($farm->CP)?$farm->CP:old('CP') }}"><br>
     
-    <label  for="DNI"> Número de cámara: </label>
-    <input  type="text" id="DNI" name="DNI" 
-            value="{{ isset($employee->DNI)?$employee->DNI:old('DNI') }}"><br>
-      
-    <label  for="ID_Animal"> Identificador del animal: </label>
-    <input  type="text" id="ID_Animal" name="ID_Animal" 
-            value="{{ isset($animal->ID_Animal)?$animal->ID_Animal:old('ID_Animal') }}"><br>
-     
-    <label  for="Añadir">  </label>
+    <label  for="AgregarFarm">  </label>
     <input  type="submit" id="AgregarFarm" value="{{ $modo }}"><hr>
     
     <div>

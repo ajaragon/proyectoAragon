@@ -34,6 +34,10 @@
     <input  type="text" id="ID_Especie" name="ID_Especie" 
             value="{{ isset($animal->ID_Especie)?$animal->ID_Especie:old('ID_Especie') }}"><br>
 
+    <label  for="CIF"> CIF de la explotación: </label>
+    <input  type="text" id="CIF" name="CIF" 
+            value="{{ isset($animal->CIF)?$animal->CIF:old('CIF') }}"><br>
+
     <label  for="AgregarAnimal">  </label>
     <input  type="submit" id="AgregarAnimal" value="{{ $modo }}"><hr>
     

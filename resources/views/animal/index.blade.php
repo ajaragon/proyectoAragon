@@ -72,6 +72,7 @@
                     <th scope="col">Lugar de slaughter</th>
                     <th scope="col">Fecha de slaughter</th>
                     <th scope="col">ID Especie</th>
+                    <th scope="col">CIF de la explotación</th>
                     <th scope="col">Funciones</th><!--CRUD-->
                 </tr>
             </thead>
@@ -89,6 +90,7 @@
                     <td>{{ $animal->L_Slaughter }}</td>
                     <td>{{ $animal->F_Slaughter }}</td>
                     <td>{{ $animal->ID_Especie }}</td>
+                    <td>{{ $animal->CIF }}</td>
                     <td>
                         <a href="{{ url('/animal/'.$animal->id.'/edit') }}">Editar</a>
                         

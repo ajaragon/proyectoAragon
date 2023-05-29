@@ -11,17 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('livestock_farmers', function (Blueprint $table) {
+        Schema::create('farms', function (Blueprint $table) {
             $table->id();
 
-            $table->string('DNI');
-            $table->string('Nombre');
-            $table->string('Apellido1');
-            $table->string('Apellido2');
+            $table->string('CIF');
+            $table->string('Nombre_Farm');
+            $table->string('Titular');
             $table->string('Telefono');
             $table->string('Correo_Electronico');
+            $table->string('Direccion');
+            $table->string('Comarca');
             $table->string('Provincia');
-            
+            $table->string('CP');
+
             $table->timestamps();
         });
     }
@@ -31,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('livestock_farmers');
+        Schema::dropIfExists('farms');
     }
 };

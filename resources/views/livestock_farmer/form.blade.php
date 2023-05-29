@@ -45,6 +45,10 @@
     <input  type="text" id="Provincia" name="Provincia" 
             value="{{ isset($livestock_farmer->Provincia)?$livestock_farmer->Provincia:old('Provincia') }}"><br>
 
+    <label  for="CIF"> CIF de la explotación: </label>
+    <input  type="text" id="CIF" name="CIF" 
+            value="{{ isset($livestock_farmer->CIF)?$livestock_farmer->CIF:old('CIF') }}"><br>
+
     <label  for="AgregarLivestock_farmer">  </label>
     <input  type="submit" id="AgregarLivestock_farmer" value="{{ $modo }}"><hr>
 

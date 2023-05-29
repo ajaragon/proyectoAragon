@@ -22,8 +22,8 @@
             value="{{ isset($part->COD_Part)?$part->COD_Part:old('COD_Part') }}"><br> 
 
     <label  for="Descripcion"> Descripción: </label>
-    <input  type="text" id="Nombre" name="Nombre" 
-            value="{{ isset($part->Nombre)?$part->Nombre:old('Nombre') }}"><br>
+    <input  type="text" id="Descripcion" name="Descripcion" 
+            value="{{ isset($part->Descripcion)?$part->Descripcion:old('Descripcion') }}"><br>
 
     <label  for="AgregarPart">  </label>
     <input  type="submit" id="AgregarPart" value="{{ $modo }}"><hr>

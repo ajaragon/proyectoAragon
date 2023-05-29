@@ -52,8 +52,6 @@
                     <th>Comarca</th>
                     <th>Provincia</th>
                     <th>Código postal</th>
-                    <th>DNI del ganadero</th>
-                    <th>Código del animal</th>
                     <th>Funciones</th><!--CRUD-->
                 </tr>
             </thead>
@@ -72,8 +70,6 @@
                     <td>{{ $farm->Comarca }}</td>
                     <td>{{ $farm->Provincia }}</td>
                     <td>{{ $farm->CP }}</td>
-                    <td>{{ $farm->DNI }}</td>
-                    <td>{{ $farm->ID_Animal }}</td>
                     <td>
                         <a href="{{ url('/farm/'.$farm->id.'/edit') }}">Editar</a>
                         

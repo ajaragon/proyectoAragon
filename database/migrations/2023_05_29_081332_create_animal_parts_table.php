@@ -11,6 +11,7 @@ return new class extends Migration
         Schema::create('animal_parts', function (Blueprint $table) {
             $table->id();
 
+            //Necesita tener el código de la pieza y el identificador del animal
             $table  ->foreignId('COD_Part')
                     ->constrained('parts')
                     ->onUpdate('cascade')

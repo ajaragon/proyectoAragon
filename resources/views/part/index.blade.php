@@ -44,6 +44,7 @@
                 <tr>
                     <th>Código registro</th><!--id MyAdmin-->
                     <th>Código de la pieza</th>
+                    <th>Descripción</th>
                     <th>Funciones</th><!--CRUD-->
                 </tr>
             </thead>
@@ -54,6 +55,7 @@
                     <!--Como aparezcan en MyAdmin-->
                     <td>{{ $part->id }}</td>
                     <td>{{ $part->COD_Part }}</td>
+                    <td>{{ $part->Descripcion }}</td>
                     <td>
                         <!--Añadir opción de actualizar y eliminar-->
                         <!--ACTUALIZAR-->

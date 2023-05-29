@@ -34,14 +34,20 @@ use App\Http\Controllers\PDFController; //enlace creado con el controlador de ve
 */
 
 //CAMBIAR RUTA "/"; añadir "/home": Lo que se encuentra un internauta nada más acceder al sitio web
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('auth.login');  //aparece la vista donde el usuario se loguea
 });
 
 //enla url localhost/proyectoAragon/public/
 //ordeno que muestre la vista de welcome
+/*
 Route::get('/', function(){
     return view('welcome');
+});
+*/
+
+Route::get('/', function(){
+    return view('home');
 });
 
 //RUTAS GANADEROS
@@ -100,6 +106,8 @@ Route::get('/livestock_farmer/create',[Livestock_farmerController::class,'create
                                                         //php artisan route:list
 //---------------------------------------------------------------\\
 
+
+
 //el middleware evita que una persona que conoce la url pueda introducir datos
 //con el "auth" se obliga a cualquier usuario a loguearse
 //Route::resource('livestock_farmer',Livestock_farmerController::class)->middleware('auth');. .//Seguridad
@@ -117,6 +125,7 @@ Route::resource('slaughterer',SlaughtererController::class);
 //Route::resource('animal',SlaughterSlaughtererController::class);
 Route::resource('vet',VetController::class);
 
+
 Auth::routes();
 //Auth::routes(['register'=>false,'reset'=>false]);//. . . . . . . . . . . . . . Seguridad
 
@@ -127,6 +136,7 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/', [Livestock_farmerController::class, 'index'])->name('home');
 });
 */
+
 
 //Obtiene la ruta, concatena /xxxxx con la función index del controlador xxxxx 
 Route::get('/home',[HomeController::class,'index'])->name('home');  //lleva a la interfaz principal de la base de datos una vez que el usuario se registra
@@ -143,18 +153,21 @@ Route::get('/slaughterer',[SlaughtererController::class,'index'])->name('slaught
 //Route::get('/slaughter_slaughterer',[SlaughterSlaughtererController::class,'index'])->name('slaughter_slaughterer');
 Route::get('/vet',[VetController::class,'index'])->name('vet');
 
+
+
 Route::get('/animal',[AnimalController::class,'search']);
 //Route::get('/animal_part',[AnimalPartController::class,'search']);
 Route::get('/chamber',[ChamberController::class,'search']);
 Route::get('/employee',[EmployeeController::class,'search']);
-Route::get('/slaughterer',[FarmController::class,'search']);
 Route::get('/family',[FamilyController::class,'search']);
-Route::get('/farm',[Livestock_farmerController::class,'search']);
-Route::get('/livestock_farmer',[PartController::class,'search']);
-Route::get('/part',[SlaughterController::class,'search']);
-Route::get('/slaughter',[SlaughtererController::class,'search']);
+Route::get('/farm',[FarmController::class,'search']);
+Route::get('/livestock_farmer',[Livestock_farmerController::class,'search']);
+Route::get('/part',[PartController::class,'search']);
+Route::get('/slaughter',[SlaughterController::class,'search']);
+Route::get('/slaughterer',[SlaughtererController::class,'search']);
 //Route::get('/slaughter_slaughterer',[SlaughterSlaughtererController::class,'search']);
 Route::get('/vet',[VetController::class,'search']);
+
 
 //Ruta para exportar tablas en .pdf
 //Route::get('animal.export', [AnimalController::class, 'export'])->name('export');

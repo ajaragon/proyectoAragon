@@ -45,6 +45,7 @@ class Livestock_farmerController extends Controller
             'Telefono'=>'required|string|max:9',
             'Correo_Electronico'=>'required|string|max:30',
             'Provincia'=>'required|string|max:20',
+            'CIF'=>'required|string|max:9',
         ];
 
         //$mensaje =['required'=>'El :attribute es obligatorio'];
@@ -60,6 +61,7 @@ class Livestock_farmerController extends Controller
             'Telefono.required'=>'Debe introducir el teléfono',
             'Correo_Electronico.required'=>'Debe introducir la calle',
             'Provincia.required'=>'Debe introducir la provincia',
+            'CIF.required'=>'Debe introducir el CIF',
         ];
         
         $this->validate($request, $campos, $mensaje);
@@ -111,6 +113,7 @@ class Livestock_farmerController extends Controller
             'Telefono'=>'required|string|max:9',
             'Correo_Electronico'=>'required|string|max:30',
             'Provincia'=>'required|string|max:20',
+            'CIF'=>'required|string|max:9',
         ];
 
         //$mensaje =['required'=>'El :attribute es obligatorio'];
@@ -125,6 +128,7 @@ class Livestock_farmerController extends Controller
             'Telefono.required'=>'Debe introducir el teléfono',
             'Correo_Electronico.required'=>'Debe introducir la calle',
             'Provincia.required'=>'Debe introducir la provincia',
+            'CIF.required'=>'Debe introducir el CIF',
         ];
 
         $this->validate($request, $campos, $mensaje);

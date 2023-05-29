@@ -32,8 +32,6 @@ class FarmController extends Controller
             'Comarca'=>'required|string|max:20',
             'Provincia'=>'required|string|max:20',
             'CP'=>'required|string|max:5',
-            'DNI'=>'required|string|max:9',
-            'ID_Animal'=>'required|string|max:9',
         ];
         
         $mensaje =
@@ -47,8 +45,6 @@ class FarmController extends Controller
             'Comarca.required'=>'Debe introducir la comarca',
             'Provincia.required'=>'Debe introducir la provincia',
             'CP.required'=>'Debe introducir el código postal',
-            'DNI.required'=>'Debe introducir el DNI',
-            'ID_Animal.required'=>'Debe introducir el identificador del animal',
         ];
         
         $this->validate($request, $campos, $mensaje);
@@ -84,8 +80,6 @@ class FarmController extends Controller
             'Comarca'=>'required|string|max:20',
             'Provincia'=>'required|string|max:20',
             'CP'=>'required|string|max:5',
-            'DNI'=>'required|string|max:9',
-            'ID_Animal'=>'required|string|max:9',
         ];
         
         $mensaje =
@@ -99,8 +93,6 @@ class FarmController extends Controller
             'Comarca.required'=>'Debe introducir la comarca',
             'Provincia.required'=>'Debe introducir la provincia',
             'CP.required'=>'Debe introducir el código postal',
-            'DNI.required'=>'Debe introducir el DNI',
-            'ID_Animal.required'=>'Debe introducir el identificador del animal',
         ];
         
         $this->validate($request, $campos, $mensaje);

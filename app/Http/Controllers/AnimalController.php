@@ -32,6 +32,7 @@ class AnimalController extends Controller
             'L_Slaughter'=>'required|string|max:50',
             'F_Slaughter'=>'required|string|max:10',
             'ID_Especie'=>'required|string|max:1',
+            'CIF'=>'required|string|max:9',
         ];
         
         $mensaje =
@@ -43,7 +44,8 @@ class AnimalController extends Controller
             'F_Nacimiento.required'=>'Debe introducir la fecha de nacimiento',
             'L_Slaughter.required'=>'Debe introducir el lugar de nacimiento',
             'F_Slaughter.required'=>'Debe introducir la fecha de slaughter',
-            'ID_Especie.required'=>'Debe introducir el identificador de la especie'
+            'ID_Especie.required'=>'Debe introducir el identificador de la especie',
+            'CIF.required'=>'Debe introducir el CIF'
         ];
         
         $this->validate($request, $campos, $mensaje);
@@ -78,6 +80,7 @@ class AnimalController extends Controller
             'L_Slaughter'=>'required|string|max:50',
             'F_Slaughter'=>'required|string|max:10',
             'ID_Especie'=>'required|string|max:1',
+            'CIF'=>'required|string|max:9',
         ];
         
         $mensaje =
@@ -89,7 +92,8 @@ class AnimalController extends Controller
             'F_Nacimiento.required'=>'Debe introducir la fecha de nacimiento',
             'L_Slaughter.required'=>'Debe introducir el lugar de nacimiento',
             'F_Slaughter.required'=>'Debe introducir la fecha de slaughter',
-            'ID_Especie.required'=>'Debe introducir el identificador de la especie'
+            'ID_Especie.required'=>'Debe introducir el identificador de la especie',
+            'CIF.required'=>'Debe introducir el CIF'
         ];
 
         $this->validate($request, $campos, $mensaje);

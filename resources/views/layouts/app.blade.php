@@ -93,9 +93,11 @@
                                     <li>
                                         <a href="animal">{{ __('Registro de los animales') }}</a>
                                     </li>
+                                    <!--
                                     <li>
                                         <a href="animal_part">Animales/piezas</a>
                                     </li>
+                                    -->
                                     <li>
                                         <a href="chamber">{{ __('Registro de las cámaras frigoríficas') }}</a>
                                     </li>
@@ -120,9 +122,11 @@
                                     <li>
                                         <a href="slaughterer">{{ __('Registro de los matarifes') }}</a>
                                     </li>
+                                    <!--
                                     <li>
                                         <a href="slaughter_slaughterer">Sacrificios/matarifes</a>
                                     </li>
+                                    -->
                                     <li>
                                         <a href="vet">{{ __('Registro de los veterinarios') }}</a>
                                     </li>

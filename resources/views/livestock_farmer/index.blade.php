@@ -53,6 +53,7 @@
                     <th>Teléfono</th>
                     <th>Correo electrónico</th>
                     <th>Provincia</th>
+                    <th>CIF de la explotación</th>
                     <th>Funciones</th><!--CRUD-->
                 </tr>
             </thead>
@@ -69,6 +70,7 @@
                     <td>{{ $livestock_farmer->Telefono }}</td>
                     <td>{{ $livestock_farmer->Correo_Electronico }}</td>
                     <td>{{ $livestock_farmer->Provincia }}</td>
+                    <td>{{ $livestock_farmer->CIF }}</td>
                     <td>
                         <!--Añadir opción de actualizar y eliminar-->
                         <!--ACTUALIZAR-->
