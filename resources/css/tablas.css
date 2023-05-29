@@ -5,7 +5,7 @@ section{
 }
 
 /*Barra de búsquedas*/
-#nuevo-registro:hover{
+.arreglo-bootstrap:hover{
     color: #041F3D !important;
     text-decoration: none;
 }

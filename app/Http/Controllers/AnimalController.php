@@ -116,7 +116,9 @@ class AnimalController extends Controller
             $animals =Animal::all();
         }//fin del else
 
-        $datosAnimal =compact('animals');
+        //$datosAnimal =compact('animals');
+        //return view('animal.index', $datosAnimal, compact('busqueda'));
+
         return view('animal.index', compact('animals', 'busqueda'));
     }
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Livestock_farmer;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
 
 class Livestock_farmerController extends Controller
 {

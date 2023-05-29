@@ -131,9 +131,9 @@
                             </li>
                         </ul>
                     </li>
-                        <li>
-                            <a href="#">Registros de los usuarios</a>
-                        </li>
+                    <li>
+                        <a href="#">Registro de los contactos</a>
+                    </li>
                 </ul>
 
                 <!--
@@ -149,55 +149,43 @@
             </nav>
             <!-- Sidebar Holder -->
             <div id="content">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
 
-                            <!--Botón de apertura/cirerre menú lateral-->
-                            <button type="button" id="sidebarCollapse" class="navbar-btn">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </button>
-                            <!--Botón de apertura/cierre login-->
-                            <button     class="btn d-inline-block d-lg-none ml-auto"
-                                        id="hamburguesa" 
-                                        type="button" 
-                                        data-toggle="collapse" 
-                                        data-target="#navbarSupportedContent" 
-                                        aria-controls="navbarSupportedContent" 
-                                        aria-expanded="false" 
-                                        aria-label="Toggle navigation">
-                                <i class="fas fa-align-justify"></i>
-                            </button>
+                    <!--Botón de apertura/cirerre menú lateral-->
+                        <button type="button" id="sidebarCollapse" class="navbar-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
 
-                            <!-- Barra de búsquedas -->
-                            <!--
-                                <div class="input-group rounded col-4">
-                                    <input  type="search"
-                                            name="search" 
-                                            class="form-control rounded" 
-                                            placeholder="Buscar identificador..." 
-                                            aria-label="Search" 
-                                            aria-describedby="search-addon" />
-                                    <button>
-                                        <span class="input-group-text border-0" id="search-addon">
-                                            <i class="fas fa-search"></i>
-                                        </span>
-                                    </button>
-                                </div>
-                            -->
+                    <!--Botón de apertura/cierre login-->
+                        <button     class="btn d-inline-block d-lg-none ml-auto"
+                                    id="hamburguesa" 
+                                    type="button" 
+                                    data-toggle="collapse" 
+                                    data-target="#navbarSupportedContent" 
+                                    aria-controls="navbarSupportedContent" 
+                                    aria-expanded="false" 
+                                    aria-label="Toggle navigation">
+                            <i class="fas fa-align-justify"></i>
+                        </button>
 
-                            <div    class="collapse navbar-collapse" 
-                                    id="navbarSupportedContent">
-                                <ul class="nav navbar-nav ml-auto">
-                                    <!--
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Login</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Register</a>
-                                    </li>-->
-                                    <!-- Authentication Links -->
+                        <div    class="collapse navbar-collapse text-reset" 
+                                id="navbarSupportedContent">
+                            <ul class="nav navbar-nav ml-auto">
+                                
+                                <!--
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Register</a>
+                                </li>
+                                -->
+                                
+                                <!-- Authentication Links -->
+                                
                                     @guest
                                         @if (Route::has('login'))
                                             <li class="nav-item">
@@ -229,10 +217,10 @@
                                             </div>
                                         </li>
                                     @endguest
-                                </ul>
-                            </div>
+                            </ul>
                         </div>
-                    </nav>
+                    </div>
+                </nav>
                     <!--
                     <h2>Collapsible Sidebar Using Bootstrap 4</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -253,7 +241,7 @@
                     <h3>Lorem Ipsum Dolor</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     -->
-                    <div>
+                <div>
                         <!-- El yield va a llamar a cualquier sección de los archivos de las vistas creadas que lleve content ->
                         <!--    El concepto es que se está empleado una plantilla en común entre todas las vistas 
                                 y en este contenedor se le ordena que muestre la sección con el contenido específico de cada tabla 
@@ -261,9 +249,9 @@
                         <!-- Se podría hacer con un include, sin embargo, habría que ir sección por sección concretando 
                                 a qué vista hace referencia
                         -->
-                        @yield('content')
-                    </div>
+                    @yield('content')
                 </div>
+            </div>
 
             <!-- jQuery CDN - Slim version (=without AJAX) -->
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
