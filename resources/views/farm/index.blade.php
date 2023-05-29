@@ -71,14 +71,18 @@
                     <td>{{ $farm->Provincia }}</td>
                     <td>{{ $farm->CP }}</td>
                     <td>
+                        @role('administrador')
                         <a href="{{ url('/farm/'.$farm->id.'/edit') }}">Editar</a>
-                        
+                        @endrole
                         <form action="{{ url('/farm/'.$farm->id) }}" method="post">
-                        @csrf    
+                        @csrf
+                            @role('administrador')    
                             {{ method_field('DELETE') }} 
                             <input  type="submit" id="borrar" value="Eliminar" 
                                     onclick="return confirmacion('Los datos serán borrados')">
+                            @endrole
                         </form>
+                        
                     </td>
                 </tr>
                 @endforeach

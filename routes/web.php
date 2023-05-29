@@ -34,15 +34,17 @@ use App\Http\Controllers\PDFController; //enlace creado con el controlador de ve
 */
 
 //CAMBIAR RUTA "/"; añadir "/home": Lo que se encuentra un internauta nada más acceder al sitio web
-/*
-Route::get('/home', function () {
-    return view('auth.login');  //aparece la vista donde el usuario se loguea
-});
-*/
 
+Route::get('/', function () {
+    return view('home');  //aparece la vista donde el usuario se loguea
+});
+
+
+/*
 Route::get('/', function () {
     return view('auth.login');  //aparece la vista donde el usuario se loguea
 });
+/*
 
 //enla url localhost/proyectoAragon/public/
 //ordeno que muestre la vista de welcome
@@ -133,7 +135,7 @@ Route::resource('vet',VetController::class);
 
 
 Auth::routes();
-Auth::routes(['register'=>false,'reset'=>false]);//. . . . . . . . . . . . . . Seguridad
+//Auth::routes(['register'=>false,'reset'=>false]);//. . . . . . . . . . . . . . Seguridad
 
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
