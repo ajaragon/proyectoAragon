@@ -132,7 +132,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Registro de los contactos</a>
+                        <a href="usuario">{{ __('Administración de usuarios') }}</a>
+                    </li>
+                    <li>
+                        <!--<a href="rol">{{ __('Administración de permisos') }}</a>-->
                     </li>
                 </ul>
 
@@ -189,22 +192,22 @@
                                     @guest
                                         @if (Route::has('login'))
                                             <li class="nav-item">
-                                                <a class="nav-link" href="{{ route('login') }}" id="login">{{ __('Login') }}</a>
+                                                <a class="nav-link text-bg-dark" href="{{ route('login') }}" id="login">{{ __('Login') }}</a>
                                             </li>
                                         @endif
 
                                         @if (Route::has('register'))
                                             <li class="nav-item">
-                                                <a class="nav-link" href="{{ route('register') }}" id="register">{{ __('Register') }}</a>
+                                                <a class="nav-link text-bg-dark" href="{{ route('register') }}" id="register">{{ __('Register') }}</a>
                                             </li>
                                         @endif
                                     @else
                                         <li class="nav-item dropdown">
-                                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                            <a id="navbarDropdown" class="nav-link dropdown-toggle text-bg-dark" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                                 {{ Auth::user()->name }}
                                             </a>
 
-                                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                            <div class="dropdown-menu dropdown-menu-end text-bg-dark" aria-labelledby="navbarDropdown">
                                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                                 onclick="event.preventDefault();
                                                                 document.getElementById('logout-form').submit();">

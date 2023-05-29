@@ -20,7 +20,10 @@ use App\Http\Controllers\SlaughterController; //enlace creado con el controlador
 use App\Http\Controllers\SlaughtererController; //enlace creado con el controlador de slaughterer
 //use App\Http\Controllers\SlaughterSlaughtererController; //enlace creado con el controlador de slaughter/slaughterer
 use App\Http\Controllers\VetController; //enlace creado con el controlador de vet
-use App\Http\Controllers\PDFController; //enlace creado con el controlador de vet
+use App\Http\Controllers\PDFController; //enlace creado con el controlador de PDFs
+use App\Http\Controllers\RolController; //enlace creado con el controlador de rol
+use App\Http\Controllers\UsuarioController; //enlace creado con el controlador de vet
+
 
 /*
 |--------------------------------------------------------------------------
@@ -135,6 +138,27 @@ Route::resource('vet',VetController::class);
 
 
 Auth::routes();
+
+//Permisos
+Route::group(['middleware'=>'auth'], function(){
+
+    Route::resource('home', HomeController::class);
+    Route::resource('animal', AnimalController::class);
+    Route::resource('chamber', ChamberController::class);
+    Route::resource('employee', EmployeeController::class);
+    Route::resource('farm', FarmController::class);
+    Route::resource('family', FamilyControler::class);
+    Route::resource('livestock_farmer', Livestock_farnerController::class);
+    Route::resource('part', PartController::class);
+    Route::resource('slaughter', SlaughterController::class);
+    Route::resource('slaughterer', SlaughtererController::class);
+    Route::resource('vet', VetController::class);
+    Route::resource('usuario', UsuarioController::class);
+    Route::resource('rol', RolController::class);
+
+});
+
+
 //Auth::routes(['register'=>false,'reset'=>false]);//. . . . . . . . . . . . . . Seguridad
 
 
@@ -146,6 +170,7 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/', [Home::class, 'index'])->name('home');
 });
 */
+
 
 //-----------------------------------------------------------\\
 //RUTAS PARA MOSTRAR LOS REGISTROS DE LAS TABLAS

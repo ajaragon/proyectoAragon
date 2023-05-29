@@ -1,0 +1,11 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <form action="{{ url('/usuario/'.$usuario->id) }}" method="post">
+        @csrf
+        {{ method_field('PATCH')}} <!--Se envía los datos al controlador para que los actualice-->
+        @include('usuario.form',['modo'=>'Editar registro'])
+    </form>
+</div>
+@endsection

@@ -14,7 +14,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        /*
+        
         //https://www.youtube.com/watch?v=3c_Ri_h0ecY
 
         //Creación de los roles:
@@ -35,7 +35,7 @@ return new class extends Migration
         $user->assignRole($rolEscritor);
         $user->assignRole($rolConsultor);
         
-        */
+        
     }
 
     /**
