@@ -12,7 +12,7 @@ Versiones:
 
 5.0V Creación de las interfaces de la consulta de la base de datos 
 
-6.0V Creación de exportación de tablas
+6.0V Creación de exportación de tablas y solución de bugs en backend
 
 
 

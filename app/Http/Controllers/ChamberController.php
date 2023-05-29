@@ -23,7 +23,7 @@ class chamberController extends Controller
 
         $campos =
         [
-            'NUM_chamber'=>'required|string|max:2',
+            'NUM_Chamber'=>'required|string|max:2',
             'Capacidad'=>'required|string|max:3',
             'COD_Slaughter'=>'required|string|max:2',
         ];

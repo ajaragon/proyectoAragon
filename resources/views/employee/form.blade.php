@@ -38,10 +38,6 @@
     <input  type="text" id="Provincia" name="Provincia" 
             value="{{ isset($employee->Provincia)?$employee->Provincia:old('Provincia') }}"><br>
 
-    <label  for="CIF"> Provincia: </label>
-    <input  type="text" id="CIF" name="CIF" 
-            value="{{ isset($employee->CIF)?$employee->CIF:old('CIF') }}"><br>
-
     <label  for="AgregarEmpleado">  </label>
     <input  type="submit" id="AgregarEmpleado" value="{{ $modo }}"><hr>
     

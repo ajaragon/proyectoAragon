@@ -59,13 +59,6 @@
                     <td>
                         <!--Añadir opción de actualizar y eliminar-->
                         <!--ACTUALIZAR-->
-                        <!--
-                            localhost/proyectoAragon/public/livestock_farmer/id/edit 
-                            Para conocer cuál es el elemento que quiero que actualice,
-                            le paso el id.
-                            Se mostrará entonces la vista "edit" 
-                            donde aparece el formulario con los campos que se quieren editar
-                        -->
                         <a href="{{ url('/part/'.$part->id.'/edit') }}">Editar</a>
                         <!--ELIMINAR-->
                         <!--Para que el software conozca que elemento tiene que borrar,
@@ -98,3 +91,4 @@
         </button>-->
     </div>
 </section>
+@endsection

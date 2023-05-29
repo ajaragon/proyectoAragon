@@ -5,6 +5,10 @@
 //---------------------------------------------------------------------------------\\
 //---------------------------------------------------------------------------------\\
 
+/*
+localhost/proyectoAragon
+*/
+
 //Import punteros hacie los controladores
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController; //enlace creado con el controlador de home
@@ -34,7 +38,13 @@ use App\Http\Controllers\PDFController; //enlace creado con el controlador de ve
 */
 
 //CAMBIAR RUTA "/"; añadir "/home": Lo que se encuentra un internauta nada más acceder al sitio web
+/*
 Route::get('/home', function () {
+    return view('auth.login');  //aparece la vista donde el usuario se loguea
+});
+*/
+
+Route::get('/', function () {
     return view('auth.login');  //aparece la vista donde el usuario se loguea
 });
 
@@ -45,10 +55,6 @@ Route::get('/', function(){
     return view('welcome');
 });
 */
-
-Route::get('/', function(){
-    return view('home');
-});
 
 //RUTAS GANADEROS
 /*
@@ -110,7 +116,11 @@ Route::get('/livestock_farmer/create',[Livestock_farmerController::class,'create
 
 //el middleware evita que una persona que conoce la url pueda introducir datos
 //con el "auth" se obliga a cualquier usuario a loguearse
-//Route::resource('livestock_farmer',Livestock_farmerController::class)->middleware('auth');. .//Seguridad
+
+
+//SEGURIDAD
+//Route::resource('livestock_farmer',Livestock_farmerController::class)->middleware('auth');
+
 Route::resource('home',HomeController::class);
 Route::resource('animal',AnimalController::class);
 //Route::resource('animal',AnimalPartController::class);
@@ -127,15 +137,14 @@ Route::resource('vet',VetController::class);
 
 
 Auth::routes();
-//Auth::routes(['register'=>false,'reset'=>false]);//. . . . . . . . . . . . . . Seguridad
+Auth::routes(['register'=>false,'reset'=>false]);//. . . . . . . . . . . . . . Seguridad
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //Route::get('/home',[Livestock_farmerController::class,'index'])->name('home');
-/*
+
 Route::group(['middleware'=>'auth'], function(){
     Route::get('/', [Livestock_farmerController::class, 'index'])->name('home');
 });
-*/
 
 
 //Obtiene la ruta, concatena /xxxxx con la función index del controlador xxxxx 

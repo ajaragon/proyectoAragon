@@ -23,7 +23,6 @@ class SlaughterController extends Controller
         $campos =
         [
             'COD_Slaughter'=>'required|string|max:9',
-            'Descripcion'=>'required|string|max:50',
             'NUM_Colegiado'=>'required|string|max:9',
             'ID_Animal'=>'required|string|max:9',
             'ID_Employee'=>'required|string|max:9',
@@ -32,7 +31,6 @@ class SlaughterController extends Controller
         $mensaje =
         [
             'COD_Slaughter.required'=>'Debe introducir el código del slaughter',
-            'Descripcion.required'=>'Debe introducir la descripción',
             'NUM_Colegiado.required'=>'Debe introducir el identificador del vet',
             'ID_Animal.required'=>'Debe introducir el identificador del animal',
             'ID_Employee.required'=>'Debe introducir el identificador del empleado',
@@ -62,7 +60,6 @@ class SlaughterController extends Controller
         $campos =
         [
             'COD_Slaughter'=>'required|string|max:9',
-            'Descripcion'=>'required|string|max:50',
             'NUM_Colegiado'=>'required|string|max:9',
             'ID_Animal'=>'required|string|max:9',
             'ID_Employee'=>'required|string|max:9',
@@ -71,7 +68,6 @@ class SlaughterController extends Controller
         $mensaje =
         [
             'COD_Slaughter.required'=>'Debe introducir el código del slaughter',
-            'Descripcion.required'=>'Debe introducir la descripción',
             'NUM_Colegiado.required'=>'Debe introducir el identificador del vet',
             'ID_Animal.required'=>'Debe introducir el identificador del animal',
             'ID_Employee.required'=>'Debe introducir el identificador del empleado',

@@ -44,7 +44,6 @@
                 <tr>
                     <th>Código registro</th><!--id MyAdmin-->
                     <th>Código de sacrificio</th>
-                    <th>Descripcion</th>
                     <th>Número de colegiado</th>
                     <th>Identificador del animal</th>
                     <th>Identificador del empleado</th>
@@ -58,7 +57,6 @@
                     <!--Como aparezcan en MyAdmin-->
                     <td>{{ $slaughter->id }}</td>
                     <td>{{ $slaughter->COD_Slaughter }}</td>
-                    <td>{{ $slaughter->Descripcion }}</td>
                     <td>{{ $slaughter->NUM_Colegiado }}</td>
                     <td>{{ $slaughter->ID_Animal }}</td>
                     <td>{{ $slaughter->ID_Employee }}</td>

@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
 
             $table->string('COD_Slaughter');        //PK
-            $table->string('Descripcion');
            
             $table  ->foreignId('NUM_Colegiado')
                     ->constrained('vets')

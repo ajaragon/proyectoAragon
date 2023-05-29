@@ -32,7 +32,6 @@ class EmployeeController extends Controller
             'Correo_Electronico'=>'required|string|max:30',
             'Direccion'=>'required|string|max:50',
             'Provincia'=>'required|string|max:20',
-            'CIF'=>'required|string|max:9',
         ];
         
         $mensaje =
@@ -46,7 +45,6 @@ class EmployeeController extends Controller
             'Correo_Electronico.required'=>'Debe introducir el correo electrónico',
             'Direccion.required'=>'Debe introducir la dirección',
             'Provincia.required'=>'Debe introducir la provincia',
-            'CIF.required'=>'Debe introducir el CIF'
         ];
         
         $this->validate($request, $campos, $mensaje);
@@ -82,7 +80,6 @@ class EmployeeController extends Controller
             'Correo_Electronico'=>'required|string|max:30',
             'Direccion'=>'required|string|max:50',
             'Provincia'=>'required|string|max:20',
-            'CIF'=>'required|string|max:9',
         ];
         
         $mensaje =
@@ -96,7 +93,6 @@ class EmployeeController extends Controller
             'Correo_Electronico.required'=>'Debe introducir el correo electrónico',
             'Direccion.required'=>'Debe introducir la dirección',
             'Provincia.required'=>'Debe introducir la provincia',
-            'CIF.required'=>'Debe introducir el CIF'
         ];
 
         $this->validate($request, $campos, $mensaje);

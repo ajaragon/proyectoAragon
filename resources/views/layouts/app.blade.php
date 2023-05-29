@@ -52,105 +52,101 @@
             <!--https://bootstrapious.com/tutorial/sidebar/index.html-->
             <!--MENÚ LATERAL-->
             <nav id="sidebar">
-                        <div class="sidebar-header">
-                            <h3>Nombre de la empresa</h3>
-                            <!--Añadir logo-->
-                        </div>
+                <div class="sidebar-header">
+                    <h3>Empresa</h3>
+                </div>
 
-                        <ul class="list-unstyled components">
-                            <p>Menú</p>
-                            <li class="">
-                                <a  href="#homeSubmenu" 
-                                    data-toggle="collapse" 
-                                    aria-expanded="false" 
-                                    class="dropdown-toggle">
-                                    Empresa
-                                </a>
-                                <ul class="collapse list-unstyled" id="homeSubmenu">
-                                    <li>
-                                        <a href="#">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Quiénes somos</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Blog</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Contáctanos</a>
-                                    </li>
-                                </ul>
+                <ul class="list-unstyled components">
+                    <p>Menú</p>
+                    <li class="">
+                        <a  href="#homeSubmenu" 
+                            data-toggle="collapse" 
+                            aria-expanded="false" 
+                            class="dropdown-toggle">
+                            Empresa
+                        </a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="#">Home</a>
                             </li>
                             <li>
-                                <!--<a href="#">About</a>-->
-                                <a  href="#pageSubmenu" 
-                                    data-toggle="collapse" 
-                                    aria-expanded="false" 
-                                    class="dropdown-toggle">
-                                    Registros
-                                </a>
-                                <ul class="collapse list-unstyled" id="pageSubmenu">
-                                    <li>
-                                        <a href="animal">{{ __('Registro de los animales') }}</a>
-                                    </li>
-                                    <!--
-                                    <li>
-                                        <a href="animal_part">Animales/piezas</a>
-                                    </li>
-                                    -->
-                                    <li>
-                                        <a href="chamber">{{ __('Registro de las cámaras frigoríficas') }}</a>
-                                    </li>
-                                    <li>
-                                        <a href="employee">{{ __('Registro de los empleados') }}</a>
-                                    </li>
-                                    <li>
-                                        <a href="family">{{ __('Registro de las especies') }}</a>
-                                    </li>
-                                    <li>
-                                        <a href="farm">{{ __('Registro de las explotaciones ganaderas') }}</a>
-                                    </li>
-                                    <li>
-                                        <a href="livestock_farmer">{{ __('Registro de los ganaderos') }}</a>
-                                    </li>
-                                    <li>
-                                        <a href="part">{{ __('Registro de las piezas de los animales') }}</a>
-                                    </li>
-                                    <li>
-                                        <a href="slaughter">{{ __('Registro de los sacrificios') }}</a>
-                                    </li>
-                                    <li>
-                                        <a href="slaughterer">{{ __('Registro de los matarifes') }}</a>
-                                    </li>
-                                    <!--
-                                    <li>
-                                        <a href="slaughter_slaughterer">Sacrificios/matarifes</a>
-                                    </li>
-                                    -->
-                                    <li>
-                                        <a href="vet">{{ __('Registro de los veterinarios') }}</a>
-                                    </li>
-                                </ul>
+                                <a href="#">Quiénes somos</a>
                             </li>
                             <li>
-                                <a href="#">Portfolio</a>
+                                <a href="#">Blog</a>
                             </li>
                             <li>
-                                <a href="#">Contact</a>
+                                <a href="#">Contáctanos</a>
                             </li>
                         </ul>
-
-                        <!--
-                        <ul class="list-unstyled CTAs">
+                    </li>
+                    <li>
+                        <!--<a href="#">About</a>-->
+                        <a  href="#pageSubmenu" 
+                                data-toggle="collapse" 
+                                aria-expanded="false" 
+                                class="dropdown-toggle">
+                                Registros
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
                             <li>
-                                <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                                <a href="animal">{{ __('Registro de los animales') }}</a>
+                            </li>
+                            <!--
+                            <li>
+                                <a href="animal_part">Animales/piezas</a>
+                            </li>
+                            -->
+                            <li>
+                                <a href="chamber">{{ __('Registro de las cámaras frigoríficas') }}</a>
                             </li>
                             <li>
-                                <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                                <a href="employee">{{ __('Registro de los empleados') }}</a>
+                            </li>
+                            <li>
+                                <a href="family">{{ __('Registro de las especies') }}</a>
+                            </li>
+                            <li>
+                                <a href="farm">{{ __('Registro de las explotaciones ganaderas') }}</a>
+                            </li>
+                            <li>
+                                <a href="livestock_farmer">{{ __('Registro de los ganaderos') }}</a>
+                            </li>
+                            <li>
+                                <a href="part">{{ __('Registro de las piezas de los animales') }}</a>
+                            </li>
+                            <li>
+                                <a href="slaughter">{{ __('Registro de los sacrificios') }}</a>
+                            </li>
+                            <li>
+                                <a href="slaughterer">{{ __('Registro de los matarifes') }}</a>
+                            </li>
+                            <!--
+                            <li>
+                                <a href="slaughter_slaughterer">Sacrificios/matarifes</a>
+                            </li>
+                            -->
+                            <li>
+                                <a href="vet">{{ __('Registro de los veterinarios') }}</a>
                             </li>
                         </ul>
-                        -->
-                    </nav>
+                    </li>
+                        <li>
+                            <a href="#">Registros de los usuarios</a>
+                        </li>
+                </ul>
+
+                <!--
+                <ul class="list-unstyled CTAs">
+                    <li>
+                        <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                    </li>
+                    <li>
+                        <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                    </li>
+                </ul>
+                -->
+            </nav>
             <!-- Sidebar Holder -->
             <div id="content">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -258,6 +254,13 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     -->
                     <div>
+                        <!-- El yield va a llamar a cualquier sección de los archivos de las vistas creadas que lleve content ->
+                        <!--    El concepto es que se está empleado una plantilla en común entre todas las vistas 
+                                y en este contenedor se le ordena que muestre la sección con el contenido específico de cada tabla 
+                        -->
+                        <!-- Se podría hacer con un include, sin embargo, habría que ir sección por sección concretando 
+                                a qué vista hace referencia
+                        -->
                         @yield('content')
                     </div>
                 </div>

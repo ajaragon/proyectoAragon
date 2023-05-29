@@ -1,7 +1,4 @@
-@extends('layouts.app')<!--
-                            aplica el layout por defecto para que 
-                            se aplique el estillo y aparezca el login
-                        -->
+@extends('layouts.app')
 
 @section('content')
 @vite(['resources/css/tablas.css'])
