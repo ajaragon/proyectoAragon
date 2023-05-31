@@ -212,6 +212,15 @@ Route::get('/vet',[VetController::class,'search']);
 //Ruta para exportar tablas en .pdf
 //Route::get('animal.export', [AnimalController::class, 'export'])->name('export');
 Route::get('animal-export', [AnimalController::class, 'export']);
+Route::get('chamber-export', [ChamberController::class, 'export']);
+Route::get('employee-export', [EmployeeController::class, 'export']);
+Route::get('family-export', [FamilyController::class, 'export']);
+Route::get('farm-export', [FarmController::class, 'export']);
+Route::get('livestock_farmer-export', [Livestock_farmerController::class, 'export']);
+Route::get('part-export', [PartController::class, 'export']);
+Route::get('slaughter-export', [SlaughterController::class, 'export']);
+Route::get('slaughterer-export', [SlaughtererController::class, 'export']);
+Route::get('vet-export', [VetController::class, 'export']);
 
 
 

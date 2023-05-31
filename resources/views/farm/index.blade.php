@@ -5,10 +5,12 @@
 
 <!-- Buscador de registros, impresion de tablas y creación de registros-->
 <section class="busqueda">
-    <div class="row">
-            <div class="col-lg-6">
+    <!--BARRA DE BÚSQUEDA DE REGISTROS-->
+        <div class="row">
+            <form class="col-lg-6">
                 <div class="input-group rounded" id="search-container">
                 <input  type="search" 
+                        id="search"
                         name="search" 
                         class="form-control rounded" 
                         placeholder="Buscar identificador..." 
@@ -16,18 +18,20 @@
                         aria-describedby="search-addon" />
                 <button>
                     <span class="input-group-text border-0" id="search-addon">
-                    <i class="fas fa-search"></i>
+                        <i class="fas fa-search"></i>
                     </span>
                 </button>
                 </div>
-            </div>
+            </form>
             <div class="col-lg-6">
                 <div    class="btn-group" 
                         role="group" 
                         aria-label="Basic example">
-                    <button type="button" class="btn btn-outline-light">Imprimir</button>
                     <button type="button" class="btn btn-outline-light">
-                        <a id="nuevo-registro" href="{{ url('farm/create') }}">Crear</a>
+                        <a class="arreglo-bootstrap" id="exportar" href="{{ url('farm-export') }}">Imprimir</a>
+                    </button>
+                    <button type="button" class="btn btn-outline-light">
+                        <a class="arreglo-bootstrap" id="nuevo-registro" href="{{ url('farm/create') }}">Crear</a>
                     </button>
                 </div>
             </div>

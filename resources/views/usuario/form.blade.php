@@ -14,7 +14,7 @@
 <input  type="text" id="password" name="password" 
         value="{{ isset($usuario->password)?$usuario->password:old('password') }}"><br>
 
-<label  for="roles"> Permisos: </label>
+<label  for="roles"> Permisos(administrador, escritor, consultor): </label>
 <input  type="text" id="roles" name="roles" 
         value="{{ isset($usuario->roles)?$usuario->roles:old('roles') }}"><br>
 

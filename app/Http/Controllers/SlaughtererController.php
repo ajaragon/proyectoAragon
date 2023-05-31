@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Slaughterer;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
+use PDF;
 
 class SlaughtererController extends Controller
 {
@@ -115,5 +117,22 @@ class SlaughtererController extends Controller
     {
         Slaughterer::destroy($id);
         return redirect('slaughterer')->with('mensaje','Se eliminó el registro de la base de datos.');  
+    }
+
+    public function export()
+    {
+       
+        $slaughterers = Slaughterer::get();
+        
+        $data =
+        [
+            'title' =>'REGISTROS DE LOS ANIMALES',
+            'date' =>date('m/d/Y'),
+            'slaughterers' =>$slaughterers, 
+        ];
+ 
+        $pdf = PDF::loadView('slaughterer.export', $data);
+     
+        return $pdf->download('matarifes.pdf');
     }
 }

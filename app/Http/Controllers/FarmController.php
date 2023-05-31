@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Farm;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
+use PDF;
 
 class FarmController extends Controller
 {
@@ -123,5 +125,26 @@ class FarmController extends Controller
     {
         Farm::destroy($id);
         return redirect('farm')->with('mensaje','Se eliminó el registro de la base de datos.');  
+    }
+
+    public function export()
+    {
+        //Mete todos los registros de la tabla en la variable $animals
+        $farms = Farm::get();
+        
+        //Agrupa el título que se ve en el documento, la fecha de impresión
+        //y todos los registros de la tabla
+        $data =
+        [
+            'title' =>'REGISTROS DE LOS ANIMALES',
+            'date' =>date('m/d/Y'),
+            'farms' =>$farms, 
+        ];
+ 
+        //Carga la vista export junto con todos los datos de los registros de la tabla
+        $pdf = PDF::loadView('farm.export', $data);
+     
+        //devuelve la descarga de la vista junto con los registros en un .pdf
+        return $pdf->download('explotaciones.pdf');
     }
 }

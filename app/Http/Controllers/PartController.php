@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Part;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
+use PDF;
 
 class PartController extends Controller
 {
@@ -94,5 +96,26 @@ class PartController extends Controller
     {
         Part::destroy($id);
         return redirect('part')->with('mensaje','Se eliminó el registro de la base de datos.');  
+    }
+
+    public function export()
+    {
+        //Mete todos los registros de la tabla en la variable $animals
+        $parts =Part::get();
+        
+        //Agrupa el título que se ve en el documento, la fecha de impresión
+        //y todos los registros de la tabla
+        $data =
+        [
+            'title' =>'REGISTROS DE LOS ANIMALES',
+            'date' =>date('m/d/Y'),
+            'parts' =>$parts, 
+        ];
+ 
+        //Carga la vista export junto con todos los datos de los registros de la tabla
+        $pdf = PDF::loadView('part.export', $data);
+     
+        //devuelve la descarga de la vista junto con los registros en un .pdf
+        return $pdf->download('piezas.pdf');
     }
 }

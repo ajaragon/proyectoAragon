@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Vet;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
+use PDF;
 
 class VetController extends Controller
 {
@@ -119,5 +121,22 @@ class VetController extends Controller
     {
         Vet::destroy($id);
         return redirect('vet')->with('mensaje','Se eliminó el registro de la base de datos.');  
+    }
+
+    public function export()
+    {
+       
+        $vets = Vet::get();
+        
+        $data =
+        [
+            'title' =>'REGISTROS DE LOS ANIMALES',
+            'date' =>date('m/d/Y'),
+            'vets' =>$vets, 
+        ];
+ 
+        $pdf = PDF::loadView('vet.export', $data);
+     
+        return $pdf->download('veterinarios.pdf');
     }
 }

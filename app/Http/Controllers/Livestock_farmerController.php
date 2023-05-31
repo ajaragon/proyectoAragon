@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Livestock_farmer;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
+use PDF;
 
 class Livestock_farmerController extends Controller
 {
@@ -165,5 +166,26 @@ class Livestock_farmerController extends Controller
         Livestock_farmer::destroy($id);         //le paso el id del elemento que quiero que elimine
         //return redirect('livestock_farmer');  //vuelve a mostrar los registros de todos los livestock_farmers
         return redirect('livestock_farmer')->with('mensaje','Se eliminó el registro de la base de datos.');  
+    }
+
+    public function export()
+    {
+        //Mete todos los registros de la tabla en la variable $animals
+        $livestock_farmers = Livestock_farmer::get();
+        
+        //Agrupa el título que se ve en el documento, la fecha de impresión
+        //y todos los registros de la tabla
+        $data =
+        [
+            'title' =>'REGISTROS DE LOS ANIMALES',
+            'date' =>date('m/d/Y'),
+            'livestock_farmers' =>$livestock_farmers, 
+        ];
+ 
+        //Carga la vista export junto con todos los datos de los registros de la tabla
+        $pdf = PDF::loadView('livestock_farmer.export', $data);
+     
+        //devuelve la descarga de la vista junto con los registros en un .pdf
+        return $pdf->download('ganaderos.pdf');
     }
 }

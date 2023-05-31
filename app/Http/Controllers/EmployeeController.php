@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Employee;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
+use PDF;
+
 
 class EmployeeController extends Controller
 {
@@ -123,5 +126,26 @@ class EmployeeController extends Controller
     {
         Employee::destroy($id);
         return redirect('employee')->with('mensaje','Se eliminó el registro de la base de datos.');  
+    }
+
+    public function export()
+    {
+        //Mete todos los registros de la tabla en la variable $animals
+        $employees = Employee::get();
+        
+        //Agrupa el título que se ve en el documento, la fecha de impresión
+        //y todos los registros de la tabla
+        $data =
+        [
+            'title' =>'REGISTROS DE LOS ANIMALES',
+            'date' =>date('m/d/Y'),
+            'employees' =>$employees, 
+        ];
+ 
+        //Carga la vista export junto con todos los datos de los registros de la tabla
+        $pdf = PDF::loadView('employee.export', $data);
+     
+        //devuelve la descarga de la vista junto con los registros en un .pdf
+        return $pdf->download('empleados.pdf');
     }
 }

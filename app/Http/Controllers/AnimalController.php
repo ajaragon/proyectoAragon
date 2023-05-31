@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Animal;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
 use PDF;
 
 class AnimalController extends Controller
@@ -136,8 +137,11 @@ class AnimalController extends Controller
     */
     public function export()
     {
+        //Mete todos los registros de la tabla en la variable $animals
         $animals = Animal::get();
-  
+        
+        //Agrupa el título que se ve en el documento, la fecha de impresión
+        //y todos los registros de la tabla
         $data =
         [
             'title' =>'REGISTROS DE LOS ANIMALES',
@@ -145,8 +149,10 @@ class AnimalController extends Controller
             'animals' =>$animals, 
         ];
  
-        $pdf = PDF::loadView('export', $data);
+        //Carga la vista export junto con todos los datos de los registros de la tabla
+        $pdf = PDF::loadView('animal.export', $data);
      
+        //devuelve la descarga de la vista junto con los registros en un .pdf
         return $pdf->download('animales.pdf');
     }
 }
