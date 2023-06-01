@@ -18,5 +18,11 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        //Introducción de roles
+        $this->call(RoleSeeder::class);
+
+        //creación de superadministrador
+        $this->call(SuperAdminSeeder::class);
     }
 }

@@ -8,7 +8,7 @@
 
     <label  for="Descripcion"> Descripción: </label>
     <input  type="text" id="Descripcion" name="Descripcion" 
-            value="{{ isset($family->Descripcion)?$farm->Descripcion:old('Descripcion') }}"><br>
+            value="{{ isset($family->Descripcion)?$family->Descripcion:old('Descripcion') }}"><br>
        
     <label  for="Añadir">  </label>
     <input  type="submit" id="AgregarFamily" value="{{ $modo }}"><hr>

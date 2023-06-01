@@ -73,14 +73,17 @@
                     <td>{{ $vet->Correo_Electronico }}</td>
                     <td>{{ $vet->Provincia }}</td>
                     <td>
+                        @role(['administrador', 'escritor'])
                         <a href="{{ url('/vet/'.$vet->id.'/edit') }}">Editar</a>
-                        
+                        @endrole
+                        @role(['administrador'])
                         <form action="{{ url('/vet/'.$vet->id) }}" method="post">
                         @csrf    
                             {{ method_field('DELETE') }} 
                             <input  type="submit" id="borrar" value="Eliminar" 
                                     onclick="return confirmacion('Los datos serán borrados')">
                         </form>
+                        @endrole
                     </td>
                 </tr>
                 @endforeach

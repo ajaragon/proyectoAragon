@@ -39,7 +39,7 @@ class SuperAdminSeeder extends Seeder
         */
 
         //En caso de que ya exista y no sea la primera vez que se introduce un usuario:
-        
+        /*
         $usuario =User::create([
             'name'=>'superAdmin',
             'email'=>'superAdmin@superAdmin.com',
@@ -47,6 +47,14 @@ class SuperAdminSeeder extends Seeder
         ]);
 
         $usuario->assignRole('administrador');
-        
+        */
+        User::create([
+            'name'=>'superAdmin',
+            'email'=>'superAdmin@superAdmin.com',
+            'email_verified_at'=>now(),
+            //'password'=>bcrypt('12345678')
+            'password'=>'$2y$10$R6HPc2vlupl6p1AT7i6UbObaWG1osAcVVvVk/.sKieb1LDYoWAfGO',
+            'remember_token'=>Str::random(10)  
+        ])->assignRole('administrador');
     }
 }

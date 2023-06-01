@@ -61,14 +61,17 @@
                     <td>{{ $family->ID_Especie }}</td>
                     <td>{{ $family->Descripcion }}</td>
                     <td>
+                        @role(['administrador', 'escritor'])
                         <a href="{{ url('/family/'.$family->id.'/edit') }}">Editar</a>
-                        
+                        @endrole
+                        @role(['administrador'])
                         <form action="{{ url('/family/'.$family->id) }}" method="post">
                         @csrf    
                             {{ method_field('DELETE') }} 
                             <input  type="submit" id="borrar" value="Eliminar" 
                                     onclick="return confirmacion('Los datos serán borrados')">
                         </form>
+                        @endrole
                     </td>
                 </tr>
                 @endforeach

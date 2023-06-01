@@ -73,6 +73,7 @@
                     <td>{{ $livestock_farmer->Provincia }}</td>
                     <td>{{ $livestock_farmer->CIF }}</td>
                     <td>
+                        @role(['administrador', 'escritor'])
                         <!--Añadir opción de actualizar y eliminar-->
                         <!--ACTUALIZAR-->
                         <!--
@@ -83,6 +84,8 @@
                             donde aparece el formulario con los campos que se quieren editar
                         -->
                         <a href="{{ url('/livestock_farmer/'.$livestock_farmer->id.'/edit') }}">Editar</a>
+                        @endrole
+                        @role(['administrador'])
                         <!--ELIMINAR-->
                         <!--Para que el software conozca que elemento tiene que borrar,
                             se le pasa el id correspondiente
@@ -93,6 +96,7 @@
                             <input  type="submit" id="borrar" value="Eliminar" 
                                     onclick="return confirmacion('Los datos serán borrados')">
                         </form>
+                        @endrole
                     </td>
                 </tr>
                 @endforeach

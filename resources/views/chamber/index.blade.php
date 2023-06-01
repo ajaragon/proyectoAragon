@@ -64,14 +64,17 @@
                     <td>{{ $chamber->Capacidad }}</td>
                     <td>{{ $chamber->COD_Slaughter }}</td>
                     <td>
+                        @role(['administrador', 'escritor'])
                         <a href="{{ url('/chamber/'.$chamber->id.'/edit') }}">Editar</a>
-                        
+                        @endrole
+                        @role(['administrador'])
                         <form action="{{ url('/chamber/'.$chamber->id) }}" method="post">
                         @csrf    
                             {{ method_field('DELETE') }} 
                             <input  type="submit" id="borrar" value="Eliminar" 
                                     onclick="return confirmacion('Los datos serán borrados')">
                         </form>
+                        @endrole
                     </td>
                 </tr>
                 @endforeach

@@ -61,19 +61,21 @@
                     <td>{{ $part->COD_Part }}</td>
                     <td>{{ $part->Descripcion }}</td>
                     <td>
-                        <!--Añadir opción de actualizar y eliminar-->
-                        <!--ACTUALIZAR-->
+                        @role(['administrador', 'escritor'])
                         <a href="{{ url('/part/'.$part->id.'/edit') }}">Editar</a>
                         <!--ELIMINAR-->
                         <!--Para que el software conozca que elemento tiene que borrar,
                             se le pasa el id correspondiente
                         -->
+                        @endrole
+                        @role(['administrador'])
                         <form action="{{ url('/part/'.$part->id) }}" method="post">
                         @csrf    
                             {{ method_field('DELETE')}} 
                             <input  type="submit" id="borrar" value="Eliminar" 
                                     onclick="return confirmacion('Los datos serán borrados')">
                         </form>
+                        @endrole
                     </td>
                 </tr>
                 @endforeach

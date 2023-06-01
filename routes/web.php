@@ -1,10 +1,4 @@
 <?php
-//---------------------------------------------------------------------------------\\
-//---------------------------------------------------------------------------------\\
-//BACKEND
-//---------------------------------------------------------------------------------\\
-//---------------------------------------------------------------------------------\\
-
 //Import punteros hacie los controladores
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController; //enlace creado con el controlador de home
@@ -38,16 +32,66 @@ use App\Http\Controllers\UsuarioController; //enlace creado con el controlador d
 
 //CAMBIAR RUTA "/"; añadir "/home": Lo que se encuentra un internauta nada más acceder al sitio web
 
-Route::get('/', function () {
-    return view('home');  //aparece la vista donde el usuario se loguea
+
+//---------------------------------------------------------------------------------\\
+//---------------------------------------------------------------------------------\\
+//FRONTEND
+//---------------------------------------------------------------------------------\\
+//---------------------------------------------------------------------------------\\
+
+//Ruta de la página home
+Route::get('/', function(){
+    return view('layouts.main');
+});
+
+Route::get('/main', function(){
+    return view('layouts.main');
+});
+
+//Para que nos muestre la vista "Sobre nosotros"
+Route::get('/about', function(){
+    return view('layouts/about');
+});
+
+//Para que nos muestre la vista "Blog"
+Route::get('/blog', function(){
+    return view('layouts/blog');
+});
+
+//Para que nos muestre la vista "Contacto"
+Route::get('/contact', function(){
+    return view('layouts/contact');
+});
+
+//Para que muestre las entradas del blog
+Route::get('/entrada1', function(){
+    return view('layouts/entrada1');
+});
+
+Route::get('/entrada12', function(){
+    return view('layouts/entrada2');
+});
+
+Route::get('/entrada3', function(){
+    return view('layouts/entrada3');
+});
+
+Route::get('/entrada4', function(){
+    return view('layouts/entrada4');
 });
 
 
-/*
+//---------------------------------------------------------------------------------\\
+//---------------------------------------------------------------------------------\\
+//BACKEND
+//---------------------------------------------------------------------------------\\
+//---------------------------------------------------------------------------------\\
+   
+
 Route::get('/', function () {
-    return view('auth.login');  //aparece la vista donde el usuario se loguea
+    return view('auth.login')->name('login');  //aparece la vista donde el usuario se loguea
 });
-/*
+
 
 //enla url localhost/proyectoAragon/public/
 //ordeno que muestre la vista de welcome
@@ -122,6 +166,7 @@ Route::get('/livestock_farmer/create',[Livestock_farmerController::class,'create
 //SEGURIDAD
 //Route::resource('livestock_farmer',Livestock_farmerController::class)->middleware('auth');
 
+/*
 Route::resource('home',HomeController::class);
 Route::resource('animal',AnimalController::class);
 //Route::resource('animal',AnimalPartController::class);
@@ -135,27 +180,25 @@ Route::resource('slaughter',SlaughterController::class);
 Route::resource('slaughterer',SlaughtererController::class);
 //Route::resource('animal',SlaughterSlaughtererController::class);
 Route::resource('vet',VetController::class);
-
+*/
 
 Auth::routes();
 
 //Permisos
 Route::group(['middleware'=>'auth'], function(){
-
     Route::resource('home', HomeController::class);
     Route::resource('animal', AnimalController::class);
     Route::resource('chamber', ChamberController::class);
     Route::resource('employee', EmployeeController::class);
     Route::resource('farm', FarmController::class);
-    Route::resource('family', FamilyControler::class);
-    Route::resource('livestock_farmer', Livestock_farnerController::class);
+    Route::resource('family', FamilyController::class);
+    Route::resource('livestock_farmer', Livestock_farmerController::class);
     Route::resource('part', PartController::class);
     Route::resource('slaughter', SlaughterController::class);
     Route::resource('slaughterer', SlaughtererController::class);
     Route::resource('vet', VetController::class);
     Route::resource('usuario', UsuarioController::class);
     Route::resource('rol', RolController::class);
-
 });
 
 
@@ -240,53 +283,4 @@ Route::get('vet-export', [VetController::class, 'export']);
 
 
 
-
-
-
-
-//---------------------------------------------------------------------------------\\
-//---------------------------------------------------------------------------------\\
-//FRONTEND
-//---------------------------------------------------------------------------------\\
-//---------------------------------------------------------------------------------\\
-
-//Para que nos muestre la vista "Sobre nosotros"
-Route::get('/about', function(){
-    return view('layouts/about');
-});
-
-//Para que nos muestre la vista "Blog"
-Route::get('/blog', function(){
-    return view('layouts/blog');
-});
-
-//Para que nos muestre la vista "Contacta con nosotros"
-Route::get('/contact', function(){
-    return view('layouts/contact');
-});
-
-//Para que muestre las entradas del blog
-Route::get('/entrada1', function(){
-    return view('layouts/entrada1');
-});
-
-Route::get('/entrada12', function(){
-    return view('layouts/entrada2');
-});
-
-Route::get('/entrada3', function(){
-    return view('layouts/entrada3');
-});
-
-Route::get('/entrada4', function(){
-    return view('layouts/entrada4');
-});
-
-Route::get('/entrada5', function(){
-    return view('layouts/entrada5');
-});
-
-Route::get('/entrada6', function(){
-    return view('layouts/entrada6');
-});
 

@@ -14,6 +14,7 @@ Versiones:
 
 6.0V Creación de exportación de tablas y solución de bugs en backend
 
+7.0V Creación de roles y permisos y solución de bugs
 
 
 Para realizar la programación de la base de datos he seguido el tutorial de YouTube

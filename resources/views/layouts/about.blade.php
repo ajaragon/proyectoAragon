@@ -49,55 +49,51 @@
     </head>
     <body>
         <!--https://codepen.io/codervishwas/pen/OJmGyWQ-->
-        <header class="header">
+        <header class="header color-fondo-hf color-letras-hf">
             <!-- Barra de navegación -->
-            <nav class="navbar
-                        color-navbar
-                        background-navbar
-                        bg-dark
-                        navbar-expand-md
-                        text-uppercase">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
 
-                <div class="container">
-                    
-                        <!-- Nombre de la empresa y el logo -->
-                        <a class="navbar-brand" href="#">
-                        <img    src="{{ url('images/logo.png') }}"
-                                alt="logo"
-                                class="img-logo mr-2"
-                                id="logo">Empresa
-                        </a>
-                        
-                        <!-- Donde se oculta el menú en pantallas más pequeñas -->
-                        <button     data-bs-toggle="collapse" 
-                                    data-bs-target="header-menu"
-                                    type="button" 
-                                    class="navbar-toggler">
-                            <span class="navbar-toggler-icon"></span>
+                        <a class="navbar-brand" href="/proyectoAragon/public/main"><img src="{{ url('images/logo.png') }}" id="logo"></a>
+                        <h5 class="d-none d-lg-block">Empresa</h5>
+
+                        <!-- Botón hamburguesa -->
+                        <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon top-bar"></span>
+                            <span class="toggler-icon middle-bar"></span>
+                            <span class="toggler-icon bottom-bar"></span>
                         </button>
-                                
-                        <!-- Páginas del sitio web -->
-                        <div class="collapse navbar-collapse" id="header-menu">
-                            <ul class="navbar-nav ms-auto">
+
+                        <!-- Menú -->
+                        <div class="collapse navbar-collapse ms-lg-5" id="navbarNav">
+                            <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="active nav-link" href="#">Home</a>
+                                    <a class="nav-link active text-reset" aria-current="page" href="/proyectoAragon/public/main">Home</a>
+                                </li>
+                                <!--
+                                <li class="nav-item">
+                                    <a class="nav-link active text-reset" aria-current="page" href="/proyectoAragon/public/about">Quiénes somos</a>
+                                </li>-->
+                                <li class="nav-item">
+                                    <a class="nav-link active text-reset" aria-current="page" href="/proyectoAragon/public/blog">Blog</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Quiénes somos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contáctanos</a>
+                                    <a class="nav-link active text-reset" aria-current="page" href="/proyectoAragon/public/contact">Contacto</a>
                                 </li>
                             </ul>
                         </div>
+                        <!-- Fin de menú -->
 
-                        <!-- Cambiar idioma -->
-                        
-                </div>
-            </nav>
+                        <!-- Login/Register -->
+                        <div class="col-auto">
+                            <a href="#" class="text-reset pr-2">Login</a>
+                            <!--<a href="#" class="text-reset">Register</a>-->
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- Fin del header -->
             <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         </header>
         <main>
@@ -171,40 +167,43 @@
         <!--https://www.youtube.com/watch?v=KIEZqYZhcEU-->
         <!--https://www.youtube.com/watch?v=PSD5pFi6bx4-->
         <!--https://www.youtube.com/watch?v=CM_iZHTEZ3s-->
-        <footer class="footer bg-dark text-white py-4">
+        <footer class="footer color-fondo-hf color-letras-hf text-white py-4">
+            <!-- footer -->
             <div class="container">
-                <nav class="row">
+                <nav class="navbar navbar-expand-lg navbar-light justify-content-around">
+                    <div class="container-fluid">
 
-                    <!-- Logo -->
-                    <a href="#" class="col-4 d-flex align-items-center">
-                        <img    src="{{ url('images/logo.png') }}"
-                                alt="logo"
-                                class="img-logo mr-2"
-                                id="logo">
-                    </a>
+                        <!-- Logo -->
+                        <a href="/proyectoAragon/public/main" class="col-lg-4 d-flex align-items-center">
+                            <img    src="{{ url('images/logo.png') }}"
+                                    alt="logo"
+                                    class="img-logo mr-2"
+                                    id="logo">
+                        </a>
 
-                    <!-- Dirección de la empresa -->
-                    <ul class="col-4 list-unstyled">
-                        <li>Dirección Plaza Mayor</li>
-                        <li>28012, Madrid, España</li>
-                        <li>Distrito Sol</li>
-                    </ul>
+                        <!-- Dirección de la empresa -->
+                        <ul class="col-lg-4 col-sm-12 list-unstyled">
+                            <li class="text-reset">Dirección Plaza Mayor</li>
+                            <li class="text-reset">28012, Madrid, España</li>
+                            <li class="text-reset">Distrito Sol</li>
+                        </ul>
 
-                    <!-- Redes sociales -->
-                    <ul class="col-4 list-unstyled">
-                        <li class="font-weight-bold text-uppercase">Nuestras redes sociales:</li>
-                        <li class="d-flex justify-content-between">
-                            <a href="#">
-                                <i class="fab fa-twitter" id="twitter"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fab fa-facebook-f" id="facebook"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fab fa-instagram" id="instagram"></i>
-                            </a>
-                        </li>
-                    </ul>
+                        <!-- Redes sociales -->
+                        <ul class="col-lg-4 list-unstyled">
+                            <li class="font-weight-bold text-uppercase">Nuestras redes sociales:</li>
+                            <li class="d-flex justify-content-between">
+                                <a href="https://twitter.com/?lang=es" class="text-reset">
+                                    <i class="fab fa-twitter" id="twitter"></i>
+                                </a>
+                                <a href="https://es-es.facebook.com/" class="text-reset">
+                                    <i class="fab fa-facebook-f" id="facebook"></i>
+                                </a>
+                                <a href="https://www.instagram.com/" class="text-reset">
+                                    <i class="fab fa-instagram" id="instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </footer>

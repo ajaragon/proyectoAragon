@@ -14,14 +14,17 @@ class PermissionSeeder extends Seeder
      */
     public function run(): void
     {
+        /*
         $permisos =[
             'lectura-rol',
             'crear-rol',
             'editar-rol',
             'borrar-rol',
         ];
+
         foreach($permisos as $permiso){
             Permission::create(['name'=>$permiso]);
         }//fin del for each
+        */
     }
 }

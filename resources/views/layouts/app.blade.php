@@ -67,16 +67,16 @@
                         </a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
                             <li>
-                                <a href="#">Home</a>
+                                <a href="/proyectoAragon/public/main">Home</a>
                             </li>
                             <li>
-                                <a href="#">Quiénes somos</a>
+                                <a href="/proyectoAragon/public/about">Quiénes somos</a>
                             </li>
                             <li>
-                                <a href="#">Blog</a>
+                                <a href="/proyectoAragon/public/blog">Blog</a>
                             </li>
                             <li>
-                                <a href="#">Contáctanos</a>
+                                <a href="/proyectoAragon/public/contact">Contacto</a>
                             </li>
                         </ul>
                     </li>
@@ -132,7 +132,10 @@
                         </ul>
                     </li>
                     <li>
+                        <!-- Solo es visible para el administrador -->
+                        @role(['administrador'])
                         <a href="usuario">{{ __('Administración de usuarios') }}</a>
+                        @endrole
                     </li>
                     <li>
                         <!--<a href="rol">{{ __('Administración de permisos') }}</a>-->

@@ -49,55 +49,51 @@
     </head>
     <body>
         <!--https://codepen.io/codervishwas/pen/OJmGyWQ-->
-        <header class="header">
+        <header class="header color-fondo-hf color-letras-hf">
             <!-- Barra de navegación -->
-            <nav class="navbar
-                        color-navbar
-                        background-navbar
-                        bg-dark
-                        navbar-expand-md
-                        text-uppercase">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
 
-                <div class="container">
-                    
-                        <!-- Nombre de la empresa y el logo -->
-                        <a class="navbar-brand" href="#">
-                        <img    src="{{ url('images/logo.png') }}"
-                                alt="logo"
-                                class="img-logo mr-2"
-                                id="logo">Empresa
-                        </a>
-                        
-                        <!-- Donde se oculta el menú en pantallas más pequeñas -->
-                        <button     data-bs-toggle="collapse" 
-                                    data-bs-target="header-menu"
-                                    type="button" 
-                                    class="navbar-toggler">
-                            <span class="navbar-toggler-icon"></span>
+                        <a class="navbar-brand" href="/proyectoAragon/public/main"><img src="{{ url('images/logo.png') }}" id="logo"></a>
+                        <h5 class="d-none d-lg-block">Empresa</h5>
+
+                        <!-- Botón hamburguesa -->
+                        <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon top-bar"></span>
+                            <span class="toggler-icon middle-bar"></span>
+                            <span class="toggler-icon bottom-bar"></span>
                         </button>
-                                
-                        <!-- Páginas del sitio web -->
-                        <div class="collapse navbar-collapse" id="header-menu">
-                            <ul class="navbar-nav ms-auto">
+
+                        <!-- Menú -->
+                        <div class="collapse navbar-collapse ms-lg-5" id="navbarNav">
+                            <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="active nav-link" href="#">Home</a>
+                                    <a class="nav-link active text-reset" aria-current="page" href="/proyectoAragon/public/main">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Quiénes somos</a>
+                                    <a class="nav-link active text-reset" aria-current="page" href="/proyectoAragon/public/about">Quiénes somos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Blog</a>
+                                    <a class="nav-link active text-reset" aria-current="page" href="/proyectoAragon/public/blog">Blog</a>
                                 </li>
+                                <!--
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Contáctanos</a>
-                                </li>
+                                    <a class="nav-link active text-reset" aria-current="page" href="/proyectoAragon/public/contact">Contacto</a>
+                                </li>-->
                             </ul>
                         </div>
+                        <!-- Fin de menú -->
 
-                        <!-- Cambiar idioma -->
-
-                </div>
-            </nav>
+                        <!-- Login/Register -->
+                        <div class="col-auto">
+                            <a href="#" class="text-reset pr-2">Login</a>
+                            <!--<a href="#" class="text-reset">Register</a>-->
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- Fin del header -->
             <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         </header>
         <main>
