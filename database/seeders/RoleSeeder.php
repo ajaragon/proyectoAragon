@@ -15,12 +15,12 @@ class RoleSeeder extends Seeder
     public function run(): void
     {
         //Creacion de los roles
-        $rolAdministrador =Role::create(['name'=>'Administrador']);
-        $rolEscritor =Role::create(['name'=>'Escritor']);
-        $rolConsultor =Role::create(['name'=>'Consultor']);
+        $rolAdministrador =Role::create(['name'=>'administrador']);
+        $rolEscritor =Role::create(['name'=>'escritor']);
+        $rolConsultor =Role::create(['name'=>'consultor']);
 
         //Creación de permiso crear nuevo registro
-        Permission::create(['name'=>'crear'])->syncRoles([$rolAdministrador, $rolAdministrador]);
+        Permission::create(['name'=>'crear'])->syncRoles([$rolAdministrador, $rolEscritor]);
 
         //Creación de permiso de editar un usuario
         Permission::create(['name'=>'usuario.edit'])->assignRole($rolAdministrador);

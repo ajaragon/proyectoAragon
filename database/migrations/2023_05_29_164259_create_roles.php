@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Str;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use App\Models\User;
@@ -22,19 +23,20 @@ return new class extends Migration
         //  -editor
         //  -consultor
 
+        /*
         $rolAdministrador =Role::create(['name'=>'administrador']);
         $rolEscritor =Role::create(['name'=>'escritor']);
         $rolConsultor =Role::create(['name'=>'consultor']);
 
         //Encuentra a un usuario para asignarle un rol
-        $user = User::find(1);
+        //$user = User::find(1);
 
-
+        /*
         //Le asigna un rol
         $user->assignRole($rolAdministrador);
         $user->assignRole($rolEscritor);
         $user->assignRole($rolConsultor);
-        
+        */
         
     }
 

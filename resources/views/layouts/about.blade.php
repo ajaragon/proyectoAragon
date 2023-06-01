@@ -102,34 +102,35 @@
                     <!--
                         Historia de la empresa
                     -->
-            <section class="text">
-                <h4 class="title">HISTORIA DE LA EMPRESA</h4>
-                <p>
-                    La historia de nuestro matadero comenzó en el año 1990, cuando un grupo de ganaderos de la comarca decidió unirse para crear una pequeña explotación dedicada a la producción de carne de calidad.
-                    Situada en las montañas y rodeada de pequeñas poblaciones, la explotación pronto se convirtió en un referente en la zona.
-                </p>
-                <p>
-                    Desde sus inicios, nuestro matadero se ha caracterizado por su compromiso con la calidad y la seguridad alimentaria.
-                    Nos hemos esforzado por ofrecer productos frescos y de la máxima calidad.
-                    Pretendemos que los animales sean criados en condiciones óptimas y sacrificados siguiendo los estándares más exigentes.
-                    Además, hemos mantenido siempre una estrecha relación con los ganaderos de la zona, colaborando con ellos para garantizar el bienestar animal y, sobre todo, la sostenibilidad del entorno.
-                </p>
-                <p>
-                    A lo largo de estos años, hemos ido evolucionando y mejorando nuestras instalaciones y procesos, siempre con el objetivo de ofrecer el mejor servicio a nuestros clientes. 
-                    En la actualidad, nuestro matadero cuenta con las últimas tecnologías en cuanto a control de calidad y seguridad alimentaria, y seguimos trabajando cada día para estar a la vanguardia en estos ámbitos.
-                </p>
-                <p>
-                    Sin embargo, no todo ha sido fácil: a lo largo de estos años, hemos tenido que superar diversos obstáculos y desafíos.
-                    La competencia de grandes empresas del sector y la crisis económica de los últimos años han sido algunos de ellos.
-                </p>
-                <p>
-                    No obstante, gracias al esfuerzo y dedicación de nuestro equipo humano, hemos logrado mantenernos a flote y seguir creciendo.
-                    Hoy en día, nuestro matadero sigue siendo una pequeña explotación comarcal, pero con una gran trayectoria y una sólida reputación en el sector.
-                    Y seguimos trabajando con la misma ilusión y compromiso con los que empezamos hace más de 30 años.
-                </p>
-                <p>Texto originado por chatgpt</p>
-            </section>        
-            
+            <div class="container">
+                <section class="text mt-5">
+                    <h4 class="title">HISTORIA DE LA EMPRESA</h4>
+                    <p>
+                        La historia de nuestro matadero comenzó en el año 1990, cuando un grupo de ganaderos de la comarca decidió unirse para crear una pequeña explotación dedicada a la producción de carne de calidad.
+                        Situada en las montañas y rodeada de pequeñas poblaciones, la explotación pronto se convirtió en un referente en la zona.
+                    </p>
+                    <p>
+                        Desde sus inicios, nuestro matadero se ha caracterizado por su compromiso con la calidad y la seguridad alimentaria.
+                        Nos hemos esforzado por ofrecer productos frescos y de la máxima calidad.
+                        Pretendemos que los animales sean criados en condiciones óptimas y sacrificados siguiendo los estándares más exigentes.
+                        Además, hemos mantenido siempre una estrecha relación con los ganaderos de la zona, colaborando con ellos para garantizar el bienestar animal y, sobre todo, la sostenibilidad del entorno.
+                    </p>
+                    <p>
+                        A lo largo de estos años, hemos ido evolucionando y mejorando nuestras instalaciones y procesos, siempre con el objetivo de ofrecer el mejor servicio a nuestros clientes. 
+                        En la actualidad, nuestro matadero cuenta con las últimas tecnologías en cuanto a control de calidad y seguridad alimentaria, y seguimos trabajando cada día para estar a la vanguardia en estos ámbitos.
+                    </p>
+                    <p>
+                        Sin embargo, no todo ha sido fácil: a lo largo de estos años, hemos tenido que superar diversos obstáculos y desafíos.
+                        La competencia de grandes empresas del sector y la crisis económica de los últimos años han sido algunos de ellos.
+                    </p>
+                    <p>
+                        No obstante, gracias al esfuerzo y dedicación de nuestro equipo humano, hemos logrado mantenernos a flote y seguir creciendo.
+                        Hoy en día, nuestro matadero sigue siendo una pequeña explotación comarcal, pero con una gran trayectoria y una sólida reputación en el sector.
+                        Y seguimos trabajando con la misma ilusión y compromiso con los que empezamos hace más de 30 años.
+                    </p>
+                    <p>Texto originado por chatgpt</p>
+                </section>
+            </div>
         <!-- TEXTO EN INGLÉS
 
             The story of our slaughterhouse began in 1990 when a group of local farmers decided to come together and create a small operation dedicated to the production of quality meat. 

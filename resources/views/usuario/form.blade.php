@@ -16,7 +16,7 @@
 
 <label  for="roles"> Permisos(administrador, escritor, consultor): </label>
 <input  type="text" id="roles" name="roles" 
-        value="{{ isset($usuario->roles)?$usuario->roles:old('roles') }}"><br>
+        value="{{ isset($usuario->roles)?$usuario->roles:('roles') }}"><br>
 
 <label  for="AgregarUsuario">  </label>
 <input  type="submit" id="AgregarUsuario" value="{{ $modo }}"><hr>

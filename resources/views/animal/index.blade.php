@@ -50,9 +50,11 @@
                     <button type="button" class="btn btn-outline-light">
                         <a class="arreglo-bootstrap" id="exportar" href="{{ url('animal-export') }}">Imprimir</a>
                     </button>
+                    @can('crear')
                     <button type="button" class="btn btn-outline-light">
                         <a class="arreglo-bootstrap" id="nuevo-registro" href="{{ url('animal/create') }}">Crear</a>
                     </button>
+                    @endcan
                 </div>
             </div>
         </div>

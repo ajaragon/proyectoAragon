@@ -36,7 +36,7 @@
                         @endif
                     </td>
                     <td>
-                        <!--<a class="btn btn-dark btn-sm" href="{{ url('/usuario/'.$usuario->id.'/edit') }}">Editar</a>-->
+                        <a class="btn btn-dark btn-sm" href="{{ url('/usuario/'.$usuario->id.'/edit') }}">Editar</a>
                         
                         <form action="{{ url('/usuario/'.$usuario->id) }}" method="post">
                         @csrf    
