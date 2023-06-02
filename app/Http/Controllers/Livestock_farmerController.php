@@ -177,7 +177,7 @@ class Livestock_farmerController extends Controller
         //y todos los registros de la tabla
         $data =
         [
-            'title' =>'REGISTROS DE LOS ANIMALES',
+            'title' =>'REGISTROS DE LOS GANADEROS',
             'date' =>date('m/d/Y'),
             'livestock_farmers' =>$livestock_farmers, 
         ];

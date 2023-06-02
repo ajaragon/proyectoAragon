@@ -136,7 +136,7 @@ class FarmController extends Controller
         //y todos los registros de la tabla
         $data =
         [
-            'title' =>'REGISTROS DE LOS ANIMALES',
+            'title' =>'REGISTROS DE LAS EXPLOTACIONES GANADERAS',
             'date' =>date('m/d/Y'),
             'farms' =>$farms, 
         ];

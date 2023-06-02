@@ -137,7 +137,7 @@ class EmployeeController extends Controller
         //y todos los registros de la tabla
         $data =
         [
-            'title' =>'REGISTROS DE LOS ANIMALES',
+            'title' =>'REGISTROS DE LOS EMPLEADOS',
             'date' =>date('m/d/Y'),
             'employees' =>$employees, 
         ];

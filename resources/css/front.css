@@ -6,18 +6,55 @@
         -#FFFFFF blanco
 */
 
+*{
+  box-sizing: border-box;
+}
+
+/*COLORES*/
+.bg-azul-claro{
+  background-color: #00A3E0 !important;
+}
+
+.bg-azul-oscuro{
+  background-color: #041E42 !important;
+}
+
+.bg-rosa{
+  background-color: #E40046 !important;
+}
+
+.bg-blanco{
+  background-color: #FFFFFF !important;
+}
+
+.c-azul-oscuro{
+  color: #041225 !important;
+}
+
+.c-azul-claro{
+  color: #00A3E0 !important;
+}
+
+.c-rosa{
+  color: #E40046 !important;
+}
+
+.c-blanco{
+  color: #FFFFFF !important;
+}
+
+/*FIN DE COLORES*/
+
 body{
   margin: 0;
   position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /*background-color: #00A3E0 !important;*/
-  background-color: #FFFFFF !important;
 }
 
-
 #logo{
+  margin-left: 5em;
   width: 4em;
   height: 4em;
 }
@@ -28,6 +65,12 @@ header{
   box-shadow: 0px 10px 10px -6px #041225;
   position: sticky;
   top: 0;
+  z-index: 5;
+}
+
+/*Links de redireccionamiento*/
+#navbarNav{
+  margin-right: 5em;
 }
 
 /*Botón hamburguesa*/
@@ -102,79 +145,162 @@ header{
 
 /*Fin de botón hamburguesa*/
 
-.color-fondo-hf{
-  background-color: #041E42;
+/*-----------------------------------------------------------------------------------------*/
+/*MAIN MAIN*/
+/*-----------------------------------------------------------------------------------------*/
+
+/*https://developer.mozilla.org/es/docs/Web/CSS/z-index*/
+#navbar-inferior{
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.color-letras-hf{
-  color: #FFFFFF;
+.front-to-back{
+  z-index: -1;
 }
 
-/*MAIN*/
-
-.card-img-filter{
-  filter:brightness(0,1);
+.login{
+  font-size: large;
+  font-weight: bold;
 }
 
-.card{
-  transition-duration: 1s;
-  clip-path: polygon(50% 0, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%, 0% 0%);
+/*Efecto zoom imagen*/
+/*https://www.youtube.com/watch?v=eZGHCRENcEk*/
+.img-z{
+  width: 20em;
+  height: 12em;
 }
 
-.card-effect:hover .card{
-  clip-path: polygon(50% 0, 50% 0, 100% 50%, 100% 50%, 50% 100%, 50% 100%, 0% 50%, 0% 50%);
+.image{
+  width: 100%;
 }
 
-.card-img-overlay{
-  transition-duration: 1s;
+figure{
+  overflow: hidden;
+  margin: 0 10px;
 }
 
-.card-effect:hover .card-img-overlay{
+.image img{
+  width: 20em;
+  height: 12em;
+  cursor: pointer;
+}
+
+.image #zoom-In img{
   transform: scale(1);
+  transition: 0.3s ease-in-out;
 }
 
-.imagen-galeria{
-  max-height: 12em;
+.image #zoom-In:hover img{
+  transform: scale(1.5);
 }
 
+/*-----------------------------------------------------------------------------------------*/
+/*MAIN BLOG*/
+/*-----------------------------------------------------------------------------------------*/
+
+/*Entradas del blog*/
+.container-section{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;          /*DISPLAY:FLEX + FLEX-WRAP: WRAP*/
+                            /*TRUCO RESPONSIVE*/
+}
+
+.blog-card{
+  width: 270px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.card-image{
+  height: 170px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.blog-card h6{
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.blog-card p{
+  padding: 10px;
+  text-align: center;
+}
+
+.blog-card a{
+  padding: 15px 20px;
+  display: block;
+  text-align: center;
+  text-align: center;
+  margin: 20px 20px;
+  text-decoration: none;
+}
+
+.blog-card:hover{
+  background-color: #041225 !important;
+  color: #00A3E0 !important;
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: all 0.5s ease;
+}
+
+.img-1{
+  background-image: url('/public/images/galeria-valle-montaña.jpg');
+}
+
+.img-2{
+  background-image: url('/public/images/galeria-senderismo.jpg');
+}
+
+.img-3{
+  background-image: url('/public/images/galeria-aves.jpg');
+}
+
+.img-4{
+  background-image: url('/public/images/galeria-castillo.jpg');
+}
+
+.titulo-blog{
+  position: relative;
+  justify-content: center;
+  margin-left: auto;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  font-weight: bold;
+}
+
+/*fin de entradas al blog*/
+
+.linea{
+  position: relative;
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
+
+/*Carrusel*/
+
+.c-item{
+  height: 480px;
+}
+
+.c-img{
+  height: 100%;
+  object-fit: cover;
+  filter:brightness(0.9)
+}
+
+/*fin de carrousel*/
 /*FOOTER*/
 
 .footer{
   margin-top: auto;
   width: 100%;
 }
-/*
-<nav class="row">
 
-                    <!-- Logo -->
-                    <a href="#" class="col-lg-4 d-flex align-items-center">
-                        <img    src="{{ url('images/logo.png') }}"
-                                alt="logo"
-                                class="img-logo mr-2"
-                                id="logo">
-                    </a>
-
-                    <!-- Dirección de la empresa -->
-                    <ul class="col-lg-4 list-unstyled">
-                        <li class="text-reset">Dirección Plaza Mayor</li>
-                        <li class="text-reset">28012, Madrid, España</li>
-                        <li class="text-reset">Distrito Sol</li>
-                    </ul>
-
-                    <!-- Redes sociales -->
-                    <ul class="col-lg-4 list-unstyled">
-                        <li class="font-weight-bold text-uppercase">Nuestras redes sociales:</li>
-                        <li class="d-flex justify-content-between">
-                            <a href="#" class="text-reset">
-                                <i class="fab fa-twitter" id="twitter"></i>
-                            </a>
-                            <a href="#" class="text-reset">
-                                <i class="fab fa-facebook-f" id="facebook"></i>
-                            </a>
-                            <a href="#" class="text-reset">
-                                <i class="fab fa-instagram" id="instagram"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-*/

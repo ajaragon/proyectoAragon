@@ -107,7 +107,7 @@ class PartController extends Controller
         //y todos los registros de la tabla
         $data =
         [
-            'title' =>'REGISTROS DE LOS ANIMALES',
+            'title' =>'REGISTROS DE LOS PIEZAS',
             'date' =>date('m/d/Y'),
             'parts' =>$parts, 
         ];

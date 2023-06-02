@@ -109,7 +109,7 @@ class FamilyController extends Controller
         //y todos los registros de la tabla
         $data =
         [
-            'title' =>'REGISTROS DE LOS ANIMALES',
+            'title' =>'REGISTROS DE LAS ESPECIES',
             'date' =>date('m/d/Y'),
             'families' =>$families, 
         ];

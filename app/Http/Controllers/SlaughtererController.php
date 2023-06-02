@@ -126,7 +126,7 @@ class SlaughtererController extends Controller
         
         $data =
         [
-            'title' =>'REGISTROS DE LOS ANIMALES',
+            'title' =>'REGISTROS DE LOS MATARIFES',
             'date' =>date('m/d/Y'),
             'slaughterers' =>$slaughterers, 
         ];

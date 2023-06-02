@@ -87,11 +87,11 @@ Route::get('/entrada4', function(){
 //---------------------------------------------------------------------------------\\
 //---------------------------------------------------------------------------------\\
    
-
+/*
 Route::get('/', function () {
     return view('auth.login')->name('login');  //aparece la vista donde el usuario se loguea
 });
-
+*/
 
 //enla url localhost/proyectoAragon/public/
 //ordeno que muestre la vista de welcome
@@ -220,9 +220,8 @@ Route::group(['middleware'=>'auth'], function(){
 
 
 //Obtiene la ruta, concatena /xxxxx con la función index del controlador xxxxx 
-Route::get('/home',[HomeController::class,'index'])->name('home');  //lleva a la interfaz principal de la base de datos una vez que el usuario se registra
+Route::get('/home',[HomeController::class,'index'])->name('home');                          //lleva a la interfaz principal de la base de datos una vez que el usuario se registra
 Route::get('/animal',[AnimalController::class,'index'])->name('animal');
-//Route::get('/animal_part',[AnimalPartController::class,'index'])->name('animal_part');
 Route::get('/chamber',[ChamberController::class,'index'])->name('chamber');
 Route::get('/employee',[EmployeeController::class,'index'])->name('employee');
 Route::get('/farm',[FarmController::class,'index'])->name('farm');
@@ -231,7 +230,6 @@ Route::get('/livestock_farmer',[Livestock_farmerController::class,'index'])->nam
 Route::get('/part',[PartController::class,'index'])->name('part');
 Route::get('/slaughter',[SlaughterController::class,'index'])->name('slaughter');
 Route::get('/slaughterer',[SlaughtererController::class,'index'])->name('slaughterer');
-//Route::get('/slaughter_slaughterer',[SlaughterSlaughtererController::class,'index'])->name('slaughter_slaughterer');
 Route::get('/vet',[VetController::class,'index'])->name('vet');
 
 

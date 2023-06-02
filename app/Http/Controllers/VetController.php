@@ -130,7 +130,7 @@ class VetController extends Controller
         
         $data =
         [
-            'title' =>'REGISTROS DE LOS ANIMALES',
+            'title' =>'REGISTROS DE LOS VETERINARIOS',
             'date' =>date('m/d/Y'),
             'vets' =>$vets, 
         ];
